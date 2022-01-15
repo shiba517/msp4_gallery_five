@@ -1,0 +1,54 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Lato&family=Noto+Sans:wght@400;700&display=swap'); */
+
+body {
+    background-color: #f5f0e1;
+    font-family: 'Lato', sans-serif;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+
+/* OVERRIDES */
+.nav-link {
+    color: #f5f0e1;
+}
+
+.ncc-btn-search {
+    color: #f5f0e1;
+    border-color: #f66e40;
+    background-color: #f66e40;
+}
+
+
+/* TEST */
+.ncc-test-bg {
+    background-color: cadetblue;
+}
+
+.ncc-test-bg2 {
+    background-color: crimson;
+}
+
+
+/* UNIVERSAL */
+.ncc-logo-dec {
+    border: solid 0.5rem #f66e40;
+    color: #1e3d59;
+    background-color: #ffc13b;
+}
+
+
+/* HERO PAGE */
+#hero-section {
+    height: 60vh;
+}
+#hero-section .ncc-logo-dec {
+    font-size: 25vh;
+    border: solid 1.5rem #f66e40;
+}
+
+
+/* NAV BAR */
+.ncc-navbar-dec {
+    background-color: #1e3d59;
+    color: #f5f0e1;
+}
