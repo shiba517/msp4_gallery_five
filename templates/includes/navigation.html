@@ -56,8 +56,8 @@
             <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="#">Get in touch</a>
             </li>
-            <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <form class="d-flex" method="GET" action="{% url 'products' %}">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="find">
                 <button class="btn ncc-btn-search" type="submit">Search</button>
             </form>
             <li class="nav-item">
