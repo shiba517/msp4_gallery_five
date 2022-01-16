@@ -1,0 +1,224 @@
+[
+    {   
+        "model": "products.product",
+        "fields": {
+            "sku": "pp5001340001",
+            "name": "Near Sorrento",
+            "artist_name": "John Brett",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            "price": 3351,
+            "category": 2,
+            "image_url": "https://unsplash.com/photos/0pJPixfGfVo",
+            "image": "birmingham-museums-trust-0pJPixfGfVo-unsplash.jpg"
+            }
+    },
+    {
+        "model": "products.product",
+        "fields": {
+            "sku": "pp5001340003",
+            "name": "Unknown",
+            "artist_name": "Michael Angelo",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            "price": 4422,
+            "category": 1,
+            "image_url": "https://unsplash.com/photos/1rBg5YSi00c",
+            "image": "adrianna-geo-1rBg5YSi00c-unsplash.jpg"
+            }
+    },
+    {
+        "model": "products.product",
+        "fields": {
+            "sku": "pp5001340004",
+            "name": "Cat with Kittens",
+            "artist_name": "Unknown",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            "price": 3493,
+            "category": 1,
+            "image_url": "https://unsplash.com/photos/Wiad3DQxUho",
+            "image": "europeana-Wiad3DQxUho-unsplash.jpg"
+            }
+    },
+    {
+        "model": "products.product",
+        "fields": {
+            "sku": "pp5001340005",
+            "name": "Mother fox and little baby showing love",
+            "artist_name": "Unknown",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            "price": 3406,
+            "category": 1,
+            "image_url": "https://unsplash.com/photos/g0GyY9aLBdY",
+            "image": "fuu-j-g0GyY9aLBdY-unsplash.jpg"
+            }
+    },
+    {
+        "model": "products.product",
+        "fields": {
+            "sku": "pp5001340006",
+            "name": "Unknown",
+            "artist_name": "Unknown artist",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            "price": 3184,
+            "category": 1,
+            "image_url": "https://unsplash.com/photos/Lo7venJ_ywM",
+            "image": "fuu-j-Lo7venJ_ywM-unsplash.jpg"
+            }
+    },
+    {
+        "model": "products.product",
+        "fields": {
+            "sku": "pp5001340007",
+            "name": "Unknown",
+            "artist_name": "Unknown artist",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            "price": 8253,
+            "category": 3,
+            "image_url": "https://unsplash.com/photos/QMZcTr4F7LY",
+            "image": "steve-johnson-QMZcTr4F7LY-unsplash.jpg"
+            }
+    },
+    {
+        "model": "products.product",
+        "fields": {
+            "sku": "pp5001340008",
+            "name": "Unknown",
+            "artist_name": "Sian Butler",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            "price": 1079,
+            "category": 3,
+            "image_url": "https://unsplash.com/photos/rtKuJUQF6Ls",
+            "image": "david-clode-rtKuJUQF6Ls-unsplashv.jpg"
+            }
+    },
+    {
+        "model": "products.product",
+        "fields": {
+            "sku": "pp5001340009",
+            "name": "Morning Mountains",
+            "artist_name": "Nimmy Melvin",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            "price": 4864,
+            "category": 3,
+            "image_url": "https://unsplash.com/photos/9s0XMFJbXv8",
+            "image": "melvin-thambi-9s0XMFJbXv8-unsplash.jpg"
+            }
+    },
+    {
+        "model": "products.product",
+        "fields": {
+            "sku": "pp5001340010",
+            "name": "Unknown",
+            "artist_name": "Faber Sorrentino",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            "price": 7497,
+            "category": 4,
+            "image_url": "https://unsplash.com/photos/IEgvy4o3byM",
+            "image": "simon-lee-IEgvy4o3byM-unsplash.jpg"
+            }
+    },
+    {
+        "model": "products.product",
+        "fields": {
+            "sku": "pp5001340011",
+            "name": "Unknown",
+            "artist_name": "Sharan Pagadala",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            "price": 8919,
+            "category": 4,
+            "image_url": "https://unsplash.com/photos/5HkxlQFDgN4",
+            "image": "simon-lee-IEgvy4o3byM-unsplash.jpg"
+            }
+    },
+    {
+        "model": "products.product",
+        "fields": {
+            "sku": "pp5001340012",
+            "name": "Unknown",
+            "artist_name": "Fakurian Design",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            "price": 3418,
+            "category": 4,
+            "image_url": "https://unsplash.com/photos/PGdW_bHDbpI",
+            "image": "fakurian-design-PGdW_bHDbpI-unsplash.jpg"
+            }
+    },
+    {
+        "model": "products.product",
+        "fields": {
+            "sku": "pp5001340013",
+            "name": "BMASE",
+            "artist_name": "Matt Moloney",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            "price": 6375,
+            "category": 5,
+            "image_url": "https://unsplash.com/photos/tKB1GDJUq9c",
+            "image": "fakurian-design-PGdW_bHDbpI-unsplash.jpg"
+            }
+    },
+    {
+        "model": "products.product",
+        "fields": {
+            "sku": "pp5001340014",
+            "name": "tin tin poster inside library",
+            "artist_name": "Girl with red hat",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            "price": 1378,
+            "category": 5,
+            "image_url": "https://unsplash.com/photos/oRvSnk49R6k",
+            "image": "girl-with-red-hat-oRvSnk49R6k-unsplash.jpg"
+            }
+    },
+    {
+        "model": "products.product",
+        "fields": {
+            "sku": "pp5001340015",
+            "name": "Woman in white hat and coat",
+            "artist_name": "Giorgio Trovato",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            "price": 6614,
+            "category": 5,
+            "image_url": "https://unsplash.com/photos/-EI-bSCZ17o",
+            "image": "giorgio-trovato--EI-bSCZ17o-unsplash.jpg"
+            }
+    },
+    {
+        "model": "products.product",
+        "fields": {
+            "sku": "pp5001340016",
+            "name": "Unknown",
+            "artist_name": "Unknown artist",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            "price": 3681,
+            "category": 7,
+            "image_url": "https://unsplash.com/photos/KTYSVnv6lUw",
+            "image": "timothy-dykes-KTYSVnv6lUw-unsplash.jpg"
+            }
+    },
+    {
+        "model": "products.product",
+        "fields": {
+            "sku": "pp5001340017",
+            "name": "Unknown",
+            "artist_name": "Vika Wendish",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            "price": 6462,
+            "category": 7,
+            "image_url": "https://unsplash.com/photos/BrBS7sBkU3g",
+            "image": "vika-wendish-BrBS7sBkU3g-unsplash.jpg"
+            }
+    },
+    {
+        "model": "products.product",
+        "fields": {
+            "sku": "pp5001340018",
+            "name": "Unknown",
+            "artist_name": "Unknown artist",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            "price": 5739,
+            "category": 7,
+            "image_url": "https://unsplash.com/photos/j_9wznLtfKk",
+            "image": "vika-wendish-BrBS7sBkU3g-unsplash.jpg"
+            }
+    }
+    
+]
