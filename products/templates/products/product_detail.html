@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <div class="row row-cols-1 row-cols-lg-2">
+        <div class="col-7 ncc-productdetail-image-area">
+            <img src="{{ product.image.url }}" class="ncc-productdetail-image" alt="">
+        </div>
+        <div class="col d-flex flex-wrap align-items-center justify-content-center ncc-productdetail-detail-area">
+            <div class="text-center">
+                <h2 class="">{{ product.name }}</h2>
+                <i class="">{{ product.artist_name }}</i>
+                <p class="px-3">{{ product.description }}</p>
+                <p class="display-3">£{{ product.price }}</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+{% endblock %}

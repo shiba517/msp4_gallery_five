@@ -79,3 +79,16 @@ body {
     background-color: #f66e40;
     /* height: 20vh; */
 }
+
+
+/* PRODUCT_DETAIL */
+.ncc-productdetail-image-area {
+    height: 70vh;
+    /* width: 100%; */
+}
+
+.ncc-productdetail-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
