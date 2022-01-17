@@ -6,7 +6,7 @@ def crate_content(request):
     total = 0
     product_count = 0
 
-    charitable_slice = totel * settings.CHARITABLE_SLICE
+    charitable_slice = total * settings.CHARITABLE_SLICE
 
     context = {
         'crate_items': crate_items,

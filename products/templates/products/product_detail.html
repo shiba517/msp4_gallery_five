@@ -1,13 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
-    </div>
-{% endblock %}
 
 {% block content %}
 <div class="container mt-4">
@@ -38,7 +31,7 @@
                             </a>
                             <input type="submit" class="btn text-uppercase mt-5 btn ncc-btn-base" value="Add to cart">
 
-                            <!-- THIS PIECE OF CODE IS HERE TO USER TO KEEP USER TO THE SAME PAGE WHEN ABOOVE FORM HAS BEEN SUBMITTED -->
+                            <!-- THIS PIECE OF CODE IS HERE TO KEEP USER ON THE SAME PAGE WHEN ABOOVE FORM HAS BEEN SUBMITTED -->
                             <input type="hidden" name="redirect_url" value="{{ request.path }}">
                         </div>
                     </form>
