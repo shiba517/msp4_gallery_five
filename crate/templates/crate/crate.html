@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load bag_tools %}
 
 
 {% block content %}
@@ -56,6 +57,9 @@
                                     </form>
                                     <a class="update-link btn ncc-btn-base"><small>Update</small></a>
                                     <a href="" class="remove-item btn float-right ncc-btn-base" id="remove_{{ item.item_id }}"><small>Remove</small></a>
+                                </td>
+                                <td class="py-3">
+                                    <p>£{{ item.product.price | calc_subtotal:item.quantity }}</p>
                                 </td>
                             </tr>
                             {% endfor %}
