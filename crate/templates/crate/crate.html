@@ -16,8 +16,51 @@
     <div class="row">
         <div class="col">
             {% if crate_items %}
-            <div>
-                <h2>Crate test header</h2>
+            <div class="col-10">
+                <div class="table-responsive rounded">
+                    <table class="table table-sm table-borderless">
+                        <thead class="text-black">
+                            <tr>
+                                <th scope="col">Product Info</th>
+                                <th scope="col"></th>
+                                <th scope="col">Price</th>
+                                <th scope="col">Qty</th>
+                                <th scope="col">Subtotal</th>
+                            </tr>
+                        </thead>
+                            {% for item in crate_items %}
+                            <tr>
+                                
+                                <td class="p-3 w-25">
+                                    <img class="img-fluid rounded" src="{{ item.product.image.url }}">
+                                    
+                                </td>
+                                <td class="py-3">
+                                    <p class="my-0"><strong>{{ item.product.name }}</strong></p>
+                                    <p class="my-0 small text-muted">{{ item.product.sku|upper }}</p>
+                                </td>
+                                <td class="py-3">
+                                    <p class="my-0">£{{ item.product.price }}</p>
+                                </td>
+                                
+                                <td class="py-3 w-25">
+                                    <form class="form update-form" action="{% url 'adjust_crate' item.item_id %}" method="POST">
+                                        {% csrf_token %}
+                                        <div class="form-group w-25 mb-2">
+                                            <div class="input-group">
+                                                <input class="form-control qty_input" type="number" name="quantity" value="{{ item.quantity }}" min="1" max="99" data-item_id="{{ item.item_id }}" id="id_qty_{{ item.item_id }}">
+                                                
+                                            </div>
+                                        </div>
+                                        
+                                    </form>
+                                    <a class="update-link btn ncc-btn-base"><small>Update</small></a>
+                                    <a href="" class="remove-item btn float-right ncc-btn-base" id="remove_{{ item.item_id }}"><small>Remove</small></a>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                    </table>
+                </div>
             </div>
             {% else %}
             <h3>Your crate is empty</h3>
@@ -27,9 +70,30 @@
         </div>
     </div>
 </div>
+{% endblock %}
 
 
+{% block postloadjs %}
+{{ block.super }}
 
+<script type="text/javascript">
+    // Updates quantity
+    $('.update-link').click(function(e) {
+        var form = $(this).prev('.update-form');
+        form.submit();
+    })
 
+    // Removes items
+    $('.remove-item').click(function(e) {
+        var csrfToken = "{{ csrf_token }}";
+        var itemId = $(this).attr('id').split('remove_')[1];
+        var url = `/crate/remove/${itemId}/`;
+        var data = {'csrfmiddlewaretoken': csrfToken};
 
+        $.post(url, data)
+            .done(function() {
+            location.reload();
+        });
+    })
+</script>
 {% endblock %}
