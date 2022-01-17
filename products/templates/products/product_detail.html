@@ -18,7 +18,8 @@
 
                 <!-- ADDING ITEM TO THE CART -->
                 <div class="mt-4">
-                    <form class="form" action="" method="POST">
+                    <form class="form" action="{% url 'add_to_crate' product.id %}" method="POST">
+                        {% csrf_token %}
                         <div class="form-row">
                             <p class="mt-3">Quantity:</p>
                             <div class="form-group">
