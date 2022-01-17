@@ -10,7 +10,7 @@
 {% endblock %}
 
 {% block content %}
-<div class="container-md">
+<div class="container">
     <div class="row mb-4">
         <div class="col">
             <hr>
@@ -18,6 +18,18 @@
             <hr>
         </div>
     </div>
+
+    <!-- Ordering of products -->
+    <div class="row mb-4">
+        <div class="col">
+            <select id="sort-selector" class="form-select" aria-label="Default select example">
+                <option selected>Open this select menu</option>               
+                <option value="name_asc" {% if current_sorting == 'name_asc' %}selected{% endif %}>Name (A-Z)</option>
+                <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (Low-High)</option>
+              </select>
+        </div>
+    </div>
+
     <div class="row row-cols-1 row-cols-lg-3">
         {% for product in products %}
         <div class="col mb-4">
@@ -39,4 +51,33 @@
     </div>
 </div>
 </html>
+{% endblock %}
+
+
+{% block postloadjs %}
+    {{ block.super }}
+    
+    
+    <script type="text/javascript">
+        $('#sort-selector').change(function() {
+            var selector = $(this);
+            var currentUrl = new URL(window.location);
+
+            var selectedVal = selector.val();
+            if(selectedVal != "reset"){
+                var sort = selectedVal.split("_")[0];
+                var direction = selectedVal.split("_")[1];
+
+                currentUrl.searchParams.set("sort", sort);
+                currentUrl.searchParams.set("direction", direction);
+
+                window.location.replace(currentUrl);
+            } else {
+                currentUrl.searchParams.delete("sort");
+                currentUrl.searchParams.delete("direction");
+
+                window.location.replace(currentUrl);
+            }
+        })
+    </script>
 {% endblock %}
