@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block content %}
+<div class="container">
+    <div class="row mb-4">
+        <div class="col">
+            <hr>
+                <h2 class="mb-4 text-center text-uppercase">your crate</h2>
+            <hr>
+        </div>
+    </div>
+
+    <!-- CRATE CONTENT -->
+    <div class="row">
+        <div class="col">
+            {% if crate_items %}
+            <div>
+                <h2>Crate test header</h2>
+            </div>
+            {% else %}
+            <h3>Your crate is empty</h3>
+            <p>Why not do something about it by browsing our gallery</p>
+            <a href="{% url 'products' %}" class="btn ncc-btn-base">gallery</a>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+
+
+
+
+{% endblock %}
