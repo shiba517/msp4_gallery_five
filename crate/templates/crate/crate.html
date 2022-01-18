@@ -15,9 +15,9 @@
 
     <!-- CRATE CONTENT -->
     <div class="row">
-        <div class="col">
+        <!-- <div class="col"> -->
             {% if crate_items %}
-            <div class="col-10">
+            <div class="col-8">
                 <div class="table-responsive rounded">
                     <table class="table table-sm table-borderless">
                         <thead class="text-black">
@@ -66,12 +66,49 @@
                     </table>
                 </div>
             </div>
+            <div class="col-4">
+                <div>
+                    <h3>SUMMARY</h3>
+                    <hr>
+                </div>
+                <div class="table-responsive rounded">
+                    <table class="table table-sm table-borderless">
+                        <thead class="text-black">
+                            <tr>
+                                <th scope="col">Charitable contribution</th>
+                            </tr>
+                        </thead>
+                            <tr>                                
+                                <td class="py-3">
+                                    <p class="">£{{ charitable_slice|floatformat:2 }}</p>
+                                </td>                                
+                            </tr>
+                    </table>
+                </div>
+                <div class="table-responsive rounded">
+                    <table class="table table-sm table-borderless">
+                        <thead class="text-black">
+                            <tr>
+                                <th scope="col">
+                                    <strong class="text-uppercase">grand total</strong>
+                                </th>
+                            </tr>
+                        </thead>
+                            <tr>                                
+                                <td class="py-3">
+                                    <p>£{{ total|floatformat:2 }}</p>
+                                </td>                                
+                            </tr>
+                    </table>
+                </div>
+                <a href="{% url 'checkout' %}" class="btn ncc-btn-base">Checkout</a>
+            </div>
             {% else %}
             <h3>Your crate is empty</h3>
             <p>Why not do something about it by browsing our gallery</p>
             <a href="{% url 'products' %}" class="btn ncc-btn-base">gallery</a>
             {% endif %}
-        </div>
+        <!-- </div> -->
     </div>
 </div>
 {% endblock %}
