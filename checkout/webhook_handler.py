@@ -19,6 +19,9 @@ class StripeWH_Handler:
         """
         Handle payment_intent.succeeded from Stripe
         """
+        inent = event.data.object
+        print(inent)
+
         return HttpResponse(
             content=f'Webhook received: {event["type"]}',
             status=200)
