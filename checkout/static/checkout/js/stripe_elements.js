@@ -46,7 +46,7 @@ form.addEventListener('submit', function(ev) {
     card.update({ 'disabled': true});
     $('#submit-button').attr('disabled', true);
 
-    // CHECKOUT OVERLAY
+    // FOR CHECKOUT OVERLAY
     $('#payment-form').fadeToggle(100);
     $('#loading-overlay').fadeToggle(100);
 
@@ -64,7 +64,7 @@ form.addEventListener('submit', function(ev) {
                 <span>${result.error.message}</span>`;
             $(errorDiv).html(html);
 
-            // CHECKOUT OVERLAY
+            // FOR CHECKOUT OVERLAY
             $('#payment-form').fadeToggle(100);
             $('#loading-overlay').fadeToggle(100);
             
