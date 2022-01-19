@@ -21,13 +21,16 @@ def crate_content(request):
             'product': product,
         })
 
+    grand_total = total
     charitable_slice = total * Decimal(settings.CHARITABLE_SLICE)
+
 
     context = {
         'crate_items': crate_items,
         'total': total,
         'product_count': product_count,
-        'charitable_slice': charitable_slice
+        'charitable_slice': charitable_slice,
+        'grand_total': total
     }
 
     return context
