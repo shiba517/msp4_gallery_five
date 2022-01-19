@@ -186,9 +186,11 @@
             </div> -->
             <div class="row">
                 <div class="col text-center">
-                    <button class="btn mt-5 btn ncc-btn-base">
-                        <span class="">Browse again</span>
-                    </button>
+                    {% if from_profile %}
+                    <a href="{% url 'profile' %}" class="btn mt-5 btn ncc-btn-base">back to profile</a>
+                    {% else %}
+                    <a href="{% url 'products' %}" class="btn mt-5 btn ncc-btn-base">shop more</a>
+                    {% endif %}
                 </div>
             </div>
         </div>
