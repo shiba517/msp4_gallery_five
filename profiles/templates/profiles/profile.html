@@ -17,9 +17,28 @@
     </div>
     <div class="row">
         <div class="col">
-            <h4>Welcome {{ profile }}</h4>
+            <h2>Welcome {{ profile }}</h2>
         </div>
     </div>
+    <div class="row">
+        <div class="col-6">
+            <h4>your delivery information</h4>
+            <form action="{% url 'profile' %}" method="POST" id="profile-update-form">
+                {% csrf_token %}
+                {{ form|crispy }}
+                <button class="btn ncc-btn-base">change</button>
+            </form>
+        </div>
+        <div class="col-6">
+            <h4>order history</h4>
+            {{ orders }}
+        </div>
+    </div>
+        
 </div>
 {% endblock %}
 
+{% block postloadjs %}
+    {{ block.super }}
+    <script type="text/javascript" src="{% static 'profiles/js/countryfield.js' %}"></script>
+{% endblock %}
