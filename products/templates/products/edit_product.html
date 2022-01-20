@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="">
+            <hr>
+                <h2 class="mb-4 text-center text-uppercase">edit product</h2>
+            <hr>
+        </div>
+    </div>
+
+    <div class="row ">
+        <div class="offset-3 col-6">
+            <form action="{% url 'edit_product' product.id %}" method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form | crispy }}
+                <div>
+                    <a href="{% url 'products' %}" class="btn ncc-btn-base">cancel</a>
+                    <button type="submit" class="btn ncc-btn-base">update</button>
+                </div>
+            </form>
+            
+        </div>   
+        
+    </div>
+</div>
+{% endblock %}

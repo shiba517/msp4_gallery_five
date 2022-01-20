@@ -61,7 +61,7 @@ def all_products(request):
 
 def product_detail(request, product_id):
 
-    product = get_object_or_404(Product, pk=product_id)
+    product = get_object_or_404(Product, id=product_id)
     
     context = {
         'product': product,
@@ -86,6 +86,33 @@ def add_product(request):
     template = 'products/add_product.html'
     context = {
         'form': form,
+    }
+
+    return render(request, template, context)
+
+
+def edit_product(request, product_id):
+    product = get_object_or_404(Product, id=product_id)
+
+    if request.method == 'POST':
+        print('REQUEST IS A POST')
+        form = ProductForm(request.POST, request.FILES, instance=product)
+        print('FORM POSSIBLY HAS BEEN CREATED WITH PRODUCTFORM')
+        if form.is_valid():
+            print('FORM IS VALID')
+            form.save()
+            messages.success(request, 'Successfully updated product!')
+            return redirect(reverse('product_detail', args=[product.id]))
+        else:
+            messages.error(request, 'Failed to update product. Please ensure the form is valid.')
+    else:
+        print('BUTTON DID NOT POST :/')
+        form = ProductForm(instance=product)
+
+    template = 'products/edit_product.html'
+    context = {
+        'form': form,
+        'product': product
     }
 
     return render(request, template, context)
