@@ -35,7 +35,11 @@
         <div class="col mb-4">
             <div class="card">
                 <div class="ncc-card-image-area">
+                    {% if product.image %}
                     <img src="{{ product.image.url }}" class=" ncc-card-img" alt="...">
+                    {% else %}
+                    <img src="{{ MEDIA_URL }}noimage.jpg" class=" ncc-card-img" alt="...">
+                    {% endif %}
                 </div>
                 
                 <div class="card-body text-center ncc-card-body">
