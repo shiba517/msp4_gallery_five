@@ -68,8 +68,10 @@
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                     <li><a class="dropdown-item" href="{% url 'profile' %}">Profile</a></li>
-                    <li><a class="dropdown-item" href="{% url 'add_product' %}">Add product</a></li>
                     <li><a class="dropdown-item" href="{% url 'account_logout' %}">logout</a></li>
+                    {% if request.user.is_superuser %}
+                    <li><a class="dropdown-item" href="{% url 'add_product' %}">Add product</a></li>
+                    {% endif %}
                 </ul>
                 {% else %}
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown"

@@ -21,8 +21,10 @@
                 <p class="display-3">£{{ product.price }}</p>
 
                 <!-- ADDITIONAL OPTIONS -->
+                {% if request.user.is_superuser %}
                 <a href="{% url 'edit_product' product.id %}" class="btn ncc-btn-base">edit</a>
                 <a href="{% url 'delete_product' product.id %}" class="btn ncc-btn-base">delete</a>
+                {% endif %}
 
                 <!-- ADDING ITEM TO THE CART -->
                 <div class="mt-4">
