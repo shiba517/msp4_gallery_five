@@ -26,4 +26,5 @@ urlpatterns = [
     path('crate/', include('crate.urls')),
     path('checkout/', include('checkout.urls')),
     path('profile/', include('profiles.urls')),
+    path('blogs/', include('blogs.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

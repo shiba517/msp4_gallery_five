@@ -1,0 +1,39 @@
+
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block content %}
+<div class="container">
+    <div class="row mb-4">
+        <div class="col">
+            <hr>
+                <h2 class="mb-4 text-center text-uppercase">read blog</h2>
+            <hr>
+        </div>
+    </div>
+    <div class="row mb-2">
+        <div class="col text-center">
+            <h2 class="display-2">{{ blog.title }}</h2>
+            <div class="ncc-readblog-image-area">
+                {% if blog.image %}
+                <img src="{{ blog.image.url }}" class="ncc-readblog-image" alt="">
+                {% else %}
+                <img src="{{ MEDIA_URL }}noimage.jpg" class="ncc-readblog-image" alt="...">
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    <div>
+        <p class="text-start">{{ blog.auther }} ({{ blog.date }})</p>
+    </div>
+    <hr>
+    <div class="row m-4">
+        <div class="col">
+            <p>
+                {{ blog.article }}
+            </p>
+        </div>
+    </div>
+</div>
+{% endblock %}

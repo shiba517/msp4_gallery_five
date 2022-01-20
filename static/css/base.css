@@ -92,3 +92,44 @@ body {
     height: 100%;
     object-fit: contain;
 }
+
+
+/* BLOG */
+.ncc-blogpreview-dec {
+    /* background-color: #c9c8c8; */
+    background-color: #f8f9fa;
+    height: 20rem;
+    overflow: hidden;
+}
+
+.ncc-blogpreview-image-area {
+    /* background-color: #ffc13b; */
+    height: 100%
+}
+
+.ncc-blogpreview-image {
+    max-width: 100%;
+    max-height: 100%;
+    /* object-fit: contain; */
+    object-fit: cover;
+}
+
+.ncc-blogpreview-body-area {
+    padding: 0.5rem 1rem;
+    height: 100%;
+}
+
+.ncc-blogpreview-body-area p {
+    height: 40%;
+    overflow: hidden;
+}
+
+
+/* READ BLOG */
+.ncc-readblog-image-area {
+    width: 100%;
+    background-color: #f8f9fa;
+}
+.ncc-readblog-image {
+    height: 30vh;
+}
