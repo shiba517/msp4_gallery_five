@@ -1,0 +1,24 @@
+Gallery Five Confirmation for Order Number {{ order.order_number }}
+
+Hello {{ order.full_name }}!
+
+We hope you will enjoy your new art work and want to let you know that your purchase will send the charity £££ to those in need. Below is a confirmation of your order and the details you have submitted to us.
+
+Order Number: {{ order.order_number }}
+Order Date: {{ order.date }}
+
+Order Total: ${{ order.order_total }}
+Delivery: ${{ order.delivery_cost }}
+Grand Total: ${{ order.grand_total }}
+
+We will send your order to {{ order.street_address1 }} in {{ order.town_or_city }}, {{ order.country }}.
+
+If we need to get in touch, we will do so to this number: {{ order.phone_number }}.
+
+Please don;t hesitat to get in touch if you have any queries {{ contact_email }}.
+
+Thank you for your order!
+
+Sincerely,
+
+Gallery Five team
