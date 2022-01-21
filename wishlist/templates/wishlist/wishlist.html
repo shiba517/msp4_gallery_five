@@ -1,20 +1,13 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
-    </div>
-{% endblock %}
 
 {% block content %}
 <div class="container">
     <div class="row mb-4">
         <div class="col">
             <hr>
-                <h2 class="mb-4 text-center text-uppercase">art works</h2>
+                <h2 class="mb-4 text-center text-uppercase">wishlist</h2>
             <hr>
         </div>
     </div>
@@ -47,7 +40,7 @@
                     <i>{{ product.artist_name }}</i>
                     <p class="card-text display-5">{{ product.price }}</p>
                     <a href="{% url 'product_detail' product.id %}" class="btn ncc-btn-base">view</a>
-                    <a href="{% url 'add_wishlist' product.id %}" class="btn ncc-btn-base">view</a>
+                    <a href="{% url 'wishlist' %}" class="btn ncc-btn-base">view</a>
                 </div>
             </div>
         </div>
