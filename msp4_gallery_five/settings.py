@@ -46,9 +46,11 @@ INSTALLED_APPS = [
     'products',
     'crate',
     'checkout',
-    'crispy_forms',
     'profiles',
-    'blogs'
+    'blogs',
+
+    # CRIPSY FORMS
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -63,6 +65,7 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'msp4_gallery_five.urls'
 
+# CRISPY FORMS
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 TEMPLATES = [

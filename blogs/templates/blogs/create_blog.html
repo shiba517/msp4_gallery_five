@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block content %}
+<div class="container">
+    <div class="row mb-4">
+        <div class="col">
+            <hr>
+                <h2 class="mb-4 text-center text-uppercase">create blog</h2>
+            <hr>
+        </div>
+    </div>
+    <div class="row ">
+        <div class="offset-3 col-6">
+            <form action="{% url 'create_blog' %}" method="POST" class="site-form" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form | crispy }}
+                <div>
+                    <a href="" class="btn ncc-btn-base">cancel</a>
+                    <button type="submit" class="btn ncc-btn-base">post</button>
+                </div>
+            </form>
+            
+            
+        </div>   
+    </div>  
+{% endblock %}

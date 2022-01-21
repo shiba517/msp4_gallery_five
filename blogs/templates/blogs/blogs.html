@@ -11,6 +11,9 @@
             <hr>
         </div>
     </div>
+    <div class="row">
+        <a href="{% url 'create_blog' %}" class="btn ncc-btn-base">create</a>
+    </div>
     {% for blog in blogs %}
     <div class="row row-col-lg-2 ncc-blogpreview-dec m-4">
         <div class="col-6 d-flex flex-wrap align-items-center justify-content-center ncc-blogpreview-image-area">

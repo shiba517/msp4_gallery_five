@@ -26,6 +26,7 @@
     </div>
     <div>
         <p class="text-start">{{ blog.auther }} ({{ blog.date }})</p>
+        
     </div>
     <hr>
     <div class="row m-4">
@@ -34,6 +35,19 @@
                 {{ blog.article }}
             </p>
         </div>
+    </div>
+    <div>
+        {% if request.user.is_superuser %}
+        <form action="{% url 'read_blog' blog.id %}" method="POST" class="site-form">
+            {% csrf_token %}
+            {{ form | crispy }}
+            <div>
+                <a href="{% url 'reject_blog' blog.id %}" class="btn ncc-btn-base">delete</a>
+                <button type="submit" class="btn ncc-btn-base">post</button>
+            </div>
+        </form>
+        {% endif %}
+        
     </div>
 </div>
 {% endblock %}
