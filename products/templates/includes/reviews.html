@@ -5,9 +5,9 @@
 </div>
 
 <div class="row">
-    <div class="offset-3 col-6">
+    <div class="offset-3 col-6 ">
         {% for review in reviews %}
-        <div>
+        <div class="">
             <h5>{{ review.title }}</h5>
             <i>{{ review.auther }} ({{ review.date }})</i>
             <p>{{ review.review }}</p>
@@ -20,10 +20,12 @@
     </div>
 </div>
 
+{% if ordered %}
 <div class="row">
     <div class="offset-3 col-6">
-        <div class="text-center mb-5">
+        <div class=" mb-5">
             <h5>Write a review</h5>
+            
             <form action="{% url 'product_detail' product.id %}" method="POST" class="site-form" enctype="">
                 {% csrf_token %}
                 {{ form | crispy }}
@@ -35,3 +37,4 @@
         </div>
     </div>
 </div>
+{% endif %}

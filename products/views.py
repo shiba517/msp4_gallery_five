@@ -1,11 +1,14 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
+# from django.contrib.auth.models import User
 from django.db.models import Q
 from django.db.models.functions import Lower
 
 from .models import Product, Category, Reviews
 from .forms import ProductForm, ProductReviewForm
+
+from checkout.models import Order, OrderLineItem
 
 
 def all_products(request):
@@ -66,20 +69,25 @@ def product_detail(request, product_id):
 
     reviews = Reviews.objects.filter(product=product_id)
 
-    # FOR POSTING A REVIEW
-    if request.method == 'POST':
-        form = ProductReviewForm(request.POST, request.FILES)
-        if form.is_valid():
-            instance = form.save(commit=False)
-            instance.auther = request.user
-            instance.product = product
-            instance.save()
+    ordered = OrderLineItem.objects.filter(product=product_id)
 
-            return redirect(reverse('product_detail', args=[product.id]))
+    if request.method == 'POST':
+        if ordered:
+            form = ProductReviewForm(request.POST, request.FILES)
+            if form.is_valid():
+                instance = form.save(commit=False)
+                instance.auther = request.user
+                instance.product = product
+                instance.save()
+
+                return redirect(reverse('product_detail', args=[product.id]))
+        else:
+            return redirect(reverse('products'))
 
     form = ProductReviewForm()
     
     context = {
+        'ordered': ordered,
         'reviews': reviews,
         'product': product,
         'form': form,
