@@ -4,8 +4,8 @@ from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
 
-from .models import Product, Category
-from .forms import ProductForm
+from .models import Product, Category, Reviews
+from .forms import ProductForm, ProductReviewForm
 
 
 def all_products(request):
@@ -63,9 +63,26 @@ def all_products(request):
 def product_detail(request, product_id):
 
     product = get_object_or_404(Product, id=product_id)
+
+    reviews = Reviews.objects.filter(product=product_id)
+
+    # FOR POSTING A REVIEW
+    if request.method == 'POST':
+        form = ProductReviewForm(request.POST, request.FILES)
+        if form.is_valid():
+            instance = form.save(commit=False)
+            instance.auther = request.user
+            instance.product = product
+            instance.save()
+
+            return redirect(reverse('product_detail', args=[product.id]))
+
+    form = ProductReviewForm()
     
     context = {
+        'reviews': reviews,
         'product': product,
+        'form': form,
     }
 
     return render(request, 'products/product_detail.html', context)
@@ -135,5 +152,14 @@ def delete_product(request, product_id):
 
     product.delete()
     messages.success(request, 'artwor has been deleted :/')
+
+    return redirect(reverse('products'))
+
+
+@login_required()
+def remove_review(request, review_id):
+    review = get_object_or_404(Reviews, id=review_id)
+
+    review.delete()
 
     return redirect(reverse('products'))
