@@ -9,7 +9,9 @@ from .forms import BlogForm, PublishBlogForm
 
 
 def view_blogs(request):
-    blogs = Blog.objects.all()
+    # blogs = Blog.objects.all()
+
+    blogs = Blog.objects.filter(publish=True)
 
     context = {
         'blogs': blogs,
