@@ -10,22 +10,11 @@ from checkout.models import Order
 @login_required
 def profile(request):
     profile = get_object_or_404(UserProfile, user=request.user)
-
-    if request.method == 'POST':
-        form = UserProfileForm(request.POST, instance=profile)
-        if form.is_valid():
-            form.save()
-            messages.success(request, 'Profile updated successfully')
-        else:
-            messages.error(request, 'Failed to update your details. Please ensure you have enetered valid entries into the form')
-    else:
-        form = UserProfileForm(instance=profile)
     
     orders = profile.orders.all()
 
     template = 'profiles/profile.html'
     context = {
-        'form': form,
         'profile': profile,
         'orders': orders,
     }
@@ -45,6 +34,32 @@ def order_history(request, order_number):
     context = {
         'order': order,
         'from_profile': True,
+    }
+
+    return render(request, template, context)
+
+
+@login_required
+def update_profile(request):
+    profile = get_object_or_404(UserProfile, user=request.user)
+
+    if request.method == 'POST':
+        form = UserProfileForm(request.POST, instance=profile)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Profile updated successfully')
+        else:
+            messages.error(request, 'Failed to update your details. Please ensure you have enetered valid entries into the form')
+    else:
+        form = UserProfileForm(instance=profile)
+    
+    orders = profile.orders.all()
+
+    template = 'profiles/update_profile.html'
+    context = {
+        'form': form,
+        'profile': profile,
+        'orders': orders,
     }
 
     return render(request, template, context)

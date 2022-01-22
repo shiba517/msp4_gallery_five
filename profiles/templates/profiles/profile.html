@@ -15,29 +15,42 @@
             <hr>
         </div>
     </div>
-    <div class="row">
-        <div class="col">
-            <h2>Welcome {{ profile }}</h2>
-        </div>
-    </div>
 
     <div class="row m-4">
         <div class="col">
             <a href="{% url 'requested_blogs' %}" class="btn ncc-btn-base">requested blog posts</a>
+            
         </div>
     </div>
 
     <div class="row">
+        <!-- BASIC USER INFORMATION ON SHOW -->
         <div class="col-6">
-            <h4>your delivery information</h4>
-            <form action="{% url 'profile' %}" method="POST" id="profile-update-form">
-                {% csrf_token %}
-                {{ form|crispy }}
-                <button class="btn ncc-btn-base">change</button>
-            </form>
+            <div>
+                <ul class="list-group mb-2">
+                    <li class="list-group-item">
+                        <p><strong class="text-uppercase">name: </strong>{{ profile }}</p>
+                    </li>
+                    <li class="list-group-item">
+                        <p><strong class="text-uppercase">full address: </strong>{{profile.default_street_address1}},
+                            {{profile.default_street_address2}}, {{profile.default_country}},
+                            {{profile.default_town_or_city}}, {{profile.default_county}}, {{profile.default_postcode}}</p>
+                    </li>
+                    <li class="list-group-item">
+                        <p><strong class="text-uppercase">contact number: </strong>{{ profile.default_phone_number }}</p>
+                    </li>
+                    
+                </ul>
+                <a href="{% url 'update_profile' %}" class="btn ncc-btn-base">update profile</a>   
+            </div>
+            
         </div>
+        
+
+        <!-- ORDER HISTORY -->
         <div class="col-6">
-            <h4>order history</h4>
+            <h4 class="text-capitalize">order history</h4>
+            <hr>
             <div class="order-history table-responsive">
                 <table class="table table-sm table-borderless">
                     <thead>
