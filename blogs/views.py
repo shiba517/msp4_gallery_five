@@ -23,16 +23,15 @@ def view_blogs(request):
 def read_blog(request, blog_id):
     blog = get_object_or_404(Blog, id=blog_id)
 
+    # ADMIN CAN DECIDE WHETHER A BLOG SHOULD BE PUBLISHED; CAN NOT DELETE THE BLOG FROM HERE
     if request.method == 'POST': 
         form = PublishBlogForm(request.POST, request.FILES, instance=blog)
         if form.is_valid():
             form.save()
-            print('Blog has been set to publish')
-            messages.success(request, 'Successfully updated product!')
+            messages.success(request, 'Blog {blog.name} will be published')
             return redirect(reverse('view_blogs'))
         else:
-            print('Failed to update product. Please ensure the form is valid.')
-            messages.error(request, 'Failed to update product. Please ensure the form is valid.')
+            messages.error(request, 'Blog {blog.name} will not be published')
     else:
         form = PublishBlogForm(instance=blog)
 
@@ -51,6 +50,7 @@ def create_blog(request):
             instance = form.save(commit=False)
             instance.auther = request.user
             instance.save()
+            messages.error(request, 'Your {blog.name} blog has been sent for consideration')
 
             return redirect(reverse('view_blogs'))
     else:   
@@ -67,5 +67,6 @@ def create_blog(request):
 def reject_blog(request, blog_id):
     blog = get_object_or_404(Blog, id=blog_id)
     blog.delete()
+    messages.error(request, 'Blog has been deleted from teh database')
 
     return redirect(reverse('view_blogs'))

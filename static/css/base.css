@@ -2,6 +2,7 @@
 
 body {
     background-color: #f5f0e1;
+    background-color: #ccbf8f;
     /* background-color: saddlebrown; */
     font-family: 'Lato', sans-serif;
     font-family: 'Noto Sans', sans-serif;
@@ -28,6 +29,8 @@ body {
 }
 
 
+
+
 /* UNIVERSAL */
 .ncc-logo-dec {
     border: solid 0.5rem #f66e40;
@@ -37,6 +40,13 @@ body {
 
 .ncc-btn-base {
     background-color: #ffc13b;
+}
+
+
+/* BASE.HTML */
+.ncc-message {
+    /* position: absolute; */
+    width: 100%;
 }
 
 

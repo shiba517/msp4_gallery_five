@@ -83,7 +83,7 @@ def checkout(request):
     else:
         crate = request.session.get('crate', {})
         if not crate:
-            messages.error('There is nothing in your bag')
+            messages.error('Your crate is empty')
             return redirect(reverse('products'))
         
         current_crate = crate_content(request)

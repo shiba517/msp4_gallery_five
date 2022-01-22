@@ -71,6 +71,7 @@ def product_detail(request, product_id):
 
     ordered = OrderLineItem.objects.filter(product=product_id)
 
+    # REVIEW WILL BE POSTED FROM HERE
     if request.method == 'POST':
         if ordered:
             form = ProductReviewForm(request.POST, request.FILES)
@@ -105,7 +106,8 @@ def add_product(request):
         form = ProductForm(request.POST, request.FILES)
         if form.is_valid():
             product = form.save()
-            messages.success(request, 'Successfullt added product')
+            # messages.success(request, 'Successfully added product')
+            messages.success(request, f'You have added {product.name} to the database')
             return redirect(reverse('product_detail', args=[product.id]))
         else:
             messages.error(request, 'Failed to add product. Please ensure you have enetered valid entries into the form')
@@ -128,18 +130,15 @@ def edit_product(request, product_id):
     product = get_object_or_404(Product, id=product_id)
 
     if request.method == 'POST':
-        print('REQUEST IS A POST')
         form = ProductForm(request.POST, request.FILES, instance=product)
-        print('FORM POSSIBLY HAS BEEN CREATED WITH PRODUCTFORM')
         if form.is_valid():
-            print('FORM IS VALID')
             form.save()
-            messages.success(request, 'Successfully updated product!')
+            # messages.success(request, 'Successfully updated product!')
+            messages.success(request, f'You have successfully updated the information for {product.name}')
             return redirect(reverse('product_detail', args=[product.id]))
         else:
             messages.error(request, 'Failed to update product. Please ensure the form is valid.')
     else:
-        print('BUTTON DID NOT POST :/')
         form = ProductForm(instance=product)
 
     template = 'products/edit_product.html'
@@ -159,7 +158,7 @@ def delete_product(request, product_id):
     product = get_object_or_404(Product, id=product_id)
 
     product.delete()
-    messages.success(request, 'artwor has been deleted :/')
+    messages.success(request, f'You have deleted {product.name} from the database')
 
     return redirect(reverse('products'))
 
@@ -169,5 +168,6 @@ def remove_review(request, review_id):
     review = get_object_or_404(Reviews, id=review_id)
 
     review.delete()
+    messages.success(request, f'You have deleted the review from {review.name}')
 
     return redirect(reverse('products'))
