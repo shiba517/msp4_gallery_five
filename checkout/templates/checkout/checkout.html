@@ -92,7 +92,7 @@
             </div>
                 {% endfor %}
             <div class="mt-3">
-                <p>Charitable contribution: £{{ total }}</p>
+                <p>Charitable contribution: £{{ charitable_slice|floatformat:2 }}</p>
                 <p class="display-6"><strong>Grand total: £{{ total }}</strong></p>
             </div>
         </div>
