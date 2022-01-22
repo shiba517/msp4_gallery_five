@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.http import HttpResponseRedirect
+from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 
 
@@ -43,7 +44,12 @@ def read_blog(request, blog_id):
     return render(request, 'blogs/read_blog.html', context)
 
 
+@login_required()
 def create_blog(request):
+    if not request.user:
+        messages.error(request, 'You do not have access/permission to this page')
+        return redirect(reverse('home'))
+
     if request.method == 'POST':    
         form = BlogForm(request.POST, request.FILES)
         if form.is_valid():
@@ -70,3 +76,14 @@ def reject_blog(request, blog_id):
     messages.error(request, 'Blog has been deleted from teh database')
 
     return redirect(reverse('view_blogs'))
+
+
+def requested_blogs(request):
+
+    blogs = Blog.objects.filter(publish=False)
+
+    context = {
+        'blogs': blogs,
+    }
+
+    return render(request, 'blogs/requested_blogs.html', context)
