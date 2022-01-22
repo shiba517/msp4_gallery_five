@@ -22,9 +22,10 @@ def add_wishlist(request, product_id):
     else:
         product.wishlisted.add(request.user.id)
         print('LIKED')
+        
     return HttpResponseRedirect(request.META["HTTP_REFERER"])
 
-    return render(request, 'wishlist/wishlist.html')
+    # return render(request, 'wishlist/wishlist.html')
 
 
 @login_required

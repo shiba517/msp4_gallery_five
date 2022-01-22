@@ -40,7 +40,7 @@
                     <i>{{ product.artist_name }}</i>
                     <p class="card-text display-5">{{ product.price }}</p>
                     <a href="{% url 'product_detail' product.id %}" class="btn ncc-btn-base">view</a>
-                    <a href="{% url 'wishlist' %}" class="btn ncc-btn-base">view</a>
+                    <a href="{% url 'add_wishlist' product.id %}" class="btn ncc-btn-base">view</a>
                 </div>
             </div>
         </div>
