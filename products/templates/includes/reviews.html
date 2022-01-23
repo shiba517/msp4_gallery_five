@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row mt-4 mb-4">
     <div class="offset-3 col-6">
         <h3 class="text-center">Reviews</h3>
     </div>
@@ -24,13 +24,12 @@
 <div class="row">
     <div class="offset-3 col-6">
         <div class=" mb-5">
-            <h5>Write a review</h5>
+            <h4>Write a review</h4>
             
-            <form action="{% url 'product_detail' product.id %}" method="POST" class="site-form" enctype="">
+            <form action="{% url 'product_detail' product.id %}" method="POST" class="site-form mt-3" enctype="">
                 {% csrf_token %}
                 {{ form | crispy }}
                 <div>
-                    <a href="" class="btn ncc-btn-base">cancel</a>
                     <button type="submit" class="btn ncc-btn-base">post</button>
                 </div>
             </form>
