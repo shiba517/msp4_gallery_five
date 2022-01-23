@@ -74,6 +74,14 @@ body {
     background-color: #f66e40;
 }
 
+@media (max-width: 991.98px) {
+    .ncc-navlink-account {
+        width: 50vw;
+        margin: 1rem 0;
+    }
+}
+
+
 
 /* PRODUCTS */
 .ncc-card-image-area {

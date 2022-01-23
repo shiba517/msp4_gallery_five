@@ -44,10 +44,13 @@
             <div>
                 <a href="{% url 'reject_blog' blog.id %}" class="btn ncc-btn-base">delete</a>
                 <button type="submit" class="btn ncc-btn-base">post</button>
+                <a href="{% url 'view_blogs' %}" class="btn ncc-btn-base">back to blogs</a>
             </div>
         </form>
+        {% else %}
+        <a href="{% url 'view_blogs' %}" class="btn ncc-btn-base">back to blogs</a>
         {% endif %}
-        <a href="{% url 'view_blos' blog.id %}" class="btn ncc-btn-base">back to blogs</a>
+        
     </div>
 </div>
 {% endblock %}

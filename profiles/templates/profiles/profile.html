@@ -17,16 +17,16 @@
     </div>
 
     <div class="row m-4">
-        <div class="col">
-            <a href="{% url 'update_profile' %}" class="btn ncc-btn-base">Update profile</a>  
-            <a href="{% url 'requested_blogs' %}" class="btn ncc-btn-base">Requested blog posts</a>
-            <a class="btn ncc-btn-base" href="{% url 'add_product' %}">Add product</a> 
+        <div class="col text-center">
+            <a href="{% url 'update_profile' %}" class="btn ncc-btn-base m-1">Update profile</a>  
+            <a href="{% url 'requested_blogs' %}" class="btn ncc-btn-base m-1">Requested blog posts</a>
+            <a class="btn ncc-btn-base m-1" href="{% url 'add_product' %}">Add product</a> 
         </div>
     </div>
 
     <div class="row">
         <!-- BASIC USER INFORMATION ON SHOW -->
-        <div class="col-6">
+        <div class="col col-lg-6">
             <h4 class="text-capitalize">your information</h4>
             <hr>
             <div>
@@ -51,7 +51,7 @@
         
 
         <!-- ORDER HISTORY -->
-        <div class="col-6">
+        <div class="col col-lg-6 mt-3">
             <h4 class="text-capitalize">order history</h4>
             <hr>
             <div class="order-history table-responsive">

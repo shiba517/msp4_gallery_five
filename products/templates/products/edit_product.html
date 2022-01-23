@@ -13,7 +13,7 @@
     </div>
 
     <div class="row ">
-        <div class="offset-3 col-6">
+        <div class="col offset-lg-3 col-lg-6">
             <form action="{% url 'edit_product' product.id %}" method="POST" enctype="multipart/form-data">
                 {% csrf_token %}
                 {{ form | crispy }}
