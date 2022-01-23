@@ -80,6 +80,7 @@ body {
     height: 50vh;
     /* background-color: #f66e40; */
     overflow: hidden;
+    /* padding: 0; */
 }
 
 .ncc-card-img {
@@ -90,6 +91,16 @@ body {
     background-color: #f5f0e1;
     background-color: #f66e40;
     /* height: 20vh; */
+}
+
+.ncc-wishlist-button {
+    position: absolute;
+    z-index: 2;
+    /* bottom: 0; */
+    /* right: 0; */
+    font-size: 3rem;
+    margin-left: 1rem;
+    /* color: #ffc13b; */
 }
 
 

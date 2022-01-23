@@ -14,6 +14,7 @@ class ProductForm(forms.ModelForm):
         screen_names = [(c.id, c.get_screen_name()) for c in categories]
 
         self.fields['category'].choices = screen_names
+        self.fields['price'].widget.attrs['min'] = 1
         for field_name, field in self.fields.items():
             field.widget.attrs['class'] = 'border-black rounded-0'
 

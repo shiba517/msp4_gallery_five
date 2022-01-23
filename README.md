@@ -293,3 +293,70 @@ Selected blog page: [wireframe image](readme/images/selected_blog.png)
         * Navy - #1e3d59 
         * Pale orange - #ff6e40 
         * Yellow - #ffc13b 
+
+
+## **TESTING**
+
+### Cross platfrom testing
+CRUD (create, read, update, delete) TESTING
+| AIM | SM | MD | LG |
+Is it possible to create an art work to add the database?
+Is it possible to read/see the created art work?
+Is it possible to update the art work from the database?
+Is it possible to delete the art work from the database?
+Is it possible to create a blog to add the database?
+Is it possible to read/see the created a blog?
+Is it possible to update the blog from the database?
+Is it possible to delete the blog from the database?
+Is it possible to create a review for an art work?
+Is it possible to read/see the review created?
+Is it possible to update the review from the database?
+Is it possible to delete the review from the database?
+
+Form validation
+Register
+| AIM | SM | MD | LG |
+'E-mail' field must have follow the pattern of have a '@' and a '.' in the email. It won't accept if it does not
+Both 'E-mail' fields must match
+'Username' field must only contain letters, numbers, and @/./+/-/_ characters
+Both 'Password' fields must match
+
+Login
+| AIM | SM | MD | LG |
+'Login' field must match with user from the database
+'Password' field must match with the password made for user entered in the 'Login' field
+
+Checkout
+| AIM | SM | MD | LG |
+'Full Name' field will only accept upto 50 characters
+'E-mail' field must have follow the pattern of have a '@' and a '.' in the email
+'Phone Number' field will only accept numbers and a maximum of 20 numbers
+'Street Address 1' field will only accept upto 80 characters
+'Street Address 2' field will only accept upto 80 characters
+'Town or City' field will only accept upto 40 characters
+'County, State, or Locality' field will only accept upto 80 characters
+'Postcode' field will only accept upto 20 characters
+'Card number' field will only accept numbers
+
+Add product
+| AIM | SM | MD | LG |
+'Category' will have a drop down containing options from the Category database
+'Name' will allow upto 80 characters
+'Artist name' will only allow upto 80 characters
+'Description' will allow upto 500 characters
+'Price' will only accept numbers. It will take a numbers upto 4 digits in length
+'Price' will not go lower than 0
+'Image url' field will accept only urls
+'Image' will only let image files to be uploaded
+
+
+Create Blog
+| AIM | SM | MD | LG |
+'Title' field will accept upto 100 characters
+'Article' field has no limits to ammount of characters
+'Image' field will only accept image files
+
+Reviews
+| AIM | SM | MD | LG |
+'Title' field will accept upto 100 characters
+'Review' field will accept upto 1000 characters
