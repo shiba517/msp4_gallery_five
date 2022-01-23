@@ -19,10 +19,12 @@
                 Paintings
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <li><a class="dropdown-item" href="{% url 'products' %}?category=water_colour">water colour</a></li>
-                <li><a class="dropdown-item" href="{% url 'products' %}?category=acrylic">acrylic</a></li>
-                <li><a class="dropdown-item" href="{% url 'products' %}?category=oil">oil</a></li>
-                <li><a class="dropdown-item" href="{% url 'products' %}?category=tempera">tempera</a></li>
+                    <li><a class="dropdown-item" href="{% url 'products' %}?category=water_colour">water colour</a></li>
+                    <li><a class="dropdown-item" href="{% url 'products' %}?category=acrylic">acrylic</a></li>
+                    <li><a class="dropdown-item" href="{% url 'products' %}?category=oil">oil</a></li>
+                    <li><a class="dropdown-item" href="{% url 'products' %}?category=tempera">tempera</a></li>  
+                    
+                    
                 </ul>
                 
             </li>
@@ -68,7 +70,7 @@
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                     <li><a class="dropdown-item" href="{% url 'profile' %}">Profile</a></li>
-                    <li><a class="dropdown-item" href="{% url 'account_logout' %}">logout</a></li>
+                    <li><a class="dropdown-item" href="{% url 'account_logout' %}">Logout</a></li>
                     {% if request.user.is_superuser %}
                     <li><a class="dropdown-item" href="{% url 'add_product' %}">Add product</a></li>
                     {% endif %}

@@ -29,11 +29,6 @@ class Product(models.Model):
     image = models.ImageField(null=True, blank=True)
     wishlisted = models.ManyToManyField('profiles.UserProfile', blank=True)
 
-    def __str__(self):
-        return self.name
-
-    
-
 
 class Reviews(models.Model):
     class Meta:
