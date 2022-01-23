@@ -11,21 +11,24 @@
     <div class="row">
         <div class="col">
             <hr>
-                <h2 class="mb-4 text-center text-uppercase">your profile</h2>
+                <h2 class="mb-4 text-center text-uppercase">your profile - <strong>{{ profile }}</strong></h2>
             <hr>
         </div>
     </div>
 
     <div class="row m-4">
         <div class="col">
-            <a href="{% url 'requested_blogs' %}" class="btn ncc-btn-base">requested blog posts</a>
-            
+            <a href="{% url 'update_profile' %}" class="btn ncc-btn-base">Update profile</a>  
+            <a href="{% url 'requested_blogs' %}" class="btn ncc-btn-base">Requested blog posts</a>
+            <a class="btn ncc-btn-base" href="{% url 'add_product' %}">Add product</a> 
         </div>
     </div>
 
     <div class="row">
         <!-- BASIC USER INFORMATION ON SHOW -->
         <div class="col-6">
+            <h4 class="text-capitalize">your information</h4>
+            <hr>
             <div>
                 <ul class="list-group mb-2">
                     <li class="list-group-item">
@@ -41,7 +44,7 @@
                     </li>
                     
                 </ul>
-                <a href="{% url 'update_profile' %}" class="btn ncc-btn-base">update profile</a>   
+                 
             </div>
             
         </div>
