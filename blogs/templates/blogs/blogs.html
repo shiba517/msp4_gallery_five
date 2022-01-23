@@ -12,18 +12,20 @@
         </div>
     </div>
     <div class="row">
-        <a href="{% url 'create_blog' %}" class="btn ncc-btn-base">create</a>
+        <div class="col text-center">
+            <a href="{% url 'create_blog' %}" class="btn ncc-btn-base">Write a blog</a>
+        </div>
     </div>
     {% for blog in blogs %}
     <div class="row row-col-lg-2 ncc-blogpreview-dec m-4">
-        <div class="col-6 d-flex flex-wrap align-items-center justify-content-center ncc-blogpreview-image-area">
+        <div class="d-none d-sm-block col-md-6 d-flex flex-wrap align-items-center justify-content-center ncc-blogpreview-image-area">
             {% if blog.image %}
             <img src="{{ blog.image.url }}" class="ncc-blogpreview-image d-flex align-items-center" alt="">
             {% else %}
             <img src="{{ MEDIA_URL }}noimage.jpg" class="ncc-blogpreview-image d-flex align-items-center" alt="...">
             {% endif %}
         </div>
-        <div class="col-6 ncc-blogpreview-body-area">
+        <div class="col col-md-6 ncc-blogpreview-body-area">
             <h2>{{ blog.title }}</h2>
             <i>{{ blog.auther }}</i>
             <p>{{ blog.article }}</p>

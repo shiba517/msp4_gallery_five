@@ -5,7 +5,7 @@
 </div>
 
 <div class="row">
-    <div class="offset-3 col-6 ">
+    <div class="col offset-md-2 col-md-8 offset-lg-3 col-lg-6">
         {% for review in reviews %}
         <div class="">
             <h5>{{ review.title }}</h5>
@@ -21,9 +21,9 @@
 </div>
 
 {% if ordered %}
-<div class="row">
-    <div class="offset-3 col-6">
-        <div class=" mb-5">
+<div class="row mt-3">
+    <div class="col offset-md-2 col-md-8">
+        <div class=" mb-4">
             <h4>Write a review</h4>
             
             <form action="{% url 'product_detail' product.id %}" method="POST" class="site-form mt-3" enctype="">

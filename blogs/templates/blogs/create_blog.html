@@ -12,17 +12,17 @@
         </div>
     </div>
     <div class="row ">
-        <div class="offset-3 col-6">
+        {% if request.user.is_superuser %}
+        <div class="col offset-md-2 col-md-8 offset-lg-3 col-lg-6">
             <form action="{% url 'create_blog' %}" method="POST" class="site-form" enctype="multipart/form-data">
                 {% csrf_token %}
                 {{ form | crispy }}
                 <div>
-                    <a href="" class="btn ncc-btn-base">cancel</a>
+                    <a href="{% url 'view_blogs' %}" class="btn ncc-btn-base">cancel</a>
                     <button type="submit" class="btn ncc-btn-base">post</button>
                 </div>
             </form>
-            
-            
+        {% endif %}   
         </div>   
     </div>  
 {% endblock %}

@@ -298,7 +298,7 @@ Selected blog page: [wireframe image](readme/images/selected_blog.png)
 ## **TESTING**
 
 ### Cross platfrom testing
-CRUD (create, read, update, delete) TESTING
+#### CRUD (create, read, update, delete) TESTING
 | AIM | SM | MD | LG |
 Is it possible to create an art work to add the database?
 Is it possible to read/see the created art work?
@@ -313,7 +313,7 @@ Is it possible to read/see the review created?
 Is it possible to update the review from the database?
 Is it possible to delete the review from the database?
 
-Form validation
+#### Form validation
 Register
 | AIM | SM | MD | LG |
 'E-mail' field must have follow the pattern of have a '@' and a '.' in the email. It won't accept if it does not
@@ -360,3 +360,5 @@ Reviews
 | AIM | SM | MD | LG |
 'Title' field will accept upto 100 characters
 'Review' field will accept upto 1000 characters
+
+

@@ -18,14 +18,14 @@
                 <a class="nav-link active" aria-current="page" href="{% url 'products' %}">All</a>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Paintings
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                     <li><a class="dropdown-item" href="{% url 'products' %}?category=water_colour">water colour</a></li>
                     <li><a class="dropdown-item" href="{% url 'products' %}?category=acrylic">acrylic</a></li>
                     <li><a class="dropdown-item" href="{% url 'products' %}?category=oil">oil</a></li>
-                    <li><a class="dropdown-item" href="{% url 'products' %}?category=tempera">tempera</a></li>  
+                    <li><a class="dropdown-item" href="{% url 'products' %}?category=water_colour,acrylic,oil">All paintings</a></li>  
                     
                     
                 </ul>
@@ -39,6 +39,7 @@
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                     <li><a class="dropdown-item" href="{% url 'products' %}?category=digital">digital</a></li>
                     <li><a class="dropdown-item" href="{% url 'products' %}?category=handmade">handmade</a></li>
+                    <li><a class="dropdown-item" href="{% url 'products' %}?category=digital,handmade">handmade</a></li>
                 </ul>
             </li>
             <li class="nav-item dropdown">
@@ -50,6 +51,7 @@
                     <li><a class="dropdown-item" href="{% url 'products' %}?category=clay">clay</a></li>
                     <li><a class="dropdown-item" href="{% url 'products' %}?category=stone">stone</a></li>
                     <li><a class="dropdown-item" href="{% url 'products' %}?category=wood">wood</a></li>
+                    <li><a class="dropdown-item" href="{% url 'products' %}?category=clay,stone,wood">wood</a></li>
                 </ul>
             </li>
             <li class="nav-item">
