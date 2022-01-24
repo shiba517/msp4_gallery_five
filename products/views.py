@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
-# from django.contrib.auth.models import User
+from django.contrib.auth.models import User
 from django.db.models import Q
 from django.db.models.functions import Lower
 
@@ -9,7 +9,7 @@ from .models import Product, Category, Reviews
 from .forms import ProductForm, ProductReviewForm
 
 from checkout.models import Order, OrderLineItem
-
+from profiles.models import UserProfile
 
 def all_products(request):
 
@@ -69,7 +69,21 @@ def product_detail(request, product_id):
 
     reviews = Reviews.objects.filter(product=product_id)
 
-    ordered = OrderLineItem.objects.filter(product=product_id)
+    # profile = get_object_or_404(UserProfile, user=request.user)
+    
+    ordered = False
+    ordered_proc1 = OrderLineItem.objects.filter(product=product_id)
+    ordered2 = Order.objects.all()
+    print('*******HERE********')
+    for each in ordered_proc1:
+        # print(each.order.order_number)
+        for per in ordered2:
+            if each.order.order_number == per.order_number:
+                print('FOUND')
+                print(per)
+                ordered = True
+    # print(ordered[0].order.order_number)
+    print('*******HERE********')
 
     # REVIEW WILL BE POSTED FROM HERE
     if request.method == 'POST':

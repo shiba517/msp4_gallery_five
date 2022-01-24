@@ -76,7 +76,7 @@ body {
 
 @media (max-width: 991.98px) {
     .ncc-navlink-account {
-        width: 50vw;
+        width: 50%;
         margin: 1rem 0;
     }
 }

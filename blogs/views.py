@@ -56,7 +56,7 @@ def create_blog(request):
             instance = form.save(commit=False)
             instance.auther = request.user
             instance.save()
-            messages.error(request, 'Your {blog.name} blog has been sent for consideration')
+            messages.error(request, f'Your {blog.name} blog has been sent for consideration')
 
             return redirect(reverse('view_blogs'))
     else:   
@@ -79,6 +79,9 @@ def reject_blog(request, blog_id):
 
 
 def requested_blogs(request):
+    if not request.user.is_superuser:
+        messages.error(request, 'You do not have access/permission to this page')
+        return redirect(reverse('home'))
 
     blogs = Blog.objects.filter(publish=False)
 
