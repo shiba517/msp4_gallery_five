@@ -4,6 +4,8 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from django.db.models import Q
 from django.db.models.functions import Lower
+from django.http import HttpResponseRedirect
+
 
 from .models import Product, Category, Reviews
 from .forms import ProductForm, ProductReviewForm
@@ -186,6 +188,7 @@ def remove_review(request, review_id):
     review = get_object_or_404(Reviews, id=review_id)
 
     review.delete()
-    messages.success(request, f'You have deleted the review from {review.name}')
+    messages.success(request, 'You have deleted the review from')
 
-    return redirect(reverse('products'))
+    # return redirect(reverse('products'))
+    return HttpResponseRedirect(request.META["HTTP_REFERER"])

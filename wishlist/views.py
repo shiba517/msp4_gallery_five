@@ -23,7 +23,7 @@ def add_wishlist(request, product_id):
         
     return HttpResponseRedirect(request.META["HTTP_REFERER"])
 
-    # return render(request, 'wishlist/wishlist.html')
+    return render(request, 'wishlist/wishlist.html')
 
 
 @login_required

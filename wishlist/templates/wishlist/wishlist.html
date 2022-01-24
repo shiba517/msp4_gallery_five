@@ -12,8 +12,9 @@
         </div>
     </div>
 
-    {% if product %}
+    
     <!-- Ordering of products -->
+    {% if product|length > 0 %}
     <div class="row mb-4">
         <div class="col col-lg-4">
             <select id="sort-selector" class="form-select" aria-label="Default select example">
@@ -23,7 +24,9 @@
               </select>
         </div>
     </div>
-    {% else %}
+    {% endif %}
+
+    {% if product|length == 0 %}
     <div class="row">
         <div class="col">
             <h3>Your wishlist is empty</h3>
@@ -38,6 +41,9 @@
         <div class="col mb-4">
             <div class="card">
                 <div class="ncc-card-image-area">
+                    {% if request.user.is_authenticated %}
+                    <a href="{% url 'add_wishlist' product.id %}" class="ncc-wishlist-button" style="color:black"><i class="fas fa-heart"></i></a>        
+                    {% endif %}  
                     {% if product.image %}
                     <img src="{{ product.image.url }}" class=" ncc-card-img" alt="...">
                     {% else %}
