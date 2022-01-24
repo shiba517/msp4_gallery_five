@@ -69,8 +69,9 @@ def product_detail(request, product_id):
 
     reviews = Reviews.objects.filter(product=product_id)
 
-    # profile = get_object_or_404(UserProfile, user=request.user)
+    profile = get_object_or_404(UserProfile, user=request.user)
     
+    # FINDS IF THE USER HAD PREVIOUSLY PURCHSED THE ART WORK
     ordered = False
     ordered_proc1 = OrderLineItem.objects.filter(product=product_id)
     ordered2 = Order.objects.all()
@@ -79,9 +80,11 @@ def product_detail(request, product_id):
         # print(each.order.order_number)
         for per in ordered2:
             if each.order.order_number == per.order_number:
-                print('FOUND')
-                print(per)
-                ordered = True
+                if per.user_profile == profile:
+                    print('FOUND')
+                    print(per.user_profile)
+                    print(profile)
+                    ordered = True
     # print(ordered[0].order.order_number)
     print('*******HERE********')
 
