@@ -28,4 +28,8 @@ urlpatterns = [
     path('profile/', include('profiles.urls')),
     path('blogs/', include('blogs.urls')),
     path('wishlist/', include('wishlist.urls')),
+    path('errors/', include('errors.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+
+handler404="errors.views.error404"

@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'profiles',
     'blogs',
     'wishlist',
+    'errors',
 
     # CRIPSY FORMS
     'crispy_forms',
