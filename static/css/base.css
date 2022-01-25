@@ -2,12 +2,14 @@
 
 body {
     background-color: #f5f0e1;
+    background-color: #f3e8c6;
     /* background-color: #fbeec1; */
     /* background-color: #edf5e1; */
     /* background-color: #ccbf8f; */
     /* background-color: saddlebrown; */
     font-family: 'Lato', sans-serif;
     font-family: 'Noto Sans', sans-serif;
+    min-height: 90vh;
 }
 
 
@@ -30,8 +32,9 @@ body {
     background-color: crimson;
 }
 
-.list-group {
-    /* background-color: blue; */
+.ncc-test-height {
+    min-height: 85vh;
+    padding-bottom: 4rem;
 }
 
 
@@ -50,6 +53,7 @@ body {
 /* BASE.HTML */
 .ncc-message {
     /* position: absolute; */
+    background-color: #f66e40;
     width: 100%;
 }
 
@@ -154,6 +158,9 @@ body {
     background-color: #f8f9fa;
     height: 20rem;
     overflow: hidden;
+    /* padding-bottom: 2rem; */
+    /* margin-bottom: 1rem; */
+    border-bottom: solid #1e3d59;
 }
 @media (max-width: 767.98px) {
     .ncc-blogpreview-dec {
@@ -166,18 +173,21 @@ body {
 
 .ncc-blogpreview-image-area {
     /* background-color: #ffc13b; */
+    /* background-color: #f66e40; */
+    background-color: transparent;
     height: 100%
 }
 
 .ncc-blogpreview-image {
     max-width: 100%;
-    max-height: 100%;
+    /* max-height: 100%; */
+    overflow: hidden;
     /* object-fit: contain; */
     object-fit: cover;
 }
 
 .ncc-blogpreview-body-area {
-    padding: 0.5rem 1rem;
+    /* padding: 0.5rem 1rem; */
     height: 100%;
 }
 

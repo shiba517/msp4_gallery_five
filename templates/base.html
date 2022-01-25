@@ -60,11 +60,13 @@
           
     {% endif %}
 
-    
-
-    {% block content %}
+    <div class="ncc-test-height">
+      {% block content %}
         {% include 'includes/hero-section.html' %}
-    {% endblock %}
+      {% endblock %}
+    </div>
+
+    
 
     {% block footer_content %}
           {% include 'includes/footer.html' %}
