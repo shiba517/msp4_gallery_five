@@ -45,7 +45,9 @@ INSTALLED_APPS = [
     'home',
     'products',
     'crate',
+    # 'checkout' app heavily copied/slightly adapted from the Code Institute course. More details in the README.md under code(REF002)
     'checkout',
+    # 'profiles' app heavily copied/slightly adapted from the Code Institute course. More details in the README.md under code(REF001)
     'profiles',
     'blogs',
     'wishlist',
