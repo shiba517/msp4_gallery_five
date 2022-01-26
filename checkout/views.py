@@ -91,7 +91,7 @@ def checkout(request):
         total = current_crate['grand_total']
         stripe_total = round(total * 100)
         stripe.api_key = stripe_secret_key
-        inent = stripe.PaymentIntent.create(
+        intent = stripe.PaymentIntent.create(
             amount=stripe_total,
             currency=settings.STRIPE_CURRENCY,
         )
@@ -125,7 +125,7 @@ def checkout(request):
     context = {
         'order_form': order_form,
         'stripe_public_key': stripe_public_key,
-        'client_secret': inent.client_secret
+        'client_secret': intent.client_secret
     }
 
     return render(request, template, context)

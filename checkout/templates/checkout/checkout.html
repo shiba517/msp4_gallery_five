@@ -18,6 +18,7 @@
     </div>
 
     <div class="row row-cols-1 row-cols-lg-2">
+        <!-- DETAILS OF CURRENT ORDER -->
         <div class="col col-lg-6">
             <form action="{% url 'checkout' %}" method="POST" id="payment-form">
                 {% csrf_token %}

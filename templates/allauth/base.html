@@ -9,13 +9,11 @@
     {% block body %}
 
     {% if messages %}
-    <div>
-      <strong>Messages:</strong>
-      <ul>
-        {% for message in messages %}
-        <li>{{message}}</li>
+    <div class="ncc-message alert alert-warning alert-dismissible fade show" role="alert">
+      {% for message in messages %}
+        <p class="text-center">{{ message }}</p>
         {% endfor %}
-      </ul>
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
     {% endif %}
 

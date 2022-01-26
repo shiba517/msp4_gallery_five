@@ -17,7 +17,7 @@
     <div class="row">
         <!-- <div class="col"> -->
             {% if crate_items %}
-            <div class="col offset-md-2 col-md-8">
+            <div class="col-12 ">
                 <div class="table-responsive rounded">
                     <table class="table table-sm table-borderless">
                         <thead class="text-black">
@@ -32,7 +32,8 @@
                             {% for item in crate_items %}
                             <tr>
                                 
-                                <td class="d-sm-none d-md-block p-3 w-25">
+                                <td class="p-3 w-25">
+                                <!-- <td class="d-none d-md-block p-3 w-25"> -->
                                     {% if item.product.image %}
                                     <img class="img-fluid rounded" src="{{ item.product.image.url }}">
                                     {% else %}
@@ -60,7 +61,7 @@
                                         
                                     </form>
                                     <a class="update-link btn ncc-btn-base"><small>Update</small></a>
-                                    <a href="" class="remove-item btn float-right ncc-btn-base" id="remove_{{ item.item_id }}"><small>Remove</small></a>
+                                    <a href="" class="remove-item btn ncc-btn-base" id="remove_{{ item.item_id }}"><small>Remove</small></a>
                                 </td>
                                 <td class="py-3">
                                     <p>£{{ item.product.price | calc_subtotal:item.quantity }}</p>
@@ -70,7 +71,7 @@
                     </table>
                 </div>
             </div>
-            <div class="col offset-md-2 col-md-8">
+            <div class="col-12 text-center">
                 <div>
                     <h3>SUMMARY</h3>
                     <!-- <hr> -->
@@ -108,9 +109,12 @@
                 <a href="{% url 'checkout' %}" class="btn ncc-btn-base">Checkout</a>
             </div>
             {% else %}
-            <h3>Your crate is empty</h3>
-            <p>Why not do something about it by browsing our gallery</p>
-            <a href="{% url 'products' %}" class="btn ncc-btn-base">gallery</a>
+            <div class="col">
+                <h3>Your crate is empty</h3>
+                <p>Why not do something about it by browsing our gallery</p>
+                <a href="{% url 'products' %}" class="btn ncc-btn-base">gallery</a>
+            </div>
+            
             {% endif %}
         <!-- </div> -->
     </div>

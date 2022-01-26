@@ -1,107 +1,107 @@
 <nav class="navbar navbar-expand-lg ncc-navbar-dec">
-    <div class="container">
-    <a class="navbar-brand" href="{% url 'home' %}">
-        <div href="" class="ncc-logo-dec">
-            <i class="fas fa-palette m-2 display-5"></i>
-        </div>
-    </a>
-    <!-- Navbar icon for screen sizes less than lg -->
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="{% url 'home' %}"><strong>Home</strong></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="{% url 'products' %}">All</a>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Paintings
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <li><a class="dropdown-item" href="{% url 'products' %}?category=water_colour">water colour</a></li>
-                    <li><a class="dropdown-item" href="{% url 'products' %}?category=acrylic">acrylic</a></li>
-                    <li><a class="dropdown-item" href="{% url 'products' %}?category=oil">oil</a></li>
-                    <li><a class="dropdown-item" href="{% url 'products' %}?category=water_colour,acrylic,oil">All paintings</a></li>  
+    <div class="container ">
+        <a class="navbar-brand" href="{% url 'home' %}">
+            <div href="" class="ncc-logo-dec">
+                <i class="fas fa-palette m-2 display-5"></i>
+            </div>
+        </a>
+        <!-- Navbar icon for screen sizes less than lg -->
+        <button class="navbar-toggler ncc-test-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon "></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{% url 'home' %}"><strong>Home</strong></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{% url 'products' %}">All</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Paintings
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <li><a class="dropdown-item" href="{% url 'products' %}?category=water_colour">water colour</a></li>
+                        <li><a class="dropdown-item" href="{% url 'products' %}?category=acrylic">acrylic</a></li>
+                        <li><a class="dropdown-item" href="{% url 'products' %}?category=oil">oil</a></li>
+                        <li><a class="dropdown-item" href="{% url 'products' %}?category=water_colour,acrylic,oil">All paintings</a></li>  
+                        
+                        
+                    </ul>
                     
-                    
-                </ul>
-                
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown"
-                    aria-expanded="false">
-                    Graphics
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <li><a class="dropdown-item" href="{% url 'products' %}?category=digital">digital</a></li>
-                    <li><a class="dropdown-item" href="{% url 'products' %}?category=handmade">handmade</a></li>
-                    <li><a class="dropdown-item" href="{% url 'products' %}?category=digital,handmade">handmade</a></li>
-                </ul>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown"
-                    aria-expanded="false">
-                    Sculptures
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <li><a class="dropdown-item" href="{% url 'products' %}?category=clay">clay</a></li>
-                    <li><a class="dropdown-item" href="{% url 'products' %}?category=stone">stone</a></li>
-                    <li><a class="dropdown-item" href="{% url 'products' %}?category=wood">wood</a></li>
-                    <li><a class="dropdown-item" href="{% url 'products' %}?category=clay,stone,wood">wood</a></li>
-                </ul>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="{% url 'view_blogs' %}">Blog</a>
-            </li>
-            {% if request.user.is_authenticated %}
-            <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="{% url 'wishlist' %}">Wishlist</a>
-            </li>
-            {% endif %}
-            <!-- <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Get in touch</a>
-            </li> -->
-            <!-- SEARCH FOR AN ART WORK -->
-            <form class="d-flex" method="GET" action="{% url 'products' %}">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="find">
-                <button class="btn ncc-btn-search" type="submit">Search</button>
-            </form>
-
-            <!-- ACCOUNT -->
-            <li class="nav-item dropdown mx-1 ">
-                {% if user.is_authenticated %}
-                <a class="nav-link dropdown-toggle btn text-black ncc-btn-base ncc-navlink-account" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown"
-                    aria-expanded="false">
-                    Account
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <li><a class="dropdown-item" href="{% url 'profile' %}">Profile</a></li>
-                    <li><a class="dropdown-item" href="{% url 'account_logout' %}">Logout</a></li>
-                    {% if request.user.is_superuser %}
-                    <!-- <li><a class="dropdown-item" href="{% url 'add_product' %}">Add product</a></li> -->
-                    {% endif %}
-                </ul>
-                {% else %}
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown"
-                    aria-expanded="false">
-                    Login
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <li><a class="dropdown-item" href="{% url 'account_signup' %}">register</a></li>
-                    <li><a class="dropdown-item" href="{% url 'account_login' %}">login</a></li>
-                </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Graphics
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <li><a class="dropdown-item" href="{% url 'products' %}?category=digital">digital</a></li>
+                        <li><a class="dropdown-item" href="{% url 'products' %}?category=handmade">handmade</a></li>
+                        <li><a class="dropdown-item" href="{% url 'products' %}?category=digital,handmade">handmade</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Sculptures
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <li><a class="dropdown-item" href="{% url 'products' %}?category=clay">clay</a></li>
+                        <li><a class="dropdown-item" href="{% url 'products' %}?category=stone">stone</a></li>
+                        <li><a class="dropdown-item" href="{% url 'products' %}?category=wood">wood</a></li>
+                        <li><a class="dropdown-item" href="{% url 'products' %}?category=clay,stone,wood">wood</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{% url 'view_blogs' %}">Blog</a>
+                </li>
+                {% if request.user.is_authenticated %}
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{% url 'wishlist' %}">Wishlist</a>
+                </li>
                 {% endif %}
-            </li>
+                <!-- <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Get in touch</a>
+                </li> -->
+                <!-- SEARCH FOR AN ART WORK -->
+                <form class="d-flex" method="GET" action="{% url 'products' %}">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="find">
+                    <button class="btn ncc-btn-search" type="submit">Search</button>
+                </form>
 
-            <!-- SHOPPING CRATE -->
-            <li class="nav-item mx-1">
-                <a class="nav-link active" aria-current="page" href="{% url 'crate' %}">Crate</a>
-            </li>
-        </ul>
-    </div>
+                <!-- ACCOUNT -->
+                <li class="nav-item dropdown mx-1 ">
+                    {% if user.is_authenticated %}
+                    <a class="nav-link dropdown-toggle btn text-black ncc-btn-base ncc-navlink-account" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Account
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <li><a class="dropdown-item" href="{% url 'profile' %}">Profile</a></li>
+                        <li><a class="dropdown-item" href="{% url 'account_logout' %}">Logout</a></li>
+                        {% if request.user.is_superuser %}
+                        <!-- <li><a class="dropdown-item" href="{% url 'add_product' %}">Add product</a></li> -->
+                        {% endif %}
+                    </ul>
+                    {% else %}
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Login
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <li><a class="dropdown-item" href="{% url 'account_signup' %}">register</a></li>
+                        <li><a class="dropdown-item" href="{% url 'account_login' %}">login</a></li>
+                    </ul>
+                    {% endif %}
+                </li>
+
+                <!-- SHOPPING CRATE -->
+                <li class="nav-item mx-1">
+                    <a class="nav-link active" aria-current="page" href="{% url 'crate' %}">Crate</a>
+                </li>
+            </ul>
+        </div>
     </div>
 </nav>

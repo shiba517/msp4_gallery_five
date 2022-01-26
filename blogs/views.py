@@ -47,8 +47,8 @@ def read_blog(request, blog_id):
 @login_required()
 def create_blog(request):
     if not request.user:
-        messages.error(request, 'You do not have access/permission to this page')
-        return redirect(reverse('home'))
+        messages.error(request, 'You must be registered to be able to post a blog')
+        # return redirect(reverse('home'))
 
     if request.method == 'POST':    
         form = BlogForm(request.POST, request.FILES)
