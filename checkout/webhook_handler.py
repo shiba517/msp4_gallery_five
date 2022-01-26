@@ -97,14 +97,7 @@ class StripeWH_Handler:
                 )
                 order_exists = True
                 print('ORDER DOES EXIST. WHILE LOOP WILL NOW BREAK')
-                # TESTING
-                self._send_confirmation_email(order)
-                print('EMAIL SHOULD BE SENT')
-                return HttpResponse(
-                content=f'Webhook received: {event["type"]} | SUCCESS: Verified order already in database',
-                status=200)
-                # TESTING
-                # break              
+                break              
             except Order.DoesNotExist:
                 print('ORDER DOES NOT EXIST. WILL TRY AGAIN')
                 attempt += 1
@@ -153,8 +146,9 @@ class StripeWH_Handler:
                     order.delete()
                 return HttpResponse(
                     content=f'Webhook received: {event["type"]} | ERROR: {e}',
-                    status=500)                    
-        self._send_confirmation_email(order)
+                    status=500)
+                    
+        # self._send_confirmation_email(order)
         print('FINAL PART OF THE PROCESS. DONE!')
         return HttpResponse(
             content=f'Webhook received: {event["type"]} | SUCCESS: created order in webhook',
