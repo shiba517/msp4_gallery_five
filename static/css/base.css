@@ -215,7 +215,7 @@ body {
 }
 
 .ncc-blogpreview-body-area p {
-    height: 40%;
+    max-height: 40%;
     overflow: hidden;
 }
 
