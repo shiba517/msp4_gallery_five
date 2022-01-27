@@ -46,17 +46,21 @@ def read_blog(request, blog_id):
 
 @login_required()
 def create_blog(request):
-    if not request.user:
-        messages.error(request, 'You must be registered to be able to post a blog')
-        # return redirect(reverse('home'))
+    print('ACCESS BEGINS')
+    # if not request.user.is_authenticated:
+    #     messages.error(request, 'You must be registered to be able to post a blog')
+    #     return redirect(reverse('home'))
 
-    if request.method == 'POST':    
+    if request.method == 'POST':  
+        print('POST BEGINS')  
         form = BlogForm(request.POST, request.FILES)
+        print('FORM AS BEEN FILLED, AND SAVED')
         if form.is_valid():
             instance = form.save(commit=False)
             instance.auther = request.user
             instance.save()
-            messages.error(request, f'Your {blog.name} blog has been sent for consideration')
+            messages.success(request, f'Your blog has been sent for consideration')
+
 
             return redirect(reverse('view_blogs'))
     else:   
