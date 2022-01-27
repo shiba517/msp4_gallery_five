@@ -22,6 +22,11 @@ body {
     border: none;
 }
 
+.list-group-item {
+    background-color: transparent;
+    border: none;
+}
+
 
 /* TEST */
 .ncc-test-bg {
