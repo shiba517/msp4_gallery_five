@@ -27,7 +27,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'DEVLOPMENT' in os.environ
 
-ALLOWED_HOSTS = ['gallery-five@herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['gallery-five.herokuapp.com', 'localhost']
 
 
 # Application definition
@@ -123,7 +123,7 @@ WSGI_APPLICATION = 'msp4_gallery_five.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
-if 'DATABSE_URL' in os.environ:
+if 'DATABASE_URL' in os.environ:
     DATABASES = {
         'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
     }
