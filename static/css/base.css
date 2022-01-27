@@ -85,9 +85,14 @@ body {
     background-color: #ffc13b;
 }
 
+#aboutus-section .ncc-btn-base {
+    background-color: #f66e40;
+}
+
 /* CONTACT US (index.html) */
 .ncc-contactus-dec {
     background-color: #f66e40;
+    padding: 8vh;
 }
 
 /* NAV BAR */
