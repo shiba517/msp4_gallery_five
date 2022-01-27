@@ -78,11 +78,16 @@ body {
     border: solid 1.5rem #f66e40;
 }
 
-/* ABOUT US (hero-section.html) */
+/* ABOUT US (index.html) */
 #aboutus-section {
     padding: 8vh;
     background-color: #f8f9fa;
     background-color: #ffc13b;
+}
+
+/* CONTACT US (index.html) */
+.ncc-contactus-dec {
+    background-color: #f66e40;
 }
 
 /* NAV BAR */
