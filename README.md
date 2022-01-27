@@ -1,7 +1,5 @@
 # **MILESTONE PROJECT 4 – GALLERY FIVE** 
 
- 
-
 ## **OVERVIEW** 
 
 Gallery Five (TF) is a charity that helps support children from disadvantaged backgrounds to achieve their artistic potentials and dreams. It is mainly financed by taking a cut from the selling of donated art work from their London based gallery. Due to the current world pandemic, T5 have asked me to create a full-stack website where people can purchase the donated art works from the comfort of their own home. 
@@ -49,7 +47,6 @@ Gallery Five (TF) is a charity that helps support children from disadvantaged ba
     * Have a double confirmation process 
 
 ## **THE 5 PLANES** 
-
 ### Strategy 
 - Purpose of the website? To be able to purchase art works to raise money for the charity 
 
@@ -71,7 +68,6 @@ Gallery Five (TF) is a charity that helps support children from disadvantaged ba
     * Not registering should not have the same experience as registered users’ registered user should have a better experience in the form of offers, convenience etc 
 
 ### Scope 
-
 Intended features: 
 - Purchasing of art works 
 - Secured 
@@ -270,16 +266,27 @@ Page details:
 
 ### Skeleton 
 
-Wireframe 
-Home page: [wireframe image](readme/images/home.png)
-Browsing/Products page: [wireframe image](readme/images/products.png)
-Login/registration page: [wireframe image](readme/images/login_and_registration_page.png) 
-Payment processing page: [wireframe image](readme/images/payment_process.png)
-Selected product page: [wireframe image](readme/images/selected_product.png)
-Shopping basket page: [wireframe image](readme/images/shopping_basket.png)
-Contact us page: [wireframe image](readme/images/contact_us.png)
-Blogs page: [wireframe image](readme/images/blogs.png)
-Selected blog page: [wireframe image](readme/images/selected_blog.png)
+Wireframes for laptop/computer screens
+* Home page: [wireframe image](readme/images/home.png)
+* Products page: [wireframe image](readme/images/products.png)
+* Product detail page: [wireframe image](readme/images/product_detail.png)
+* Login/registration page: [wireframe image](readme/images/login_and_registration.png) 
+* Crate(shopping basket) page: [wireframe image](readme/images/crate.png)
+* Checkout page: [wireframe image](readme/images/checkout.png)
+<!-- Contact us page: [wireframe image](readme/images/contact_us.png) -->
+* Blogs page: [wireframe image](readme/images/blogs.png)
+* Selected blog page: [wireframe image](readme/images/read_blog.png)
+
+Wireframes for mobile/tablet screens
+* Home page: [wireframe image](readme/images/mobile_home.png)
+* Products page: [wireframe image](readme/images/mobile_products.png)
+* Product detail page: [wireframe image](readme/images/mobile_product_detail.png)
+* Login/registration page: [wireframe image](readme/images/mobile_login_and_registration.png) 
+* Crate(shopping basket) page: [wireframe image](readme/images/mobile_crate.png)
+* Checkout page: [wireframe image](readme/images/mobile_checkout.png)
+<!-- Contact us page: [wireframe image](readme/images/contact_us.png) -->
+* Blogs page: [wireframe image](readme/images/mobile_blogs.png)
+* Selected blog page: [wireframe image](readme/images/mobile_read_blog.png)
  
 
 ### Surface 
@@ -294,10 +301,76 @@ Selected blog page: [wireframe image](readme/images/selected_blog.png)
         * Pale orange - #ff6e40 
         * Yellow - #ffc13b 
 
+## **TECHNOLOGIES USED**
+- HTML
+- CSS
+- Jquery - a lightweight JavaScript library
+- Python - back-end programming language
+- Bootstrap 4 - a .css library which also includes use of .js
+- Bootstrap 5 - a .css library which also includes use of .js
+- Django - Cloud based service focused on database management
+- Heroku - Web hosting service
+- Stripe - Card payment service for websites
+- Font awesome - a catalogue of icons for .html files
+- Django templates - a template for use of python with Django in .html
+- Jquery - A convenient JS library
+- Github - Save and deploy projects useing this
+- Git pod - Platform to write code
+- Balsamiq - software for use fo making skeleton sketches
+- Paint 3D - an app I used to help resize and edit images; It is available on Windows 10
+<!-- Lucid chart - website where you can make flowcharts -->
+- W3C Markup Validator - detects any errors in .html files
+- W3C CSS Validator - detects any errors in .css files
+
 
 ## **TESTING**
+### HTML Testing
+Using - W3C Markup Validator
+| FILE | Result 1 | Correction (if needed) | Notes
+--- | --- | --- | --- |
 
-### Cross platfrom testing
+### User Stories Testing
+| AIM | Achieved | Comment |
+--- | --- | --- | 
+**As a first time visitor to the website, I would like to..** 
+Be able to browse through all the art work available for purchase | yes | 
+Search for specific art work | yes | 
+Know basic information of the art work easily such as price, name etc | yes | 
+Sorting of products on to make it easier for what I want | yes | 
+Purchase with ease and confidence | yes | 
+Read about the company of the website 
+Know how delivery and returns work 
+Be able to communicate with the website as in email, contact number etc 
+Register to the website | yes | 
+Read reviews of the art works | yes | 
+Read articles/blogs related to art and the charity sector | yes | 
+**As a registered member to the website, I would like to..** 
+Purchase with ease and confidence | yes | 
+View and edit my shopping basket | yes | 
+Have quick purchasing procedures in the form of saved bank details | yes | 
+Know about my previous purchases/orders | yes | 
+Have a page with my information given such as name, address, email etc | yes | 
+Reset my password | yes | 
+Delete my account 
+Receive emails regarding news about the website
+Create a favourite/likes list | yes | 
+Post reviews of the art works | yes | 
+Post articles/blogs related to art and the charity sector | yes |
+**As a site owner/admin user, I would like to..**
+Remove and ban accounts | yes |
+Edit products on the websites for reasons such as typo errors, pricing etc | yes | 
+Add and remove products | yes |
+Add and remove reviews | yes | 
+Approve and then post of blogs by users/member | yes |
+**As a user in the process of purchasing, I would like to..** 
+A secured payment system | yes | 
+Be acknowledged of how secure the process is for peace of mind 
+An email once payment has gone through 
+Have enough time for my items to be in the basket before it is taken off 
+Edit my basket such as deleting an item, changing the quantity etc | yes | 
+Have a double confirmation process  
+
+### Cross Platfrom Testing
 #### CRUD (create, read, update, delete) TESTING
 | AIM | SM | MD | LG |
 --- | --- | --- | --- |
@@ -313,5 +386,147 @@ Is it possible to create a review for an art work? | yes | yes | yes
 Is it possible to read/see the review created? | yes | yes | yes
 Is it possible to update the review from the database? | yes | yes | yes
 Is it possible to delete the review from the database? | yes | yes | yes
+
+### FORM VALIDATION TESTING
+| AIM | SM | MD | LG |
+--- | --- | --- | --- |
+**Register** 
+'E-mail' field must have follow the pattern of have a '@' and a '.' in the email. It won't accept if it does not | yes | yes | yes
+Both 'E-mail' fields must match | yes | yes | yes
+'Username' field must only contain letters, numbers, and @/./+/-/_ characters | yes | yes | yes
+Both 'Password' fields must match | yes | yes | yes
+**Login**
+'Login' field must match with user from the database | yes | yes | yes
+'Password' field must match with the password made for user entered in the 'Login' field | yes | yes | yes
+**Checkout - checkout.html**
+'Full Name' field will only accept upto 50 characters | yes | yes | yes
+'E-mail' field must have follow the pattern of have a '@' and a '.' in the email | yes | yes | yes
+'Phone Number' field will only accept numbers and a maximum of 20 numbers | yes | yes | yes
+'Street Address 1' field will only accept upto 80 characters | yes | yes | yes
+'Street Address 2' field will only accept upto 80 characters | yes | yes | yes
+'Town or City' field will only accept upto 40 characters | yes | yes | yes
+'County, State, or Locality' field will only accept upto 80 characters | yes | yes | yes
+'Postcode' field will only accept upto 20 characters | yes | yes | yes
+'Card number' field will only accept numbers | yes | yes | yes
+**Add product - add_product.html**
+'Category' will have a drop down containing options from the Category database | yes | yes | yes
+'Name' will allow upto 80 characters | yes | yes | yes
+'Artist name' will only allow upto 80 characters | yes | yes | yes
+'Description' will allow upto 500 characters | yes | yes | yes
+'Price' will only accept numbers. It will take a numbers upto 4 digits in length | yes | yes | yes
+'Price' will not go lower than 0 | yes | yes | yes
+'Image url' field will accept only urls | yes | yes | yes
+'Image' will only let image files to be uploaded | yes | yes | yes
+**Create Blog - create_blog.html**
+'Title' field will accept upto 100 characters | yes | yes | yes
+'Article' field has no limits to ammount of characters | yes | yes | yes
+'Image' field will only accept image files | yes | yes | yes
+**Reviews - product_detail.html**
+'Title' field will accept upto 100 characters | yes | yes | yes
+'Review' field will accept upto 1000 characters | yes | yes | yes
+
+### Responsive Testing
+AIM | SM | MD | LG |
+--- | --- | --- | --- |
+**HOME - index.html**
+Links / URLs | yes | yes | yes
+Images | yes | yes | yes
+Renders as expected | yes | yes | yes
+**PRODUCTS - products.html**
+Links / URLs | yes | yes | yes
+Images | yes | yes | yes
+Renders as expected | yes | yes | yes
+**PRODUCT DETAIL - product_detail.html**
+Links / URLs | yes | yes | yes
+Images | yes | yes | yes
+Renders as expected | yes | yes | yes
+Form validation | yes | yes | yes
+**EDIT PRODUCT - edit_product.html**
+Links / URLs | yes | yes | yes
+Images | yes | yes | yes
+Renders as expected | yes | yes | yes
+Form validation | yes | yes | yes
+**ADD PRODUCT - add_product.html**
+Links / URLs | yes | yes | yes
+Images | yes | yes | yes
+Renders as expected | yes | yes | yes
+Form validation | yes | yes | yes
+**CRATE - crate.html**
+Links / URLs | yes | yes | yes
+Images | yes | yes | yes
+Renders as expected | yes | yes | yes
+**CHECKOUT - checkout.html**
+Links / URLs | yes | yes | yes
+Images | yes | yes | yes
+Renders as expected | yes | yes | yes
+**CHECKOUT SUCCESS - checkout_success.html**
+Links / URLs | yes | yes | yes
+Images | yes | yes | yes
+Renders as expected | yes | yes | yes
+**WISHLIST - wishlist.html**
+Links / URLs | yes | yes | yes
+Images | yes | yes | yes
+Renders as expected | yes | yes | yes
+**BLOGS - blogs.html**
+Links / URLs | yes | yes | yes
+Images | yes | yes | yes
+Renders as expected | yes | yes | yes
+**READ BLOG - read_blog.html**
+Links / URLs | yes | yes | yes
+Images | yes | yes | yes
+Renders as expected | yes | yes | yes
+**CREATE_BLOG - create_blog.hmtl**
+Links / URLs | yes | yes | yes
+Images | yes | yes | yes
+Renders as expected | yes | yes | yes
+Form validation | yes | yes | yes
+**REQUESTED BLOG - requested_blog.html**
+Links / URLs | yes | yes | yes
+Images | yes | yes | yes
+Renders as expected | yes | yes | yes
+Form validation | yes | yes | yes
+**PROFILE - profile.html**
+Links / URLs | yes | yes | yes
+Images | yes | yes | yes
+Renders as expected | yes | yes | yes
+**UPDATE PROFILE - update_profile.html**
+Links / URLs | yes | yes | yes
+Images | yes | yes | yes
+Renders as expected | yes | yes | yes
+Form validation | yes | yes | yes
+
+## **DEPLOYMENT**
+### Making A Local Clone
+You may want to have access via a copy of the repository on your own device. There are three ways to do this: 
+* Method 1
+1. Login to your GitHub account and open up the repository you would like to copy 
+2. Click on the button with a drop-down menu named ‘Code’ which will be placed next to the green ‘Gitpod’ button
+3. You will then have the option to download it on to your system via the ‘Download ZIP’ option
+
+* Method 2 
+1. Open up your preferred IDE and open up the folder where you would the repository to be copied/cloned
+2. In the terminal, type in ‘git clone’ ; do not press enter or anything else
+3. Now login to your GitHub account and open up the repository you would like to copy
+4. Click on the ‘Code’ button again and copy the text given under the subheading ‘HTTPS’. A button next to this text gives you an easier way of copying the text
+5. Back to your IDE terminal, after the ‘git clone’, press the spacebar button and paste in the link you copied from the repository. Your entry in the terminal should look something like this: ‘gti clone https://github.com/shiba517/msp4_gallery_five.git’. Then press enter
+6. Your terminal will let you know the repository has been cloned and saved to your preferred destination and will be evident when viewing files and folders from your preferred destination
+
+## **CREDITS**
+### References
+* REF001 - 'Profile' app was heavily copied/slightly adapted from Code Insitute Full Stack Frameworks with Django module (https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+FSF_102+Q1_2020/courseware/4201818c00aa4ba3a0dae243725f6e32/2c1b98a8efb748009445d5056c97483b/)
+* REF002 - 'Checkout' app was heavily copied/slightly adapted from Code Insitute Full Stack Frameworks with Django module (https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+FSF_102+Q1_2020/courseware/4201818c00aa4ba3a0dae243725f6e32/326f171b831446588d33c0333eb4caaa/)
+### Content
+### Media
+### Acknowledgement 
+* Code Institue course
+* Course tutor Precious Ijege
+* W3Schools
+* Codemy
+* Very Academy
+* The Net Ninja 
+* Cryce Truly
+
+## **DISCLAIMER**
+This webite was built for educational reasons for my coding course from Code Institute. No content, written(unless mentioned in CREDITS - Content of this document) and imagery, is of mine. No offense was intentionaly made with the pricing of the art works (I randomly made up the numbers), and any namings of art works. If there is anything you would like enquire, please do so via my email - shibacdeb@gmail.com
 
 
