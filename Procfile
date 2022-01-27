@@ -1,0 +1,1 @@
+web: gunicorn msp4_gallery_five.wsgi:application
