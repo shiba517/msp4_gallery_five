@@ -25,13 +25,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY', '')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = 'DEVLOPMENT' in os.environ
+DEBUG = 'DEVLOPMENT' in os.environ
 
 # GIT PRODUCTION SETTINGS
-DEBUG = True
-ALLOWED_HOSTS = []
+# DEBUG = True
+# ALLOWED_HOSTS = []
 
-# ALLOWED_HOSTS = ['gallery-five.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['gallery-five.herokuapp.com', 'localhost']
 
 
 # Application definition
