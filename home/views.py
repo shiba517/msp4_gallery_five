@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect, reverse
 from django.core.mail import send_mail
 from django.contrib import messages
 from django.template.loader import render_to_string
@@ -33,6 +33,7 @@ def index(request):
             instance = form.save(commit=False)
             instance.save()
             messages.success(request, f'We have recieved your message will get back to you with 48 hours.')
+            return redirect(reverse('home'))
 
     context = {
         'form': form,
