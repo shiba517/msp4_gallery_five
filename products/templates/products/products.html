@@ -56,12 +56,23 @@
         {% endfor %}
         
     </div>
+    <div class="shadow-sm rounded-0 border border-black ncc-backtotop">
+        <a class="d-flex h-100 btt-link">
+            <i class="fas fa-arrow-up text-black mx-auto my-auto"></i>
+        </a>	
+    </div>
 </div>
+
 {% endblock %}
 
 
 {% block postloadjs %}
     {{ block.super }}
+    <script type="text/javascript">
+		$('.btt-link').click(function(e) {
+			window.scrollTo(0,0)
+		})
+	</script>
     
     
     <script type="text/javascript">
