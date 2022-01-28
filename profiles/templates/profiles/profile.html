@@ -18,10 +18,10 @@
 
     <div class="row m-4">
         <div class="col text-center">
-            <a href="{% url 'update_profile' %}" class="btn ncc-btn-base m-1">Update profile</a>  
+            <a href="{% url 'update_profile' %}" class="btn ncc-btn-base m-1 text-capitalize">update profile</a>  
             {% if request.user.is_superuser %}
-            <a href="{% url 'requested_blogs' %}" class="btn ncc-btn-base m-1">Requested blog posts</a>
-            <a class="btn ncc-btn-base m-1" href="{% url 'add_product' %}">Add product</a> 
+            <a href="{% url 'requested_blogs' %}" class="btn ncc-btn-base m-1 text-capitalize">requested blog posts</a>
+            <a class="btn ncc-btn-base m-1 text-capitalize" href="{% url 'add_product' %}">add product</a> 
             {% endif %}
         </div>
     </div>

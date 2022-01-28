@@ -24,8 +24,8 @@
                 {% csrf_token %}
                 {{ form|crispy }}
                 <div>
-                    <button type="submit" class="btn ncc-btn-base">Change</button>
-                    <a href="{% url 'profile' %} " class="btn ncc-btn-base">Cancel</a>
+                    <button type="submit" class="btn ncc-btn-base text-capitalize">change</button>
+                    <a href="{% url 'profile' %} " class="btn ncc-btn-base text-capitalize">cancel</a>
                 </div>
                 
             </form>

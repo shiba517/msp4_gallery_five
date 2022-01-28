@@ -22,8 +22,8 @@
 
                 <!-- ADDITIONAL OPTIONS -->
                 {% if request.user.is_superuser %}
-                <a href="{% url 'edit_product' product.id %}" class="btn ncc-btn-base">edit</a>
-                <a href="{% url 'delete_product' product.id %}" class="btn ncc-btn-base">delete</a>
+                <a href="{% url 'edit_product' product.id %}" class="btn ncc-btn-base text-capitalize">edit</a>
+                <a href="{% url 'delete_product' product.id %}" class="btn ncc-btn-base text-capitalize">delete</a>
                 {% endif %}
 
                 <!-- ADDING ITEM TO THE CART -->
@@ -41,7 +41,7 @@
                                 <a href="{% url 'products' %}" class="btn mt-5 btn ncc-btn-base">
                                     <span class="text-uppercase  ">shope more</span>
                                 </a>
-                                <input type="submit" class="btn text-uppercase mt-5 btn ncc-btn-base" value="Add to cart">
+                                <input type="submit" class="btn text-uppercase mt-5 btn ncc-btn-base text-uppercase" value="Add to cart">
                             </div>
                             
 
