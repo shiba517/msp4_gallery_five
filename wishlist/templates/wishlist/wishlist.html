@@ -38,7 +38,9 @@
     </div>
     {% endif %}
 
+    {% if products|length > 0 %}
     <p>You have favourited {{ products|length }} art works</p>
+    {% endif %}
 
     <div class="row row-cols-1 row-cols-lg-3">
         {% for product in products %}
