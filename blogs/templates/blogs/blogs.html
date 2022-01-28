@@ -17,7 +17,7 @@
         </div>
     </div>
     {% for blog in blogs %}
-    <div class="row row-col-lg-2 ncc-blogpreview-dec m-4">
+    <div class="row row-col-lg-2 ncc-blogpreview-dec m-4 pb-4">
         <div class="d-none d-sm-block col-md-6 d-flex flex-wrap align-items-center justify-content-center ncc-blogpreview-image-area">
             {% if blog.image %}
             <img src="{{ blog.image.url }}" class="ncc-blogpreview-image d-flex align-items-center" alt="">
@@ -33,5 +33,5 @@
         </div>
     </div>
     {% endfor %}
-    
+</div>
 {% endblock %}

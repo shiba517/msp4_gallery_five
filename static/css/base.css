@@ -151,7 +151,7 @@ body {
     /* color: #ffc13b; */
 }
 
-.ncc-backtotop {
+.btt-button {
     height: 42px;
     width: 42px;
     position: fixed;
@@ -184,7 +184,7 @@ body {
 /* BLOG */
 .ncc-blogpreview-dec {
     /* background-color: #c9c8c8; */
-    background-color: #f8f9fa;
+    /* background-color: #f8f9fa; */
     height: 20rem;
     overflow: hidden;
     /* padding-bottom: 2rem; */
@@ -242,4 +242,8 @@ body {
 .ncc-footer-dec {
     background-color: #1e3d59;
     color: #f5f0e1;
+}
+
+.ncc-footer-dec li {
+    color: #f5f0e1
 }
