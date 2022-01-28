@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
@@ -48,6 +48,7 @@ def update_profile(request):
         if form.is_valid():
             form.save()
             messages.success(request, 'Profile updated successfully')
+            return redirect(reverse('profile'))
         else:
             messages.error(request, 'Failed to update your details. Please ensure you have enetered valid entries into the form')
     else:
