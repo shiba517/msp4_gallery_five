@@ -28,8 +28,12 @@ def read_blog(request, blog_id):
     if request.method == 'POST': 
         form = PublishBlogForm(request.POST, request.FILES, instance=blog)
         if form.is_valid():
-            form.save()
-            messages.success(request, 'Blog {blog.name} will be published')
+            instance = form.save(commit=False)
+            instance.save()
+            if instance.publish == True:
+                messages.success(request, 'Blog {blog.name} has be published')
+            else: 
+                messages.success(request, 'Blog {blog.name} has be UNpublished')
             return redirect(reverse('view_blogs'))
         else:
             messages.error(request, 'Blog {blog.name} will not be published')
