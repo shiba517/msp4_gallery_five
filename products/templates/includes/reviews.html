@@ -4,6 +4,12 @@
     </div>
 </div>
 
+{% if reviews|length == 0 %}
+<p class="text-center">There are no reviews for this art work</p>
+{% else %}
+<p class="text-center">{{ reviews|length }} people have reviewed this</p>
+{% endif %}
+
 <div class="row">
     <div class="col offset-md-2 col-md-8 offset-lg-3 col-lg-6">
         {% for review in reviews %}

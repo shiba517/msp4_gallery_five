@@ -106,7 +106,9 @@ def product_detail(request, product_id):
         else:
             return redirect(reverse('products'))
 
+    print('REQUEST OF POST HAS NOT HAPPENED')
     form = ProductReviewForm()
+    print('FORM HAS BEEN PRODUCED')
     
     context = {
         'ordered': ordered,
