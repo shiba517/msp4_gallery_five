@@ -86,12 +86,11 @@ def product_detail(request, product_id):
                         print(per.user_profile)
                         print(profile)
                         ordered = True
-        # print(ordered[0].order.order_number)
         print('*******HERE********')
 
     # REVIEW WILL BE POSTED FROM HERE
     if request.method == 'POST':
-        if ordered:
+        if ordered or request.user.is_superuser:
             form = ProductReviewForm(request.POST, request.FILES)
             if form.is_valid():
                 instance = form.save(commit=False)

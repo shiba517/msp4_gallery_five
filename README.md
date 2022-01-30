@@ -1,5 +1,7 @@
 # **MILESTONE PROJECT 4 – GALLERY FIVE** 
 
+[live website](https://gallery-five.herokuapp.com/)
+
 ## CONTENT
 - [Overview](#overview)
 - [User Experience](#user-experience)
@@ -34,31 +36,26 @@ Gallery Five (TF) is a charity that helps support children from disadvantaged ba
 ### **User stories**: 
 - As a first time visitor to the website, I would like to 
     * Be able to browse through all the art work available for purchase 
-    * Search for specific art work 
+    * Search for specific art work via the name and/or artist
     * Know basic information of the art work easily such as price, name etc 
     * Sorting of products on to make it easier for what I want 
     * Read about the company of the website 
-    <!-- * Know how delivery and returns work  -->
     * Be able to communicate with the website as in email, contact number etc 
     * Register to the website 
     * Read reviews of the art works 
-    * Read articles/blogs related to art and the charity sector 
+    * Read articles/blogs related to art and the charity sector
+    * Purchase an item 
 
 - As a registered member to the website, I would like to 
     * Purchase with ease and confidence 
     * View and edit my shopping basket 
-    * Have quick purchasing procedures in the form of saved bank details 
     * Know about my previous purchases/orders 
     * Have a page with my information given such as name, address, email etc 
-    * Reset my password 
-    * Delete my account 
-    <!-- * Receive emails regarding news about the website -->
     * Create a favourite/likes list 
     * Post reviews of the art works 
     * Post articles/blogs related to art and the charity sector  
 
 - As a site owner/admin user, I would like to 
-    * Remove and ban accounts 
     * Edit products on the websites for reasons such as typo errors, pricing etc 
     * Add and Remove products 
     * Approve and then post of blogs by users/members 
@@ -256,7 +253,6 @@ Wireframes for laptop/computer screens
 * Login/registration page: [wireframe image](readme/images/login_and_registration.png) 
 * Crate(shopping basket) page: [wireframe image](readme/images/crate.png)
 * Checkout page: [wireframe image](readme/images/checkout.png)
-<!-- Contact us page: [wireframe image](readme/images/contact_us.png) -->
 * Blogs page: [wireframe image](readme/images/blogs.png)
 * Selected blog page: [wireframe image](readme/images/read_blog.png)
 
@@ -267,7 +263,6 @@ Wireframes for mobile/tablet screens
 * Login/registration page: [wireframe image](readme/images/mobile_login_and_registration.png) 
 * Crate(shopping basket) page: [wireframe image](readme/images/mobile_crate.png)
 * Checkout page: [wireframe image](readme/images/mobile_checkout.png)
-<!-- Contact us page: [wireframe image](readme/images/contact_us.png) -->
 * Blogs page: [wireframe image](readme/images/mobile_blogs.png)
 * Selected blog page: [wireframe image](readme/images/mobile_read_blog.png)
 
@@ -325,72 +320,67 @@ base.css | [image](readme/images/w3_base_css.png) | 2 warnings were related to t
 * After changes were made, an internal server error occured. I had to revert some line of codes back to its original state for the website to work. More details can be found in 'Bugs and Fixes' section
 
 ### **User Stories Testing**
-| AIM | Achieved | Comment |
+| AIM | Achieved | Image |
 --- | --- | --- | 
 **As a first time visitor to the website, I would like to..** 
-Be able to browse through all the art work available for purchase | yes | |
-Search for specific art work | yes | |
-Know basic information of the art work easily such as price, name etc | yes | |
-Sorting of products on to make it easier for what I want | yes | |
-Purchase with ease and confidence | yes | |
-Read about the company of the website | yes | |
-Be able to communicate with the website as in email, contact number etc | yes | |
-Register to the website | yes | |
-Read reviews of the art works | yes | | 
-Read articles/blogs related to art and the charity sector | yes | |
+Be able to browse through all the art work available for purchase | yes | [image1](readme/images/browsing_1.png) [image2](readme/images/browsing_2.png)|
+Search for specific art work via the name and/or artist | yes | [image1](readme/images/search_artist_name.png) [image2](readme/images/search_name.png) |
+Know basic information of the art work easily such as price, name etc | yes | [image](readme/images/basic_info_of_artwork.png) |
+Sorting of products on to make it easier for what I want | yes | [image](readme/images/sorting_artworks.png) |
+Read about the company of the website | yes | [image](readme/images/read_about_company.png) |
+Be able to communicate with the website as in email, contact number etc | yes | [image1](readme/images/communicate_to_website_1.png) [image2](readme/images/communicate_to_website_2.png) |
+Register to the website | yes | [image](readme/images/register_to_website.png) |
+Read reviews of the art works | yes | [image](readme/images/read_review.png) | 
+Read articles/blogs related to art and the charity sector | yes | [image](readme/images/read_blog_1.png) [image](readme/images/read_blog_2.png) |
+Purchase an item | yes | [image](readme/images/purchase_item_1.png) [image](readme/images/purchase_item_2.png) [image](readme/images/purchase_item_3.png) |
 **As a registered member to the website, I would like to..** 
-Purchase with ease and confidence | yes | |
-View and edit my shopping basket | yes | |
-Have quick purchasing procedures in the form of saved bank details | yes | |
-Know about my previous purchases/orders | yes | |
-Have a page with my information given such as name, address, email etc | yes | | 
-Reset my password | yes | |
-Delete my account 
-Create a favourite/likes list | yes | |
-Post reviews of the art works | yes | |
-Post articles/blogs related to art and the charity sector | yes | |
+Purchase with ease and confidence | yes | [image](readme/images/easy_purchase_1.png) [image](readme/images/easy_purchase_2.png) |
+View and edit my shopping basket | yes | [image](readme/images/view_and_edit_1.png) [image](readme/images/view_and_edit_2.png) |
+Know about my previous purchases/orders | yes | [image](readme/images/previous_orders.png) |
+Have a page with my information given such as name, address, email etc | yes | [image](readme/images/my_information.png) | 
+Create a favourite/likes list | yes | [image](readme/images/wishlist.png) |
+Post reviews of the art works | yes | [image](readme/images/post_review.png) |
+Post articles/blogs related to art and the charity sector | yes | [image](readme/images/request_blog_post.png) |
 **As a site owner/admin user, I would like to..**
-Remove and ban accounts | yes | |
-Edit products on the websites for reasons such as typo errors, pricing etc | yes | |
-Add and remove products | yes | |
+Edit products on the websites for reasons such as typo errors, pricing etc | yes | [image](readme/images/edit_product_1.png) [image](readme/images/edit_product_2.png) [image](readme/images/edit_product_3.png) |
+Add and remove products | yes | [image delete 1](readme/images/delete_product.png) [image delete 2](readme/images/delete_product_2.png) [image add](readme/images/add_product.png) |
 Add and remove reviews | yes | |
-Approve and then post of blogs by users/member | yes | |
+Approve and then post of blogs by users/member | yes | [image](readme/images/approve_blog.png) |
 **As a user in the process of purchasing, I would like to..** 
 A secured payment system | yes | |
 Be acknowledged of how secure the process is for peace of mind | yes | |
-An email once payment has gone through 
 Edit my basket such as deleting an item, changing the quantity etc | yes | |
-Have a confirmation message | yes | |
+Have a confirmation message | yes | [image](readme/images/purchase_approval.png) |
 
 ### **Cross Platfrom Testing**
 #### CRUD (create, read, update, delete) TESTING
 | AIM | admin | registered user | non-registered user |
 --- | --- | --- | --- |
 **Products/art works - from products app**
-CREATE a product to add to the database | yes | no | no
+CREATE a product to add to the database | yes | no(as intended) | no(as intended)
 READ/see a product from the database on the website | yes | yes | yes
-UPDATE a product | yes | no | no
-DELETE a product | yes | no | no
+UPDATE a product | yes | no(as intended) | no(as intended)
+DELETE a product | yes | no(as intended) | no(as intended)
 **Blogs - from blogs app**
-CREATE a blog post to add to the database | yes | yes | no
+CREATE a blog post to add to the database | yes | yes | no(as intended)
 READ a blog from the website on the website | yes | yes | yes
-UPDATE a blog | no | no | no
-DELETE a blog | yes | no | no
+UPDATE a blog | no(as intended) | no(as intended) | no(as intended)
+DELETE a blog | yes | no(as intended) | no(as intended)
 **Reviews - from products app**
-CREATE a review | yes | yes | no
+CREATE a review | yes | yes | no(as intended)
 READ a review | yes | yes | yes
-UPDATE a review | no | no | no
-DELETE a review | yes | yes | no
+UPDATE a review | no(as intended) | no(as intended) | no(as intended)
+DELETE a review | yes | yes | no(as intended)
 **Crate - from crate app**
 CREATE a crate | yes | yes | yes
 READ a crate | yes | yes | yes
 UPDATE a crate | yes | yes | yes
 DELETE a crat | yes | yes | yes
 **Wishlist - from wishlist app**
-CREATE a wishlist | yes | yes | no
-READ a wishlist | yes | yes | no
-UPDATE a wishlist | yes | yes | no
-DELETE from wishlist | yes | yes | no
+CREATE a wishlist | yes | yes | no(as intended)
+READ a wishlist | yes | yes | no(as intended)
+UPDATE a wishlist | yes | yes | no(as intended)
+DELETE from wishlist | yes | yes | no(as intended)
 
 ### FORM VALIDATION TESTING
 | AIM | SM | MD | LG |
@@ -677,11 +667,11 @@ You may want to have access via a copy of the repository on your own device. The
 ### Acknowledgement 
 * Code Institue course
 * Course tutor Precious Ijege
-* W3Schools
-* Codemy
-* Very Academy
-* The Net Ninja 
-* Cryce Truly
+* [W3Schools](https://www.w3schools.com/)
+* [Codemy](https://www.youtube.com/c/Codemycom)
+* [Very Academy](https://www.youtube.com/c/veryacademy)
+* [The Net Ninja ](https://www.youtube.com/c/TheNetNinja)
+* [Cryce Truly](https://www.youtube.com/c/CryceTruly)
 
 ## **DISCLAIMER**
 This webite was built for educational reasons for my coding course from Code Institute. No content, written(unless mentioned in CREDITS - Content of this document) and imagery, is of mine. No offense was intentionaly made with the pricing of the art works (I randomly made up the numbers), and any namings of art works. If there is anything you would like enquire, please do so via my email - shibacdeb@gmail.com
