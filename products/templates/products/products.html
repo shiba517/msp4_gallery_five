@@ -47,9 +47,8 @@
                 <div class="card-body text-center ncc-card-body">
                     <h3 class="card-title">{{ product.name }}</h3>
                     <i>{{ product.artist_name }}</i>
-                    <p class="card-text display-5">{{ product.price }}</p>
+                    <p class="card-text display-5">£{{ product.price }}</p>
                     <a href="{% url 'product_detail' product.id %}" class="btn ncc-btn-base text-capitalize" aria-label="go to product detail page for this art work">view</a>
-                    <!-- <a href="{% url 'add_wishlist' product.id %}" class="btn ncc-btn-base"><i class="fas fa-heart"></i></a> -->
                 </div>
             </div>
         </div>

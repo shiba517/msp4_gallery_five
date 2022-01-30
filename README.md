@@ -1,12 +1,37 @@
 # **MILESTONE PROJECT 4 – GALLERY FIVE** 
 
+## CONTENT
+- [Overview](#overview)
+- [User Experience](#user-experience)
+    * [User stories](#user-stories)
+- [The 5 Planes](#the-5-planes)
+    * [Strategy](#strategy)
+    * [Scope](#scope)
+    * [Structure](#structure)
+    * [Skeleton](#skeleton)
+    * [Surface](#surface)
+- [Technologies used](#technologies-used)
+- [Testing](#testing)
+    * [HTML testing](#html-testing)
+    * [CSS testing](#css-testing)
+    * [PEP8 testing](#pep8-testing)
+    * [User stories testing](#user-stories-testing)
+    * [Cross platform testing](#cross-platform-testing)
+    * [Bugs and fixes](#bugs-and-fixes)
+- [Deployment](#deployment)
+- [Credits](#credits)
+    * [Credits](#credits)
+    * [Conent](#content)
+    * [Media](#media)
+- [Acknowledgement](#acknowledgement)
+- [Disclaimer](#disclaimer)
+
 ## **OVERVIEW** 
 
 Gallery Five (TF) is a charity that helps support children from disadvantaged backgrounds to achieve their artistic potentials and dreams. It is mainly financed by taking a cut from the selling of donated art work from their London based gallery. Due to the current world pandemic, T5 have asked me to create a full-stack website where people can purchase the donated art works from the comfort of their own home. 
 
 ## **USER EXPERIENCE** 
-
-### User stories: 
+### **User stories**: 
 - As a first time visitor to the website, I would like to 
     * Be able to browse through all the art work available for purchase 
     * Search for specific art work 
@@ -47,7 +72,7 @@ Gallery Five (TF) is a charity that helps support children from disadvantaged ba
     * Have a confirmation message
 
 ## **THE 5 PLANES** 
-### Strategy 
+### **Strategy** 
 - Purpose of the website? To be able to purchase art works to raise money for the charity 
 
 - Target audience? Art enthusiasts who also care about social disadvantages from around the world 
@@ -67,7 +92,7 @@ Gallery Five (TF) is a charity that helps support children from disadvantaged ba
     * Make purchasing difficult as purchasing will be the main source of income 
     * Not registering should not have the same experience as registered users’ registered user should have a better experience in the form of offers, convenience etc 
 
-### Scope 
+### **Scope** 
 Intended features: 
 - Purchasing of art works 
 - Secured 
@@ -108,7 +133,7 @@ Content requirements:
 - Audio 
     * No audio as it can be more of an annoyance than an entertaining feature of the site 
 
-### Structure 
+### **Structure** 
 Database - [image](readme/images/database_schema.png)
 
 Page details: 
@@ -222,7 +247,7 @@ Page details:
     * Story about the charity
     * Images of the team behind the website and the children they are/have helped
 
-### Skeleton 
+### **Skeleton** 
 
 Wireframes for laptop/computer screens
 * Home page: [wireframe image](readme/images/home.png)
@@ -246,7 +271,7 @@ Wireframes for mobile/tablet screens
 * Blogs page: [wireframe image](readme/images/mobile_blogs.png)
 * Selected blog page: [wireframe image](readme/images/mobile_read_blog.png)
 
-### Surface 
+### **Surface** 
 - Font: 
     * Noto Sans Display - https://fonts.google.com/noto/specimen/Noto+Sans+Display 
     * Ubuntu - https://fonts.google.com/specimen/Ubuntu 
@@ -282,7 +307,7 @@ Wireframes for mobile/tablet screens
 
 
 ## **TESTING**
-### HTML Testing
+### **HTML Testing**
 Using - W3C Markup Validator
 Errors and Warnings in the .html files have been attended with the help of W3 .html Validator. After alterations, no major errors were found in the .html files; Most were related to the django templates. The few slightly concerning errors have been documented below
 | FILE | Result | Comment
@@ -291,15 +316,15 @@ checkout.html | [image](readme/images/w3_checkout.png) | could not resolve error
 footer.html | [image](readme/images/w3_footer.png) | do not believe a title element is needed regarding error 2 and 3
 navigation.html | [image](readme/images/w3_navigation.png) | did not want to alter with error 12 and 13 as it is from Bootstrap and changing of any id names most likely will interfere with the builtin in bootstrap jquery/js
 
-### CSS Testing
+### **CSS Testing**
 | FILE | Result | Notes
 base.css | [image](readme/images/w3_base_css.png) | 2 warnings were related to the colours of the background and border of a class element being the same
 
-### PEP8 Testing
+### **PEP8 Testing**
 * I used pep8online to check whether my .py file codes were PEP8 compliant. I made the changes needed for an All right pass for all .py files.
 * After changes were made, an internal server error occured. I had to revert some line of codes back to its original state for the website to work. More details can be found in 'Bugs and Fixes' section
 
-### User Stories Testing
+### **User Stories Testing**
 | AIM | Achieved | Comment |
 --- | --- | --- | 
 **As a first time visitor to the website, I would like to..** 
@@ -337,7 +362,7 @@ An email once payment has gone through
 Edit my basket such as deleting an item, changing the quantity etc | yes | |
 Have a confirmation message | yes | |
 
-### Cross Platfrom Testing
+### **Cross Platfrom Testing**
 #### CRUD (create, read, update, delete) TESTING
 | AIM | admin | registered user | non-registered user |
 --- | --- | --- | --- |
@@ -582,8 +607,72 @@ You may want to have access via a copy of the repository on your own device. The
 * REF003 - 'crate' app was heavily copied/slightly adapted from Code Insitute Full Stack Frameworks with Django module (was heavily copied/slightly adapted from Code Insitute Full Stack Frameworks with Django module)
 
 ### Content
+* I copied and pasted [lorem ipsum](https://www.lipsum.com/) texts into the products details due to the nature of the project
+* About us written content was written by me
 
 ### Media
+* [Jeremy Bezanger](https://unsplash.com/photos/NsdNBQxb-8s)
+* [Antonino Cicero](https://unsplash.com/photos/_5puSofcfOs)
+* [Pascal Bernardon](https://unsplash.com/photos/1wOv0s1oR4A)
+* [Nick Kwan](https://unsplash.com/photos/FeBoOVQv0sQ)
+* [Jeremy Bezanger](https://unsplash.com/photos/rCefTI3jS2Y)
+* [Bees And Green Tea](https://unsplash.com/photos/WqjW5em9S5o)
+* [Jeremy Bezanger](https://unsplash.com/photos/7vGDT1Ygbl4)
+* [Jorge Zapata](https://unsplash.com/photos/TPPzDKIvROw)
+* [Timothy Dykes](https://unsplash.com/photos/KTYSVnv6lUw)
+* [Pegah Mostafavi Zade](https://unsplash.com/photos/w-ImBSMvpZM)
+* [Trude Jonsson Stangel](https://unsplash.com/photos/TO_h3akXWf0)
+* [Vika Wendish](https://unsplash.com/photos/h4PSY635040)
+* [Matt Seymour](https://unsplash.com/photos/rSKjPA41H2Q)
+* [Vika Wendish](https://unsplash.com/photos/PFmk0-yVKzI)
+* [adr sree](https://unsplash.com/photos/sWvbhOTl09o)
+* [Earl Wilcox](https://unsplash.com/photos/j_9wznLtfKk)
+* [Misael Moreno](https://unsplash.com/photos/14HNtFPbKbs)
+* [Kevin Bluer](https://unsplash.com/photos/e6XqFP4kCxM)
+* [Mattias Russo-Larsson](https://unsplash.com/photos/GQ8JIFHHmCg)
+* [denis pan](https://unsplash.com/photos/FnNIDG9k8Ag)
+* [Stavrialena Gontzou](https://unsplash.com/photos/jyE-TqbRy3Y)
+* [Casey Horner](https://unsplash.com/photos/Ms77GfPPT48)
+* [Jan Gottweiss](https://unsplash.com/photos/SCTALD23uXA)
+* [Oneisha Lee](https://unsplash.com/photos/r3WFKMR9zzI)
+* [Mika](https://unsplash.com/photos/y-RjWd6Ol7A)
+* [Matteo Vistocco](https://unsplash.com/photos/mJUpopBUGsg)
+* [Matt Moloney](https://unsplash.com/photos/tKB1GDJUq9c)
+* [Jen Theodore](https://unsplash.com/photos/PU4sOcNnYj8)
+* [Katie Rainbow](https://unsplash.com/photos/DjGHuzUh_84)
+* [Karim MANJRA](https://unsplash.com/photos/fm9wqDNXyQ0)
+* [Avinash Kumar](https://unsplash.com/photos/u3B4oNyXYXE)
+* [Tim Hufner](https://unsplash.com/photos/QtL46PrOg9E)
+* [Oscar Helgstrand](https://unsplash.com/photos/HPwbniZ9g6Q)
+* [Matt Moloney](https://unsplash.com/photos/lYENI1CYeP0)
+* [Matt Moloney](https://unsplash.com/photos/cJL2LuBTu0A)
+* [Anil Kumar](https://unsplash.com/photos/dBkT44qZD6M)
+* [Ezi](https://unsplash.com/photos/ZcY6QeXg_J4)
+* [Alexander Shatov](https://unsplash.com/photos/DHl49oyrn7Y)
+* [Benjamin henon](https://unsplash.com/photos/2JlLdOm1xIs)
+* [Mingwei Lim](https://unsplash.com/photos/Q1Us6ITDPeo)
+* [Fakurian Design](https://unsplash.com/photos/nNpLEEdmUj0)
+* [KOBU Agency](https://unsplash.com/photos/csJt89dL9pE)
+* [Pink flip](https://unsplash.com/photos/1BcfKfeavVA)
+* [ueberform](https://unsplash.com/photos/eejq0xM2RTk)
+* [Europeana](https://unsplash.com/photos/6c43FgRt0Dw)
+* [Vojtech Bruzek](https://unsplash.com/photos/mCjA1I8SlS8)
+* [Europeana](https://unsplash.com/photos/TjegK_z-0j8)
+* [Matthew Brindle](https://unsplash.com/photos/p7ILrZmhHHc)
+* [Federico Di Dio](https://unsplash.com/photos/XVOBr3F95RY)
+* [Adrianna Geo](https://unsplash.com/photos/1rBg5YSi00c)
+* [Europeana](https://unsplash.com/photos/Wiad3DQxUho)
+* [Steve Johnson](https://unsplash.com/photos/iBlW9tjiyqw)
+* [Paul Blenkhorn](https://unsplash.com/photos/PkDnu0lImv4)
+* [Sir Edward Burne-Jones](https://unsplash.com/photos/tV02AFxvRJg)
+* [David Roberts](https://unsplash.com/photos/sJr8LDyEf7k)
+* [Frederick Sandys Greek](https://unsplash.com/photos/aE0-ZJb2VTQ)
+* [Michael Angelo](https://unsplash.com/photos/1rBg5YSi00c)
+* [Fuu J](https://unsplash.com/photos/KRztl5I6xac)
+* [McGill Library](https://unsplash.com/photos/eMw-fVXNpME)
+* [Sir David Wilkie](https://unsplash.com/photos/XSMTwl7n3p4)
+* [Francis Towne](https://unsplash.com/photos/5ruS8plfbvM)
+* [Robert Hills](https://unsplash.com/photos/6fv0MEf3FUE)
 
 ### Acknowledgement 
 * Code Institue course
