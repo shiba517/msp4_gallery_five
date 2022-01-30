@@ -9,10 +9,11 @@ from .forms import UserProfileForm
 
 from checkout.models import Order
 
+
 @login_required
 def profile(request):
     profile = get_object_or_404(UserProfile, user=request.user)
-    
+
     orders = profile.orders.all()
 
     template = 'profiles/profile.html'
@@ -23,11 +24,13 @@ def profile(request):
 
     return render(request, template, context)
 
+
 @login_required
 def order_history(request, order_number):
     order = get_object_or_404(Order, order_number=order_number)
 
-    messages.info(request, f'This is a past confirmation for order number {order_number}. ')
+    messages.info(request, f'This is a past confirmation\
+                  for order number {order_number}. ')
 
     template = 'checkout/checkout_success.html'
     context = {
@@ -50,10 +53,12 @@ def update_profile(request):
             messages.success(request, 'Profile updated successfully')
             return redirect(reverse('profile'))
         else:
-            messages.error(request, 'Failed to update your details. Please ensure you have enetered valid entries into the form')
+            messages.error(request, 'Failed to update your details.\
+                          Please ensure you have enetered valid \
+                          entries into the form')
     else:
         form = UserProfileForm(instance=profile)
-    
+
     orders = profile.orders.all()
 
     template = 'profiles/update_profile.html'

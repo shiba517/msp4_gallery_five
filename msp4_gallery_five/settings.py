@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'home',
     'products',
+    # 'crate' app heavily copied/slightly adapted from the Code Institute course. More details in the README.md under code(REF003)
     'crate',
     # 'checkout' app heavily copied/slightly adapted from the Code Institute course. More details in the README.md under code(REF002)
     'checkout',

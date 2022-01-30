@@ -5,6 +5,7 @@ from decimal import Decimal
 
 from products.models import Product
 
+
 def crate_content(request):
     crate_items = []
     total = 0
@@ -23,7 +24,6 @@ def crate_content(request):
 
     grand_total = total
     charitable_slice = total * Decimal(settings.CHARITABLE_SLICE)
-
 
     context = {
         'crate_items': crate_items,

@@ -14,11 +14,13 @@ class ProductAdmin(admin.ModelAdmin):
 
     ordering = ('sku',)
 
+
 class CategoryAdmin(admin.ModelAdmin):
     list_display = (
         'screen_name',
         'name',
     )
+
 
 class ReviewAdmin(admin.ModelAdmin):
     list_display = (

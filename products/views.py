@@ -13,6 +13,7 @@ from .forms import ProductForm, ProductReviewForm
 from checkout.models import Order, OrderLineItem
 from profiles.models import UserProfile
 
+
 def all_products(request):
 
     products = Product.objects.all()
@@ -20,10 +21,10 @@ def all_products(request):
     categories = None
     sort = None
     direction = None
-    
     if request.GET:
         if 'sort' in request.GET:
-            # Display of products can be in the order of <option> tags from products/templates/products/products.html
+            # Display of products can be in the order of <option> tags from
+            # products/templates/products/products.html
             sortkey = request.GET['sort']
             sort = sortkey
             if sortkey == 'name':
@@ -37,31 +38,32 @@ def all_products(request):
                     sortkey = f'-{sortkey}'
             products = products.order_by(sortkey)
 
-        # Display of products can be dependant on navlinks from templates/includes/navigation.html
+        # Display of products can be dependant on navlinks from
+        # templates/includes/navigation.html
         if 'category' in request.GET:
             categories = request.GET['category'].split(',')
             products = products.filter(category__name__in=categories)
             categories = Category.objects.filter(name__in=categories)
 
-        # To find an item via the search form from templates/includes/navigation.html
+        # To find an item via the search form from
+        # templates/includes/navigation.html
         if 'find' in request.GET:
             find = request.GET['find']
             if not find:
-                messages.error(request, "You didn't enter any search criteria!")
+                messages.error(request,
+                               "You didn't enter any search criteria!")
                 return redirect(reverse('products'))
-            
-            find = Q(name__icontains=find) | Q(description__icontains=find) | Q(artist_name__icontains=find)
+            find = Q(name__icontains=find) |
+            Q(description__icontains=find) |
+            Q(artist_name__icontains=find)
             products = products.filter(find)
-    
     current_sorting = f'{sort}_{direction}'
-    
     context = {
         'products': products,
         'searched': find,
         'current_categories': categories,
         'current_sorting': current_sorting
     }
-
     return render(request, 'products/products.html', context)
 
 
@@ -70,9 +72,6 @@ def product_detail(request, product_id):
     product = get_object_or_404(Product, id=product_id)
 
     reviews = Reviews.objects.filter(product=product_id)
-
-    
-    
     # FINDS IF THE USER HAD PREVIOUSLY PURCHSED THE ART WORK
     ordered = False
     ordered_proc1 = OrderLineItem.objects.filter(product=product_id)
@@ -109,7 +108,7 @@ def product_detail(request, product_id):
     print('REQUEST OF POST HAS NOT HAPPENED')
     form = ProductReviewForm()
     print('FORM HAS BEEN PRODUCED')
-    
+
     context = {
         'ordered': ordered,
         'reviews': reviews,
@@ -119,10 +118,12 @@ def product_detail(request, product_id):
 
     return render(request, 'products/product_detail.html', context)
 
+
 @login_required()
 def add_product(request):
     if not request.user.is_superuser:
-        messages.error(request, 'You do not have access/permission to this page')
+        messages.error(request, 'You do not \
+            have access/permission to this page')
         return redirect(reverse('home'))
 
     if request.method == 'POST':
@@ -131,13 +132,14 @@ def add_product(request):
         if form.is_valid():
             product = form.save()
             # messages.success(request, 'Successfully added product')
-            messages.success(request, f'You have added {product.name} to the database')
+            messages.success(request, f'You have added\
+                {product.name} to the database')
             return redirect(reverse('product_detail', args=[product.id]))
         else:
-            messages.error(request, 'Failed to add product. Please ensure you have enetered valid entries into the form')
+            messages.error(request, 'Failed to add product. \
+                Please ensure you have enetered valid entries into the form')
     else:
         form = ProductForm()
-    
     template = 'products/add_product.html'
     context = {
         'form': form,
@@ -145,10 +147,12 @@ def add_product(request):
 
     return render(request, template, context)
 
+
 @login_required()
 def edit_product(request, product_id):
     if not request.user.is_superuser:
-        messages.error(request, 'You do not have access/permission to this page')
+        messages.error(request, 'You do not \
+            have access/permission to this page')
         return redirect(reverse('home'))
 
     product = get_object_or_404(Product, id=product_id)
@@ -158,10 +162,12 @@ def edit_product(request, product_id):
         if form.is_valid():
             form.save()
             # messages.success(request, 'Successfully updated product!')
-            messages.success(request, f'You have successfully updated the information for {product.name}')
+            messages.success(request, f'You have successfully \
+                updated the information for {product.name}')
             return redirect(reverse('product_detail', args=[product.id]))
         else:
-            messages.error(request, 'Failed to update product. Please ensure the form is valid.')
+            messages.error(request, 'Failed to update product.\
+            Please ensure the form is valid.')
     else:
         form = ProductForm(instance=product)
 
@@ -173,16 +179,18 @@ def edit_product(request, product_id):
 
     return render(request, template, context)
 
+
 @login_required()
 def delete_product(request, product_id):
     if not request.user.is_superuser:
-        messages.error(request, 'You do not have access/permission to this page')
+        messages.error(request, 'You do not have\
+            access/permission to this page')
         return redirect(reverse('home'))
-        
     product = get_object_or_404(Product, id=product_id)
 
     product.delete()
-    messages.success(request, f'You have deleted {product.name} from the database')
+    messages.success(request, f'You have deleted\
+        {product.name} from the database')
 
     return redirect(reverse('products'))
 
@@ -196,4 +204,3 @@ def remove_review(request, review_id):
 
     # return redirect(reverse('products'))
     return HttpResponseRedirect(request.META["HTTP_REFERER"])
-    
