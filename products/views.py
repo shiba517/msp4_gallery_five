@@ -53,9 +53,7 @@ def all_products(request):
                 messages.error(request,
                                "You didn't enter any search criteria!")
                 return redirect(reverse('products'))
-            find = Q(name__icontains=find) |
-            Q(description__icontains=find) |
-            Q(artist_name__icontains=find)
+            find = Q(name__icontains=find) | Q(description__icontains=find) | Q(artist_name__icontains=find)
             products = products.filter(find)
     current_sorting = f'{sort}_{direction}'
     context = {
