@@ -13,7 +13,7 @@ Gallery Five (TF) is a charity that helps support children from disadvantaged ba
     * Know basic information of the art work easily such as price, name etc 
     * Sorting of products on to make it easier for what I want 
     * Read about the company of the website 
-    * Know how delivery and returns work 
+    <!-- * Know how delivery and returns work  -->
     * Be able to communicate with the website as in email, contact number etc 
     * Register to the website 
     * Read reviews of the art works 
@@ -27,7 +27,7 @@ Gallery Five (TF) is a charity that helps support children from disadvantaged ba
     * Have a page with my information given such as name, address, email etc 
     * Reset my password 
     * Delete my account 
-    * Receive emails regarding news about the website
+    <!-- * Receive emails regarding news about the website -->
     * Create a favourite/likes list 
     * Post reviews of the art works 
     * Post articles/blogs related to art and the charity sector  
@@ -42,9 +42,9 @@ Gallery Five (TF) is a charity that helps support children from disadvantaged ba
     * A secured payment system 
     * Be acknowledged of how secure the process is for peace of mind 
     * An email once payment has gone through 
-    * Have enough time for my items to be in the basket before it is taken off 
+    <!-- * Have enough time for my items to be in the basket before it is taken off  -->
     * Edit my basket such as deleting an item, changing the quantity etc 
-    * Have a double confirmation process 
+    * Have a confirmation message
 
 ## **THE 5 PLANES** 
 ### Strategy 
@@ -109,49 +109,7 @@ Content requirements:
     * No audio as it can be more of an annoyance than an entertaining feature of the site 
 
 ### Structure 
-Database 
-- Database model for each art work: 
-    * Id 
-    * Name 
-    * Artist 
-    * Type 
-    * Work description 
-    * Creation date 
-    * Image 
-    * Price 
-    * Purchasers
-    * Sold
-    * Likes
-
-- Database model for each category: 
-    * Id 
-    * Name of category 
-
-- Database model for each member: 
-    * Id 
-    * First name 
-    * Last name 
-    * Email 
-    * Home address 
-    * Contact number 
-    * Registration date 
-
-- Database model for each Review 
-    * Id 
-    * Review title 
-    * Reviewer
-    * Product - Art work database  
-    * Reviewer - Member database  
-    * Review date 
-
-- Database for each blog: 
-    * Id 
-    * Blog title 
-    * Blog 
-    * Auther 
-    * Blog date 
-    * Image 
-    * Publish 
+Database - [image](readme/images/database_schema.png)
 
 Page details: 
 - Header section – This will be on top of every page. It should consist of: 
@@ -287,7 +245,6 @@ Wireframes for mobile/tablet screens
 <!-- Contact us page: [wireframe image](readme/images/contact_us.png) -->
 * Blogs page: [wireframe image](readme/images/mobile_blogs.png)
 * Selected blog page: [wireframe image](readme/images/mobile_read_blog.png)
- 
 
 ### Surface 
 - Font: 
@@ -300,6 +257,7 @@ Wireframes for mobile/tablet screens
         * Navy - #1e3d59 
         * Pale orange - #ff6e40 
         * Yellow - #ffc13b 
+
 
 ## **TECHNOLOGIES USED**
 - HTML
@@ -318,7 +276,7 @@ Wireframes for mobile/tablet screens
 - Git pod - Platform to write code
 - Balsamiq - software for use fo making skeleton sketches
 - Paint 3D - an app I used to help resize and edit images; It is available on Windows 10
-<!-- Lucid chart - website where you can make flowcharts -->
+- Lucid chart - website where I made the database schema
 - W3C Markup Validator - detects any errors in .html files
 - W3C CSS Validator - detects any errors in .css files
 
@@ -326,66 +284,88 @@ Wireframes for mobile/tablet screens
 ## **TESTING**
 ### HTML Testing
 Using - W3C Markup Validator
-| FILE | Result 1 | Correction (if needed) | Notes
---- | --- | --- | --- |
+Errors and Warnings in the .html files have been attended with the help of W3 .html Validator. After alterations, no major errors were found in the .html files; Most were related to the django templates. The few slightly concerning errors have been documented below
+| FILE | Result | Comment
+--- | --- | --- |
+checkout.html | [image](readme/images/w3_checkout.png) | could not resolve error 7
+footer.html | [image](readme/images/w3_footer.png) | do not believe a title element is needed regarding error 2 and 3
+navigation.html | [image](readme/images/w3_navigation.png) | did not want to alter with error 12 and 13 as it is from Bootstrap and changing of any id names most likely will interfere with the builtin in bootstrap jquery/js
+
+### CSS Testing
+| FILE | Result | Notes
+base.css | [image](readme/images/w3_base_css.png) | 2 warnings were related to the colours of the background and border of a class element being the same
+
+### PEP8 Testing
+* I used pep8online to check whether my .py file codes were PEP8 compliant. I made the changes needed for an All right pass for all .py files.
+* After changes were made, an internal server error occured. I had to revert some line of codes back to its original state for the website to work. More details can be found in 'Bugs and Fixes' section
 
 ### User Stories Testing
 | AIM | Achieved | Comment |
 --- | --- | --- | 
 **As a first time visitor to the website, I would like to..** 
-Be able to browse through all the art work available for purchase | yes | 
-Search for specific art work | yes | 
-Know basic information of the art work easily such as price, name etc | yes | 
-Sorting of products on to make it easier for what I want | yes | 
-Purchase with ease and confidence | yes | 
-Read about the company of the website 
-Know how delivery and returns work 
-Be able to communicate with the website as in email, contact number etc 
-Register to the website | yes | 
-Read reviews of the art works | yes | 
-Read articles/blogs related to art and the charity sector | yes | 
+Be able to browse through all the art work available for purchase | yes | |
+Search for specific art work | yes | |
+Know basic information of the art work easily such as price, name etc | yes | |
+Sorting of products on to make it easier for what I want | yes | |
+Purchase with ease and confidence | yes | |
+Read about the company of the website | yes | |
+Be able to communicate with the website as in email, contact number etc | yes | |
+Register to the website | yes | |
+Read reviews of the art works | yes | | 
+Read articles/blogs related to art and the charity sector | yes | |
 **As a registered member to the website, I would like to..** 
-Purchase with ease and confidence | yes | 
-View and edit my shopping basket | yes | 
-Have quick purchasing procedures in the form of saved bank details | yes | 
-Know about my previous purchases/orders | yes | 
-Have a page with my information given such as name, address, email etc | yes | 
-Reset my password | yes | 
+Purchase with ease and confidence | yes | |
+View and edit my shopping basket | yes | |
+Have quick purchasing procedures in the form of saved bank details | yes | |
+Know about my previous purchases/orders | yes | |
+Have a page with my information given such as name, address, email etc | yes | | 
+Reset my password | yes | |
 Delete my account 
-Receive emails regarding news about the website
-Create a favourite/likes list | yes | 
-Post reviews of the art works | yes | 
-Post articles/blogs related to art and the charity sector | yes |
+Create a favourite/likes list | yes | |
+Post reviews of the art works | yes | |
+Post articles/blogs related to art and the charity sector | yes | |
 **As a site owner/admin user, I would like to..**
-Remove and ban accounts | yes |
-Edit products on the websites for reasons such as typo errors, pricing etc | yes | 
-Add and remove products | yes |
-Add and remove reviews | yes | 
-Approve and then post of blogs by users/member | yes |
+Remove and ban accounts | yes | |
+Edit products on the websites for reasons such as typo errors, pricing etc | yes | |
+Add and remove products | yes | |
+Add and remove reviews | yes | |
+Approve and then post of blogs by users/member | yes | |
 **As a user in the process of purchasing, I would like to..** 
-A secured payment system | yes | 
-Be acknowledged of how secure the process is for peace of mind 
+A secured payment system | yes | |
+Be acknowledged of how secure the process is for peace of mind | yes | |
 An email once payment has gone through 
-Have enough time for my items to be in the basket before it is taken off 
-Edit my basket such as deleting an item, changing the quantity etc | yes | 
-Have a double confirmation process  
+Edit my basket such as deleting an item, changing the quantity etc | yes | |
+Have a confirmation message | yes | |
 
 ### Cross Platfrom Testing
 #### CRUD (create, read, update, delete) TESTING
-| AIM | SM | MD | LG |
+| AIM | admin | registered user | non-registered user |
 --- | --- | --- | --- |
-Is it possible to create an art work to add the database? | yes | yes | yes
-Is it possible to read/see the created art work? | yes | yes | yes
-Is it possible to update the art work from the database? | yes | yes | yes
-Is it possible to delete the art work from the database? | yes | yes | yes
-Is it possible to create a blog to add the database? | yes | yes | yes
-Is it possible to read/see the created a blog? | yes | yes | yes
-Is it possible to update the blog from the database? | yes | yes | yes
-Is it possible to delete the blog from the database? | yes | yes | yes
-Is it possible to create a review for an art work? | yes | yes | yes
-Is it possible to read/see the review created? | yes | yes | yes
-Is it possible to update the review from the database? | yes | yes | yes
-Is it possible to delete the review from the database? | yes | yes | yes
+**Products/art works - from products app**
+CREATE a product to add to the database | yes | no | no
+READ/see a product from the database on the website | yes | yes | yes
+UPDATE a product | yes | no | no
+DELETE a product | yes | no | no
+**Blogs - from blogs app**
+CREATE a blog post to add to the database | yes | yes | no
+READ a blog from the website on the website | yes | yes | yes
+UPDATE a blog | no | no | no
+DELETE a blog | yes | no | no
+**Reviews - from products app**
+CREATE a review | yes | yes | no
+READ a review | yes | yes | yes
+UPDATE a review | no | no | no
+DELETE a review | yes | yes | no
+**Crate - from crate app**
+CREATE a crate | yes | yes | yes
+READ a crate | yes | yes | yes
+UPDATE a crate | yes | yes | yes
+DELETE a crat | yes | yes | yes
+**Wishlist - from wishlist app**
+CREATE a wishlist | yes | yes | no
+READ a wishlist | yes | yes | no
+UPDATE a wishlist | yes | yes | no
+DELETE from wishlist | yes | yes | no
 
 ### FORM VALIDATION TESTING
 | AIM | SM | MD | LG |
@@ -424,6 +404,12 @@ Both 'Password' fields must match | yes | yes | yes
 **Reviews - product_detail.html**
 'Title' field will accept upto 100 characters | yes | yes | yes
 'Review' field will accept upto 1000 characters | yes | yes | yes
+**Contact us - index.html**
+'Name' field will accept upto 100 characters | yes | yes | yes
+'E-mail' field must have follow the pattern of have a '@' and a '.' in the email | yes | yes | yes
+
+### Lighthouse testing
+I used Google Chrom Lighthouse testing to find out the quality of the website. Here are my results: [image](readme/images/lighthouse_testing.png)
 
 ### Responsive Testing
 AIM | SM | MD | LG |
@@ -495,8 +481,14 @@ Images | yes | yes | yes
 Renders as expected | yes | yes | yes
 Form validation | yes | yes | yes
 
+### Bugs and Fixes
+ISSUE | Solved? | How? | link
+--- | --- | --- | --- | 
+It was not possible to NOT save the changes made in teh checkout form in checkout.html | Yes | Thanks to helpful student peers (Phillip and Luke) from the Slack community, they posted the required code needed for the checkbox to work with the .js, .html, and .py files. | (https://code-institute-room.slack.com/archives/C7HS3U3AP/p1605302104469800?thread_ts=1605222094.452700&cid=C7HS3U3AP) and (https://code-institute-room.slack.com/archives/C7HS3U3AP/p1621881386435800?thread_ts=1605222094.452700&cid=C7HS3U3AP) 
+inernal server occured after PEP8 chnages | yes | Gitpod terminal told me whre the errors were occuring. Reverted the codes back to its state before the PEP8 changes | [image](readme/images/bugs_and_fixes_pep8.png)
+
 ## **DEPLOYMENT**
-### Making A Local Clone
+### Making a local clone
 You may want to have access via a copy of the repository on your own device. There are three ways to do this: 
 * Method 1
 1. Login to your GitHub account and open up the repository you would like to copy 
@@ -511,12 +503,88 @@ You may want to have access via a copy of the repository on your own device. The
 5. Back to your IDE terminal, after the ‘git clone’, press the spacebar button and paste in the link you copied from the repository. Your entry in the terminal should look something like this: ‘gti clone https://github.com/shiba517/msp4_gallery_five.git’. Then press enter
 6. Your terminal will let you know the repository has been cloned and saved to your preferred destination and will be evident when viewing files and folders from your preferred destination
 
+### Working with a local clone
+1. Install all the requirements from requirements.txt by typing in 'pip3 install -r requirements.txt' into your terminal
+2. Create a .gitignore from the root of your project
+3. Create a env.py from the root of your project and have it look like this: [image](readme/images/env_py_file.png)
+4. Include env.py into .gitignore
+5. Create a Stripe account
+    * Under the 'Developers' tab, click on 'Webhooks'
+    * Click on '+ Add endpoint' and enter in the your URL followed by 'checkout/wh/', and check recieve all events
+6. In your env.py file, fill out the second parameter of every os.environ line with the following:
+    * "SECRET_KEY" can be anything you want
+    * "STRIPE_PUBLIC_KEY" can be found from your Stripe account under the name of 'Publish key'
+    * "STRIPE_SECRET_KEY" can be found in your Stripe account under the name of 'Secret key'
+    * "STRIPE_WH_SECRET" can be found in your 'endpoint' tab from your Strip account under the name of 'signing secret'
+7. An admin/super_user will need to be created. To do so, type in 'python3 manage.py createsuperuser'; and follow the instructions
+8. Now it is time load up your django with the initial files/data and databases. You can do so by tyoing into your terminal the following:
+    * python3 manage.py makemigrations
+    * python3 manage.py migrate
+    * python3 manage.py loaddata categories
+    python3 manage.py loaddata products
+9. You are now done. To get access to your admin, run the server ('python3 manage.py runserver') and type in'/admin' at teh end of your url
+
+### Deploying to Heroku
+1. Install all the requirements from requirements.txt by typing in 'pip3 install -r requirements.txt' into your terminal
+2. Create a Heroku account
+    * Under 'Add-ons', find Heroku-Postgress and provision  it
+3. Follow step 8 and 7 from the previous sub title(Working wiht a local clone)
+4. In settings.py, replace and/or add the url of your Heroku app in teh variable 'ALLOWED_HOSTS'
+5. If you would like quick deployment to Heroku, add your repository to Heroku under Deploy > Connect to Github > Enable automatic deploys
+
+### Hosting files with AWS
+1. Create and AWS account
+2. Under S3 services, create a new bucket
+    * Uncheck 'Block all public access'
+3. In your newly created bucket, enable Static Web Hosting from the tab Properties
+4. Under the 'Permissions' tab, make the following changes:
+    * 'Bucket policy' > policy generator
+        * Select Type of Policy = select 'S3 Bucket Policy'
+        * Principle: type in '*'
+        * Actions: select 'GetObject'
+        * Amazon Resource Name(ARN): you should find this from the previus windown under the 'Bucket policy' tab
+        * Add statement > Generaate policy. Copy given code
+        * Paste the code in the editor under the 'Bucket policy tab and add '/*' at the end of "Resource" image
+        * Click save
+5. Under IAM services, create a new 'user group'
+6. Access management > Policies > Create policy
+    * Under JSON tab, click on 'Import Managed policy' and import 'AmazonS3FullAccess'
+    * Now under the JSON tab, include your ARN twice in the 'Resources' with the second follewed by '/*'
+    * Click on 'Review policy', fill out the name and description, and finally click on 'Create policy'
+7. Go to the page of the group you created
+    * Under 'Permissions' > Attach Policy, select for the policy you have just created and click 'Attach policy'
+8. Access management > Users > Add user. Give it a name and check 'Access type'
+    * Progress on to last step without changes and click 'Create user'
+    * Download the .csv file and save it somewhere secure as you will NOT be able to download it again once you naviate away from this page
+9. In settings.py, change the AWS_STORAGE_BUCKET_NAME to the name of your AWS bucket and AWS_S3_REGION_NAME to your region which you can find in your AWS account
+10. In teh S3 services, add a new colder named 'media'
+    * Upload your images, Select 'Grant public read access to this objects(s)' and finally 'upload'
+11. From your Stripe account, click '+ Add endpoint' and enter in the your Heroku URL followed by 'checkout/wh/', and check recieve all events
+12. Your 'Config Vars' from your Heroku account (under Settings) should look like this: [image](readme/images/heroku_config_look.png)
+    * AWS_ACCESS_KEY_ID can be found from your AWS account
+    * AWS_SECRET_ACCESS_KEY can be found from your AWS account
+
+### Setting up a real active email service
+1. Create a Gmail account
+2. go to Settings > Accounts and Import > Other Google account settings
+    * Click on 'Security' tab and enable 2-step verification
+3. Back to 'Security' tab, click on 'App passwords'
+    * for 'Select app', select 'Mail'
+    * for 'Select device', select 'other'
+    * Name your app password and click 'GENERATE'; You will then be given a password
+    * Copy and paste the password and add it to your Heroku config variable under the name of 'EMAIL_HOST_PASS'
+4. Whilst on the config variable, add another under the name of 'EMAIL_HOST_USER' with its value being your email address
+
 ## **CREDITS**
 ### References
-* REF001 - 'Profile' app was heavily copied/slightly adapted from Code Insitute Full Stack Frameworks with Django module (https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+FSF_102+Q1_2020/courseware/4201818c00aa4ba3a0dae243725f6e32/2c1b98a8efb748009445d5056c97483b/)
-* REF002 - 'Checkout' app was heavily copied/slightly adapted from Code Insitute Full Stack Frameworks with Django module (https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+FSF_102+Q1_2020/courseware/4201818c00aa4ba3a0dae243725f6e32/326f171b831446588d33c0333eb4caaa/)
+* REF001 - 'profile' app was heavily copied/slightly adapted from Code Insitute Full Stack Frameworks with Django module (https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+FSF_102+Q1_2020/courseware/4201818c00aa4ba3a0dae243725f6e32/2c1b98a8efb748009445d5056c97483b/)
+* REF002 - 'checkout' app was heavily copied/slightly adapted from Code Insitute Full Stack Frameworks with Django module (https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+FSF_102+Q1_2020/courseware/4201818c00aa4ba3a0dae243725f6e32/326f171b831446588d33c0333eb4caaa/)
+* REF003 - 'crate' app was heavily copied/slightly adapted from Code Insitute Full Stack Frameworks with Django module (was heavily copied/slightly adapted from Code Insitute Full Stack Frameworks with Django module)
+
 ### Content
+
 ### Media
+
 ### Acknowledgement 
 * Code Institue course
 * Course tutor Precious Ijege
@@ -528,5 +596,3 @@ You may want to have access via a copy of the repository on your own device. The
 
 ## **DISCLAIMER**
 This webite was built for educational reasons for my coding course from Code Institute. No content, written(unless mentioned in CREDITS - Content of this document) and imagery, is of mine. No offense was intentionaly made with the pricing of the art works (I randomly made up the numbers), and any namings of art works. If there is anything you would like enquire, please do so via my email - shibacdeb@gmail.com
-
-

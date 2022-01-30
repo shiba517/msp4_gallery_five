@@ -35,4 +35,3 @@ class UserProfileForm(forms.ModelForm):
             self.fields[field].widget.attrs['class'] = 'stripe-style-input'
             self.fields[field].label = False
             self.fields['default_phone_number'].widget.attrs['type'] = 'tel'
-            self.fields['default_phone_number'].widget.attrs['pattern'] = '[0-9]'
