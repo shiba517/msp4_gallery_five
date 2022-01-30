@@ -9,3 +9,10 @@ class ContactUsForm(forms.ModelForm):
         fields = [
             'name', 'message', 'email',
         ]
+
+    def __init__(self, *args, **kwargs):
+
+        super().__init__(*args, **kwargs)
+        
+        self.fields['email'].widget.attrs['type'] = 'email'
+        self.fields['name'].widget.attrs['maxlength'] = 10

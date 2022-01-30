@@ -18,8 +18,8 @@
                 {% csrf_token %}
                 {{ form | crispy }}
                 <div>
-                    <a href="{% url 'products' %}" class="btn ncc-btn-base text-capitalize">cancel</a>
-                    <button type="submit" class="btn ncc-btn-base text-capitalize">add</button>
+                    <a href="{% url 'products' %}" class="btn ncc-btn-base text-capitalize" aria-label="go to products page">cancel</a>
+                    <button type="submit" class="btn ncc-btn-base text-capitalize" aria-label="post your new art work to the database">add</button>
                 </div>
             </form>
             

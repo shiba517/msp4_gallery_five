@@ -17,9 +17,9 @@
             <h2 class="display-2">{{ blog.title }}</h2>
             <div class="ncc-readblog-image-area">
                 {% if blog.image %}
-                <img src="{{ blog.image.url }}" class="ncc-readblog-image" alt="">
+                <img src="{{ blog.image.url }}" class="ncc-readblog-image" alt="image for the blog">
                 {% else %}
-                <img src="{{ MEDIA_URL }}noimage.jpg" class="ncc-readblog-image" alt="...">
+                <img src="{{ MEDIA_URL }}noimage.jpg" class="ncc-readblog-image" alt="image for the blog">
                 {% endif %}
             </div>
         </div>
@@ -42,13 +42,14 @@
             {% csrf_token %}
             {{ form | crispy }}
             <div>
-                <a href="{% url 'reject_blog' blog.id %}" class="btn ncc-btn-base">delete</a>
-                <button type="submit" class="btn ncc-btn-base">post</button>
-                <a href="{% url 'view_blogs' %}" class="btn ncc-btn-base">back to blogs</a>
+                <a href="{% url 'reject_blog' blog.id %}" class="btn ncc-btn-base" aria-label="decline the request and delete it off the database">delete</a>
+                <button type="submit" class="btn ncc-btn-base" aria-label="publish the blog">post</button>
+                <a href="{% url 'view_blogs' %}" class="btn ncc-btn-base" aria-label="go back to the blogs page">back to blogs</a>
+                <a href="{% url 'requested_blogs' %}" class="btn ncc-btn-base" aria-label="go back to the requested blogs page">back to requested blogs</a>
             </div>
         </form>
         {% else %}
-        <a href="{% url 'view_blogs' %}" class="btn ncc-btn-base text-capitalize">back to blogs</a>
+        <a href="{% url 'view_blogs' %}" class="btn ncc-btn-base text-capitalize" aria-label="go back to the blogs page">back to blogs</a>
         {% endif %}
         
     </div>

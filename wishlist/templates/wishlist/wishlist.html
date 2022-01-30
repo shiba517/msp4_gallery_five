@@ -33,7 +33,7 @@
         <div class="col">
             <h3>Your wishlist is empty</h3>
             <p>Why not do something about it by browsing our gallery</p>
-            <a href="{% url 'products' %}" class="btn ncc-btn-base">gallery</a>
+            <a href="{% url 'products' %}" class="btn ncc-btn-base" aria-label="go to products page">gallery</a>
         </div>
     </div>
     {% endif %}
@@ -51,9 +51,9 @@
                     <a href="{% url 'add_wishlist' product.id %}" class="ncc-wishlist-button" style="color:black"><i class="fas fa-heart"></i></a>        
                     {% endif %}  
                     {% if product.image %}
-                    <img src="{{ product.image.url }}" class=" ncc-card-img" alt="...">
+                    <img src="{{ product.image.url }}" class=" ncc-card-img" alt="image of art work">
                     {% else %}
-                    <img src="{{ MEDIA_URL }}noimage.jpg" class=" ncc-card-img" alt="...">
+                    <img src="{{ MEDIA_URL }}noimage.jpg" class=" ncc-card-img" alt="no image avilable for art work">
                     {% endif %}
                 </div>
                 
@@ -61,7 +61,7 @@
                     <h3 class="card-title">{{ product.name }}</h3>
                     <i>{{ product.artist_name }}</i>
                     <p class="card-text display-5">{{ product.price }}</p>
-                    <a href="{% url 'product_detail' product.id %}" class="btn ncc-btn-base text-capitalize">view</a>
+                    <a href="{% url 'product_detail' product.id %}" class="btn ncc-btn-base text-capitalize" aria-label="got to product detail of the art work">view</a>
                 </div>
             </div>
         </div>

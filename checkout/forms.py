@@ -38,3 +38,10 @@ class OrderForm(forms.ModelForm):
             self.fields[field].widget.attrs['placeholder'] = placeholder
             # self.fields[field].widget.attrs['class'] = 'stripe-style-input'
             self.fields[field].label = False
+            self.fields['full_name'].widget.attrs['maxlength'] = 50
+            self.fields['email'].widget.attrs['type'] = 'email'
+            # self.fields['phone_number'].widget.attrs['type'] = 'tel'
+            self.fields['street_address1'].widget.attrs['maxlength'] = 80
+            self.fields['street_address2'].widget.attrs['maxlength'] = 80
+            self.fields['postcode'].widget.attrs['maxlength'] = 50
+            self.fields['county'].widget.attrs['maxlength'] = 80

@@ -17,8 +17,8 @@
             <h5>{{ review.title }}</h5>
             <i>{{ review.auther }} ({{ review.date }})</i>
             <p>{{ review.review }}</p>
-            {% if request.user.is_superuser %}
-            <a href="{% url 'remove_review' review.id %}" class="btn ncc-btn-base">delete</a>
+            {% if request.user.is_superuser or user == review.auther%}
+            <a href="{% url 'remove_review' review.id %}" class="btn ncc-btn-base" aria-label="delete your review">delete</a>
             {% endif %}
             <hr>
         </div>
@@ -36,7 +36,7 @@
                 {% csrf_token %}
                 {{ form | crispy }}
                 <div>
-                    <button type="submit" class="btn ncc-btn-base">post</button>
+                    <button type="submit" class="btn ncc-btn-base" aria-label="submit your review">post</button>
                 </div>
             </form>
         </div>

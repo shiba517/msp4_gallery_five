@@ -35,9 +35,9 @@
                                 <td class="p-3 w-25">
                                 <!-- <td class="d-none d-md-block p-3 w-25"> -->
                                     {% if item.product.image %}
-                                    <img class="img-fluid rounded" src="{{ item.product.image.url }}">
+                                    <img class="img-fluid rounded" src="{{ item.product.image.url }}" alt="image of art work">
                                     {% else %}
-                                    <img src="{{ MEDIA_URL }}noimage.jpg" class="img-fluid rounded" alt="...">
+                                    <img src="{{ MEDIA_URL }}noimage.jpg" class="img-fluid rounded" alt="no image is avilable">
                                     {% endif %}
                                     
                                 </td>
@@ -60,8 +60,8 @@
                                         </div>
                                         
                                     </form>
-                                    <a class="update-link btn ncc-btn-base"><small>Update</small></a>
-                                    <a href="" class="remove-item btn ncc-btn-base" id="remove_{{ item.item_id }}"><small>Remove</small></a>
+                                    <a class="update-link btn ncc-btn-base" aria-label="update the quantity to purchase"><small>Update</small></a>
+                                    <a href="" class="remove-item btn ncc-btn-base" id="remove_{{ item.item_id }}" aria-label="remove the art work from your crate"><small>Remove</small></a>
                                 </td>
                                 <td class="py-3">
                                     <p>£{{ item.product.price | calc_subtotal:item.quantity }}</p>
@@ -112,7 +112,7 @@
             <div class="col">
                 <h3>Your crate is empty</h3>
                 <p>Why not do something about it by browsing our gallery</p>
-                <a href="{% url 'products' %}" class="btn ncc-btn-base text-capitalize">gallery</a>
+                <a href="{% url 'products' %}" class="btn ncc-btn-base text-capitalize" aria-label="go to products page">gallery</a>
             </div>
             
             {% endif %}

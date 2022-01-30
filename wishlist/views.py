@@ -18,8 +18,10 @@ def add_wishlist(request, product_id):
 
     if product.wishlisted.filter(id=request.user.id).exists():
         product.wishlisted.remove(request.user.id)
+        messages.success(request, f'You have deleted {product.name} from your wishlist')
     else:
         product.wishlisted.add(request.user.id)
+        messages.success(request, f'You have added {product.name} to your wishlist')
         
     return HttpResponseRedirect(request.META["HTTP_REFERER"])
 

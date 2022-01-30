@@ -14,7 +14,7 @@
     <!-- Ordering of products -->
     <div class="row mb-4">
         <div class="col col-md-6 col-lg-4">
-            <select id="sort-selector" class="form-select" aria-label="Default select example">
+            <select id="sort-selector" class="form-select" aria-label="select how to order products on page">
                 <option selected>Open this select menu</option>               
                 <option value="name_asc" {% if current_sorting == 'name_asc' %}selected{% endif %}>Name (A-Z)</option>
                 <option value="name_desc" {% if current_sorting == 'name_desc' %}selected{% endif %}>Name (Z-A)</option>
@@ -34,12 +34,12 @@
                 
                 <div class="ncc-card-image-area bottom-100">
                     {% if request.user.is_authenticated %}
-                    <a href="{% url 'add_wishlist' product.id %}" class="ncc-wishlist-button" style="color:black"><i class="fas fa-heart"></i></a>        
+                    <a href="{% url 'add_wishlist' product.id %}" class="ncc-wishlist-button" style="color:black" aria-label="like this art work"><i class="fas fa-heart"></i></a>        
                     {% endif %}                                
                     {% if product.image %}
-                    <img src="{{ product.image.url }}" class=" ncc-card-img" alt="...">
+                    <img src="{{ product.image.url }}" class=" ncc-card-img" alt="image of art work">
                     {% else %}
-                    <img src="{{ MEDIA_URL }}noimage.jpg" class=" ncc-card-img" alt="...">
+                    <img src="{{ MEDIA_URL }}noimage.jpg" class=" ncc-card-img" alt="there is no image for this art work">
                     {% endif %}
                     
                 </div>
@@ -48,7 +48,7 @@
                     <h3 class="card-title">{{ product.name }}</h3>
                     <i>{{ product.artist_name }}</i>
                     <p class="card-text display-5">{{ product.price }}</p>
-                    <a href="{% url 'product_detail' product.id %}" class="btn ncc-btn-base text-capitalize">view</a>
+                    <a href="{% url 'product_detail' product.id %}" class="btn ncc-btn-base text-capitalize" aria-label="go to product detail page for this art work">view</a>
                     <!-- <a href="{% url 'add_wishlist' product.id %}" class="btn ncc-btn-base"><i class="fas fa-heart"></i></a> -->
                 </div>
             </div>
@@ -57,7 +57,7 @@
         
     </div>
     <div class="btt-button shadow-sm rounded-0 border border-black">
-        <a class="d-flex h-100 btt-link">
+        <a class="d-flex h-100 btt-link" aria-label="go back to the top of the page">
             <i class="fas fa-arrow-up text-black mx-auto my-auto"></i>
         </a>	
     </div>

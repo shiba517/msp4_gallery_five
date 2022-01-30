@@ -13,23 +13,23 @@
     </div>
     <div class="row">
         <div class="col text-center">
-            <a href="{% url 'create_blog' %}" class="btn ncc-btn-base text-capitalize">write a blog</a>
+            <a href="{% url 'create_blog' %}" class="btn ncc-btn-base text-capitalize" aria-label="Go to creat a blog page">write a blog</a>
         </div>
     </div>
     {% for blog in blogs %}
     <div class="row row-col-lg-2 ncc-blogpreview-dec m-4">
         <div class="d-none d-sm-block col-md-6 d-flex flex-wrap align-items-center justify-content-center ncc-blogpreview-image-area">
             {% if blog.image %}
-            <img src="{{ blog.image.url }}" class="ncc-blogpreview-image d-flex align-items-center" alt="">
+            <img src="{{ blog.image.url }}" class="ncc-blogpreview-image d-flex align-items-center" alt="image for blog">
             {% else %}
-            <img src="{{ MEDIA_URL }}noimage.jpg" class="ncc-blogpreview-image d-flex align-items-center" alt="...">
+            <img src="{{ MEDIA_URL }}noimage.jpg" class="ncc-blogpreview-image d-flex align-items-center" alt="image for blog">
             {% endif %}
         </div>
         <div class="col col-md-6 ncc-blogpreview-body-area">
             <h2>{{ blog.title }}</h2>
             <i>{{ blog.auther }}</i>
             <p>{{ blog.article }}</p>
-            <a href="{% url 'read_blog' blog.id %}" class="btn ncc-btn-base text-capitalize">read more</a>
+            <a href="{% url 'read_blog' blog.id %}" class="btn ncc-btn-base text-capitalize" aria-label="go to a page to read the whole blog">read more</a>
         </div>
     </div>
     {% endfor %}

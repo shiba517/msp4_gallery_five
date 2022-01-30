@@ -189,9 +189,9 @@
         <div class="row">
             <div class="col text-center">
                 {% if from_profile %}
-                <a href="{% url 'profile' %}" class="btn mt-5 btn ncc-btn-base text-capitalize">back to profile</a>
+                <a href="{% url 'profile' %}" class="btn mt-5 btn ncc-btn-base text-capitalize" aria-label="go back to your profile page">back to profile</a>
                 {% else %}
-                <a href="{% url 'products' %}" class="btn mt-5 btn ncc-btn-base text-capitalize">shop more</a>
+                <a href="{% url 'products' %}" class="btn mt-5 btn ncc-btn-base text-capitalize" aria-label="go to products page">shop more</a>
                 {% endif %}
             </div>
         </div>

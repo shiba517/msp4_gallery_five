@@ -12,20 +12,20 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="{% url 'home' %}"><strong>Home</strong></a>
+                    <a class="nav-link active" aria-current="page" href="{% url 'home' %}" aria-label="go to home page"><strong>Home</strong></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="{% url 'products' %}">All</a>
+                    <a class="nav-link active" aria-current="page" href="{% url 'products' %}" aria-label="view all art works">All</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Paintings
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <li><a class="dropdown-item" href="{% url 'products' %}?category=water_colour">water colour</a></li>
-                        <li><a class="dropdown-item" href="{% url 'products' %}?category=acrylic">acrylic</a></li>
-                        <li><a class="dropdown-item" href="{% url 'products' %}?category=oil">oil</a></li>
-                        <li><a class="dropdown-item" href="{% url 'products' %}?category=water_colour,acrylic,oil">All paintings</a></li>  
+                        <li><a class="dropdown-item" href="{% url 'products' %}?category=water_colour" aria-label="view all water colour art works">water colour</a></li>
+                        <li><a class="dropdown-item" href="{% url 'products' %}?category=acrylic" aria-label="view all acrylic art works">acrylic</a></li>
+                        <li><a class="dropdown-item" href="{% url 'products' %}?category=oil" aria-label="view all oil painting art works">oil</a></li>
+                        <li><a class="dropdown-item" href="{% url 'products' %}?category=water_colour,acrylic,oil" aria-label="view all painting art works">All paintings</a></li>  
                         
                         
                     </ul>
@@ -37,9 +37,9 @@
                         Graphics
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <li><a class="dropdown-item" href="{% url 'products' %}?category=digital">digital</a></li>
-                        <li><a class="dropdown-item" href="{% url 'products' %}?category=handmade">handmade</a></li>
-                        <li><a class="dropdown-item" href="{% url 'products' %}?category=digital,handmade">All graphics</a></li>
+                        <li><a class="dropdown-item" href="{% url 'products' %}?category=digital" aria-label="view all digital graphic art works">digital</a></li>
+                        <li><a class="dropdown-item" href="{% url 'products' %}?category=handmade" aria-label="view all handmade graphic art works">handmade</a></li>
+                        <li><a class="dropdown-item" href="{% url 'products' %}?category=digital,handmade" aria-label="view all graphic art works">All graphics</a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
@@ -48,27 +48,27 @@
                         Sculptures
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <li><a class="dropdown-item" href="{% url 'products' %}?category=clay">clay</a></li>
-                        <li><a class="dropdown-item" href="{% url 'products' %}?category=stone">stone</a></li>
-                        <li><a class="dropdown-item" href="{% url 'products' %}?category=wood">wood</a></li>
-                        <li><a class="dropdown-item" href="{% url 'products' %}?category=clay,stone,wood">All sculptures</a></li>
+                        <li><a class="dropdown-item" href="{% url 'products' %}?category=clay" aria-label="view all clay sculpture art works">clay</a></li>
+                        <li><a class="dropdown-item" href="{% url 'products' %}?category=stone" aria-label="view all stone sculpture art works">stone</a></li>
+                        <li><a class="dropdown-item" href="{% url 'products' %}?category=wood" aria-label="view all wood sculpture art works">wood</a></li>
+                        <li><a class="dropdown-item" href="{% url 'products' %}?category=clay,stone,wood" aria-label="view all sculpture art works">All sculptures</a></li>
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="{% url 'view_blogs' %}">Blog</a>
+                    <a class="nav-link active" aria-current="page" href="{% url 'view_blogs' %}" aria-label="go to blogs page">Blog</a>
                 </li>
                 {% if request.user.is_authenticated %}
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="{% url 'wishlist' %}">Wishlist</a>
+                    <a class="nav-link active" aria-current="page" href="{% url 'wishlist' %}" aria-label="go to your wish list page">Wishlist</a>
                 </li>
                 {% endif %}
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="{% url 'home' %}#contactus">Contact</a>
+                    <a class="nav-link active" aria-current="page" href="{% url 'home' %}#contactus" aria-label="go to your contact us section of the home page">Contact</a>
                 </li>
                 <!-- SEARCH FOR AN ART WORK -->
                 <form class="d-flex" method="GET" action="{% url 'products' %}">
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="find">
-                    <button class="btn ncc-btn-search" type="submit">Search</button>
+                    <button class="btn ncc-btn-search" type="submit" aria-label="search for item matching the entered words">Search</button>
                 </form>
 
                 <!-- ACCOUNT -->
@@ -79,27 +79,27 @@
                         Account
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <li><a class="dropdown-item" href="{% url 'profile' %}">Profile</a></li>
-                        <li><a class="dropdown-item" href="{% url 'account_logout' %}">Logout</a></li>
+                        <li><a class="dropdown-item" href="{% url 'profile' %}" aria-label="go to your profile page">Profile</a></li>
+                        <li><a class="dropdown-item" href="{% url 'account_logout' %}" aria-label="logout">Logout</a></li>
                         {% if request.user.is_superuser %}
                         <!-- <li><a class="dropdown-item" href="{% url 'add_product' %}">Add product</a></li> -->
                         {% endif %}
                     </ul>
                     {% else %}
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
+                        aria-expanded="false" aria-label="login">
                         Login
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <li><a class="dropdown-item" href="{% url 'account_signup' %}">register</a></li>
-                        <li><a class="dropdown-item" href="{% url 'account_login' %}">login</a></li>
+                        <li><a class="dropdown-item" href="{% url 'account_signup' %}" aria-label="register">Register</a></li>
+                        <li><a class="dropdown-item" href="{% url 'account_login' %}" aria-label="login">Login</a></li>
                     </ul>
                     {% endif %}
                 </li>
 
                 <!-- SHOPPING CRATE -->
                 <li class="nav-item mx-1">
-                    <a class="nav-link active" aria-current="page" href="{% url 'crate' %}">Crate</a>
+                    <a class="nav-link active" aria-current="page" href="{% url 'crate' %}" aria-label="view your crate">Crate</a>
                 </li>
             </ul>
         </div>

@@ -17,8 +17,8 @@
                 {% csrf_token %}
                 {{ form | crispy }}
                 <div>
-                    <a href="{% url 'view_blogs' %}" class="btn ncc-btn-base">cancel</a>
-                    <button type="submit" class="btn ncc-btn-base">post</button>
+                    <a href="{% url 'view_blogs' %}" class="btn ncc-btn-base" aria-label="go back to the blogs page">cancel</a>
+                    <button type="submit" class="btn ncc-btn-base" aria-label="post the entries in the form to the database">post</button>
                 </div>
             </form>
         </div>   

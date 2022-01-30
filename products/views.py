@@ -101,7 +101,7 @@ def product_detail(request, product_id):
                 instance.auther = request.user
                 instance.product = product
                 instance.save()
-
+                messages.success(request, 'You have added a review')
                 return redirect(reverse('product_detail', args=[product.id]))
         else:
             return redirect(reverse('products'))
@@ -192,7 +192,8 @@ def remove_review(request, review_id):
     review = get_object_or_404(Reviews, id=review_id)
 
     review.delete()
-    messages.success(request, 'You have deleted the review from')
+    messages.success(request, 'You have deleted a review')
 
     # return redirect(reverse('products'))
     return HttpResponseRedirect(request.META["HTTP_REFERER"])
+    

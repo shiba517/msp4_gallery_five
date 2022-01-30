@@ -7,9 +7,9 @@
     <div class="row row-cols-1 row-cols-lg-2">
         <div class="col-12 col-lg-7 ncc-productdetail-image-area">
             {% if product.image %}
-            <img src="{{ product.image.url }}" class="ncc-productdetail-image" alt="">
+            <img src="{{ product.image.url }}" class="ncc-productdetail-image" alt="image of art work">
             {% else %}
-            <img src="{{ MEDIA_URL }}noimage.jpg" class="ncc-productdetail-image" alt="...">
+            <img src="{{ MEDIA_URL }}noimage.jpg" class="ncc-productdetail-image" alt="no avialable image for this art work">
             {% endif %}
         </div>
         <div class="col-12 col-lg-5 d-flex flex-wrap align-items-center justify-content-center ncc-productdetail-detail-area">
@@ -22,8 +22,8 @@
 
                 <!-- ADDITIONAL OPTIONS -->
                 {% if request.user.is_superuser %}
-                <a href="{% url 'edit_product' product.id %}" class="btn ncc-btn-base text-capitalize">edit</a>
-                <a href="{% url 'delete_product' product.id %}" class="btn ncc-btn-base text-capitalize">delete</a>
+                <a href="{% url 'edit_product' product.id %}" class="btn ncc-btn-base text-capitalize" aria-label="go to edit product page">edit</a>
+                <a href="{% url 'delete_product' product.id %}" class="btn ncc-btn-base text-capitalize" aria-label="delete this wrt work from the database">delete</a>
                 {% endif %}
 
                 <!-- ADDING ITEM TO THE CART -->
@@ -38,7 +38,7 @@
                                 </div>
                             </div>
                             <div class="text-center">
-                                <a href="{% url 'products' %}" class="btn mt-5 btn ncc-btn-base">
+                                <a href="{% url 'products' %}" class="btn mt-5 btn ncc-btn-base" aria-label="go to products page">
                                     <span class="text-uppercase  ">shope more</span>
                                 </a>
                                 <input type="submit" class="btn text-uppercase mt-5 btn ncc-btn-base text-uppercase" value="Add to cart">
