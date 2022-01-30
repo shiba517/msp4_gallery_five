@@ -15,4 +15,4 @@ class ContactUsForm(forms.ModelForm):
         super().__init__(*args, **kwargs)
 
         self.fields['email'].widget.attrs['type'] = 'email'
-        self.fields['name'].widget.attrs['maxlength'] = 10
+        self.fields['name'].widget.attrs['maxlength'] = 30

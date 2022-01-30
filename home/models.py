@@ -3,9 +3,9 @@ from django.db import models
 
 # Create your models here.
 class ContactUs(models.Model):
-    name = models.CharField(max_length=100, null=False)
+    name = models.CharField(max_length=30, null=False)
     message = models.TextField()
-    email = models.EmailField(default='non', max_length=254,
+    email = models.EmailField(default='', max_length=254,
                               null=False, blank=False)
     date = models.DateTimeField(auto_now_add=True)
 
