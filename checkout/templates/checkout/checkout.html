@@ -28,11 +28,11 @@
                 {% csrf_token %}
                 <!-- USERS BASIC INFORMATION -->
                 <fieldset>
-                    <legend class="fieldset-label medium text-black px-2 w-auto"">Personal information</legend>
+                    <legend class="fieldset-label medium text-black px-2 w-auto">Personal information</legend>
                     {{ order_form.full_name | as_crispy_field}}
                     {{ order_form.email | as_crispy_field}}
                     {{ order_form.phone_number | as_crispy_field}}
-                    <legend class="fieldset-label medium text-black px-2 w-auto"">Delivery information</legend>
+                    <legend class="fieldset-label medium text-black px-2 w-auto">Delivery information</legend>
                     {{ order_form.street_address1 | as_crispy_field}}
                     {{ order_form.street_address2 | as_crispy_field}}
                     {{ order_form.country | as_crispy_field}}
@@ -108,11 +108,11 @@
 <div class="overlay">
     <div class="container">
         <div id="loading-overlay">
-            <h1 class="text-light logo-font loading-spinner">
+            <div class="text-light logo-font loading-spinner">
                 <span class="icon">
                     <i class="fas fa-3x fa-sync-alt fa-spin"></i>
                 </span>
-            </h1>
+            </div>
         </div>
     </div>
 </div>
