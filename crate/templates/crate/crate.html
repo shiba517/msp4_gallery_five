@@ -15,7 +15,6 @@
 
     <!-- CRATE CONTENT -->
     <div class="row">
-        <!-- <div class="col"> -->
             {% if crate_items %}
             <div class="col-12 ">
                 <div class="table-responsive rounded">
@@ -33,7 +32,6 @@
                             <tr>
                                 
                                 <td class="p-3 w-25">
-                                <!-- <td class="d-none d-md-block p-3 w-25"> -->
                                     {% if item.product.image %}
                                     <img class="img-fluid rounded" src="{{ item.product.image.url }}" alt="image of art work">
                                     {% else %}
@@ -116,7 +114,6 @@
             </div>
             
             {% endif %}
-        <!-- </div> -->
     </div>
 </div>
 {% endblock %}

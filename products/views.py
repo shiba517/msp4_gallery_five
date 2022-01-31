@@ -76,17 +76,11 @@ def product_detail(request, product_id):
     ordered2 = Order.objects.all()
     if request.user.is_authenticated:
         profile = get_object_or_404(UserProfile, user=request.user)
-        print('*******HERE********')
         for each in ordered_proc1:
-            # print(each.order.order_number)
             for per in ordered2:
                 if each.order.order_number == per.order_number:
                     if per.user_profile == profile:
-                        print('FOUND')
-                        print(per.user_profile)
-                        print(profile)
                         ordered = True
-        print('*******HERE********')
 
     # REVIEW WILL BE POSTED FROM HERE
     if request.method == 'POST':
@@ -102,9 +96,7 @@ def product_detail(request, product_id):
         else:
             return redirect(reverse('products'))
 
-    print('REQUEST OF POST HAS NOT HAPPENED')
     form = ProductReviewForm()
-    print('FORM HAS BEEN PRODUCED')
 
     context = {
         'ordered': ordered,
@@ -125,10 +117,8 @@ def add_product(request):
 
     if request.method == 'POST':
         form = ProductForm(request.POST, request.FILES)
-        print(form)
         if form.is_valid():
             product = form.save()
-            # messages.success(request, 'Successfully added product')
             messages.success(request, f'You have added\
                 {product.name} to the database')
             return redirect(reverse('product_detail', args=[product.id]))
@@ -158,7 +148,6 @@ def edit_product(request, product_id):
         form = ProductForm(request.POST, request.FILES, instance=product)
         if form.is_valid():
             form.save()
-            # messages.success(request, 'Successfully updated product!')
             messages.success(request, f'You have successfully \
                 updated the information for {product.name}')
             return redirect(reverse('product_detail', args=[product.id]))
@@ -199,5 +188,4 @@ def remove_review(request, review_id):
     review.delete()
     messages.success(request, 'You have deleted a review')
 
-    # return redirect(reverse('products'))
     return HttpResponseRedirect(request.META["HTTP_REFERER"])

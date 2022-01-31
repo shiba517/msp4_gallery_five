@@ -282,23 +282,24 @@ Wireframes for mobile/tablet screens
 ## **TECHNOLOGIES USED**
 - HTML
 - CSS
-- Jquery - a lightweight JavaScript library
-- Python - back-end programming language
-- Bootstrap 4 - a .css library which also includes use of .js
-- Bootstrap 5 - a .css library which also includes use of .js
-- Django - Cloud based service focused on database management
-- Heroku - Web hosting service
-- Stripe - Card payment service for websites
-- Font awesome - a catalogue of icons for .html files
-- Django templates - a template for use of python with Django in .html
-- Jquery - A convenient JS library
-- Github - Save and deploy projects useing this
-- Git pod - Platform to write code
-- Balsamiq - software for use fo making skeleton sketches
+- [Jquery](https://jquery.com/) - a lightweight JavaScript library
+- [Python](https://www.python.org/) - back-end programming language
+- [Bootstrap 4](https://getbootstrap.com/) - a .css library which also includes use of .js
+- [Bootstrap 5](https://getbootstrap.com/) - a .css library which also includes use of .js
+- [Django](https://www.djangoproject.com/) - Cloud based service focused on database management
+- [Heroku](https://www.heroku.com/) - Web hosting service
+- [AWS Amazon](https://aws.amazon.com/) - Used to store static data
+- [Gmail](https://accounts.google.com/signin/v2/identifier?service=mail&passive=true&rm=false&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F%3Fhl%3Den-GB&ss=1&scc=1&ltmpl=default&ltmplcache=2&hl=en-GB&emr=1&osid=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin) - used to receive emails
+- [Stripe](https://stripe.com/gb?utm_campaign=paid_brand-UK_en_Search_Brand_Stripe-2032860449&utm_medium=cpc&utm_source=google&ad_content=355351450259&utm_term=kwd-94834400&utm_matchtype=e&utm_adposition=&utm_device=c&gclid=Cj0KCQiArt6PBhCoARIsAMF5wajvwwPTEsgJ8kGrDvJQdHGdAgxmGTgX9uLvBqOzqFJSy_EfpobyQzsaAqxxEALw_wcB) - Card payment service for websites
+- [Font awesome](https://fontawesome.com/) - a catalogue of icons for .html files
+- [Django templates]((https://www.djangoproject.com/)) - a template for use of python with Django in .html
+- [Github](https://github.com/) - Save and deploy projects useing this
+- [Git pod](https://github.com/) - Platform to write code
+- [Balsamiq](https://balsamiq.com/) - software for use fo making skeleton sketches
 - Paint 3D - an app I used to help resize and edit images; It is available on Windows 10
-- Lucid chart - website where I made the database schema
-- W3C Markup Validator - detects any errors in .html files
-- W3C CSS Validator - detects any errors in .css files
+- [Lucid chart](https://lucidchart.com/) - website where I made the database schema
+- [W3C Markup Validator](https://validator.w3.org/) - detects any errors in .html files
+- [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) - detects any errors in .css files
 
 
 ## **TESTING**
@@ -353,6 +354,7 @@ Edit my basket such as deleting an item, changing the quantity etc | yes | |
 Have a confirmation message | yes | [image](readme/images/purchase_approval.png) |
 
 ### **Cross Platfrom Testing**
+
 #### CRUD (create, read, update, delete) TESTING
 | AIM | admin | registered user | non-registered user |
 --- | --- | --- | --- |
@@ -367,7 +369,7 @@ READ a blog from the website on the website | yes | yes | yes
 UPDATE a blog | no(as intended) | no(as intended) | no(as intended)
 DELETE a blog | yes | no(as intended) | no(as intended)
 **Reviews - from products app**
-CREATE a review | yes | yes | no(as intended)
+CREATE a review | yes | yes(if previously purchased the item) | no(as intended)
 READ a review | yes | yes | yes
 UPDATE a review | no(as intended) | no(as intended) | no(as intended)
 DELETE a review | yes | yes | no(as intended)

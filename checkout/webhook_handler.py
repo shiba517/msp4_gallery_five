@@ -85,6 +85,7 @@ class StripeWH_Handler:
                     full_name__iexact=shipping_details.name,
                     email__iexact=billing_details.email,
                     phone_number__iexact=shipping_details.phone,
+                    # DO NOT RENETER CODE BELOW. IT BUGS THE SYSTEM
                     # country__iexact=shipping_details.address.country,
                     postcode__iexact=shipping_details.address.postal_code,
                     town_or_city__iexact=shipping_details.address.city,
@@ -96,22 +97,16 @@ class StripeWH_Handler:
                     stripe_pid=pid,
                 )
                 order_exists = True
-                print('ORDER DOES EXIST. WHILE LOOP WILL NOW BREAK')
                 break              
             except Order.DoesNotExist:
-                print('ORDER DOES NOT EXIST. WILL TRY AGAIN')
                 attempt += 1
                 time.sleep(1)
 
         if order_exists:
-            print('ORDER DOES OFFICIALY EXISTS')
-            # self._send_confirmation_email(order)
-            print('WILL NOW HTTPRESPONSE 200')
             return HttpResponse(
                 content=f'Webhook received: {event["type"]} | SUCCESS: the verified order already exists in the database',
                 status=200)
         else:
-            print('ORDER OFFICALLY DOS NOT EXIST')
             order = None
             try:
                 order = Order.objects.create(
@@ -119,6 +114,7 @@ class StripeWH_Handler:
                     user_profile=profile,
                     email=billing_details.email,
                     phone_number=shipping_details.phone,
+                    # DO NOT RENETER CODE BELOW. IT BUGS THE SYSTEM
                     # country__iexact=shipping_details.address.country,
                     postcode=shipping_details.address.postal_code,
                     town_or_city=shipping_details.address.city,
@@ -129,9 +125,7 @@ class StripeWH_Handler:
                     original_crate=crate,
                     stripe_pid=pid,
                 )
-                print('ORDER HAS BEEN FILLED')
                 for item_id, item_data in json.loads(crate).items():
-                    print('FOR LOOP IS WORKING')
                     product = Product.objects.get(id=item_id)
                     if isinstance(item_data, int):
                         order_line_item = OrderLineItem(
@@ -140,16 +134,14 @@ class StripeWH_Handler:
                             quantity=item_data,
                         )
                         order_line_item.save()
-                        print('Order created has had something done to it')
             except Exception as e:
                 if order:
                     order.delete()
                 return HttpResponse(
                     content=f'Webhook received: {event["type"]} | ERROR: {e}',
                     status=500)
-                    
+        # DO NOT RENETER CODE BELOW. IT BUGS THE SYSTEM
         # self._send_confirmation_email(order)
-        print('FINAL PART OF THE PROCESS. DONE!')
         return HttpResponse(
             content=f'Webhook received: {event["type"]} | SUCCESS: created order in webhook',
             status=200)

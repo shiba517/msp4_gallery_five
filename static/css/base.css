@@ -49,7 +49,7 @@ body {
 
 /* HERO PAGE */
 #hero-section {
-    height: 80vh;
+    height: 85vh;
 }
 
 #hero-section .ncc-logo-dec {
@@ -59,7 +59,7 @@ body {
 
 /* ABOUT US (index.html) */
 #aboutus-section {
-    padding: 8vh;
+    padding: 9vh;
     background-color: #ffc13b;
 }
 

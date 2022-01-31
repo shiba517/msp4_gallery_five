@@ -46,7 +46,6 @@ def update_profile(request):
     profile = get_object_or_404(UserProfile, user=request.user)
 
     if request.method == 'POST':
-        print('POST HAS HAPPENED')
         form = UserProfileForm(request.POST, request.FILES, instance=profile)
         if form.is_valid():
             form.save()
