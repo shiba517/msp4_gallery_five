@@ -49,8 +49,9 @@ body {
 
 /* HERO PAGE */
 #hero-section {
-    height: 75vh;
+    height: 80vh;
 }
+
 #hero-section .ncc-logo-dec {
     font-size: 25vh;
     border: solid 1.5rem #f66e40;
