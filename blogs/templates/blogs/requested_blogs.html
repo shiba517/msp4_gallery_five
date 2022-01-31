@@ -16,6 +16,11 @@
             <a href="{% url 'create_blog' %}" class="btn ncc-btn-base text-capitalize" aria-label="Go to creat a blog page">write a blog</a>
         </div>
     </div>
+
+    {% if blogs|length == 0 %}
+    <p>No one has requested a blog to be posted</p>
+    {% endif %}
+
     {% for blog in blogs %}
     <div class="row row-col-lg-2 ncc-blogpreview-dec m-4">
         <div class="d-none d-sm-block col-md-6 d-flex flex-wrap align-items-center justify-content-center ncc-blogpreview-image-area">

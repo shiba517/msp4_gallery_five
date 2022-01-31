@@ -1,5 +1,6 @@
 # **MILESTONE PROJECT 4 – GALLERY FIVE** 
 
+
 [live website](https://gallery-five.herokuapp.com/)
 
 ## CONTENT
@@ -22,15 +23,18 @@
     * [Bugs and fixes](#bugs-and-fixes)
 - [Deployment](#deployment)
 - [Credits](#credits)
-    * [Credits](#credits)
-    * [Conent](#content)
+    * [References](#references)
+    * [Content](#content)
     * [Media](#media)
 - [Acknowledgement](#acknowledgement)
 - [Disclaimer](#disclaimer)
 
+
 ## **OVERVIEW** 
 
-Gallery Five (TF) is a charity that helps support children from disadvantaged backgrounds to achieve their artistic potentials and dreams. It is mainly financed by taking a cut from the selling of donated art work from their London based gallery. Due to the current world pandemic, T5 have asked me to create a full-stack website where people can purchase the donated art works from the comfort of their own home. 
+Gallery Five (TF) is a charity that helps support children from disadvantaged backgrounds to achieve their artistic potentials and dreams. It is mainly financed by taking a cut from the selling of donated art work from their London based gallery. Due to the current world pandemic, T5 have asked me to create a full-stack website where people can purchase the donated art works from the comfort of their own home.
+
+[top](#content)
 
 ## **USER EXPERIENCE** 
 ### **User stories**: 
@@ -64,9 +68,10 @@ Gallery Five (TF) is a charity that helps support children from disadvantaged ba
     * A secured payment system 
     * Be acknowledged of how secure the process is for peace of mind 
     * An email once payment has gone through 
-    <!-- * Have enough time for my items to be in the basket before it is taken off  -->
     * Edit my basket such as deleting an item, changing the quantity etc 
     * Have a confirmation message
+
+[top](#content)
 
 ## **THE 5 PLANES** 
 ### **Strategy** 
@@ -88,6 +93,8 @@ Gallery Five (TF) is a charity that helps support children from disadvantaged ba
 - What we shouldn’t do? 
     * Make purchasing difficult as purchasing will be the main source of income 
     * Not registering should not have the same experience as registered users’ registered user should have a better experience in the form of offers, convenience etc 
+
+[top](#content)
 
 ### **Scope** 
 Intended features: 
@@ -129,6 +136,8 @@ Content requirements:
     * A video describing the objective of the charity and the website 
 - Audio 
     * No audio as it can be more of an annoyance than an entertaining feature of the site 
+
+[top](#content)
 
 ### **Structure** 
 Database - [image](readme/images/database_schema.png)
@@ -244,6 +253,8 @@ Page details:
     * Story about the charity
     * Images of the team behind the website and the children they are/have helped
 
+[top](#content)
+
 ### **Skeleton** 
 
 Wireframes for laptop/computer screens
@@ -266,6 +277,8 @@ Wireframes for mobile/tablet screens
 * Blogs page: [wireframe image](readme/images/mobile_blogs.png)
 * Selected blog page: [wireframe image](readme/images/mobile_read_blog.png)
 
+[top](#content)
+
 ### **Surface** 
 - Font: 
     * Noto Sans Display - https://fonts.google.com/noto/specimen/Noto+Sans+Display 
@@ -278,6 +291,7 @@ Wireframes for mobile/tablet screens
         * Pale orange - #ff6e40 
         * Yellow - #ffc13b 
 
+[top](#content)
 
 ## **TECHNOLOGIES USED**
 - HTML
@@ -300,6 +314,9 @@ Wireframes for mobile/tablet screens
 - [Lucid chart](https://lucidchart.com/) - website where I made the database schema
 - [W3C Markup Validator](https://validator.w3.org/) - detects any errors in .html files
 - [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) - detects any errors in .css files
+- [PEP8](http://pep8online.com/) - detects any unconventional code in my .py files
+
+[top](#content)
 
 
 ## **TESTING**
@@ -312,13 +329,19 @@ checkout.html | [image](readme/images/w3_checkout.png) | could not resolve error
 footer.html | [image](readme/images/w3_footer.png) | do not believe a title element is needed regarding error 2 and 3
 navigation.html | [image](readme/images/w3_navigation.png) | did not want to alter with error 12 and 13 as it is from Bootstrap and changing of any id names most likely will interfere with the builtin in bootstrap jquery/js
 
+[top](#content)
+
 ### **CSS Testing**
 | FILE | Result | Notes
 base.css | [image](readme/images/w3_base_css.png) | 2 warnings were related to the colours of the background and border of a class element being the same
 
+[top](#content)
+
 ### **PEP8 Testing**
 * I used pep8online to check whether my .py file codes were PEP8 compliant. I made the changes needed for an All right pass for all .py files.
 * After changes were made, an internal server error occured. I had to revert some line of codes back to its original state for the website to work. More details can be found in 'Bugs and Fixes' section
+
+[top](#content)
 
 ### **User Stories Testing**
 | AIM | Achieved | Image |
@@ -353,6 +376,8 @@ Be acknowledged of how secure the process is for peace of mind | yes | |
 Edit my basket such as deleting an item, changing the quantity etc | yes | |
 Have a confirmation message | yes | [image](readme/images/purchase_approval.png) |
 
+[top](#content)
+
 ### **Cross Platfrom Testing**
 
 #### CRUD (create, read, update, delete) TESTING
@@ -383,6 +408,8 @@ CREATE a wishlist | yes | yes | no(as intended)
 READ a wishlist | yes | yes | no(as intended)
 UPDATE a wishlist | yes | yes | no(as intended)
 DELETE from wishlist | yes | yes | no(as intended)
+
+[top](#content)
 
 ### FORM VALIDATION TESTING
 | AIM | SM | MD | LG |
@@ -425,8 +452,12 @@ Both 'Password' fields must match | yes | yes | yes
 'Name' field will accept upto 100 characters | yes | yes | yes
 'E-mail' field must have follow the pattern of have a '@' and a '.' in the email | yes | yes | yes
 
+[top](#content)
+
 ### Lighthouse testing
 I used Google Chrom Lighthouse testing to find out the quality of the website. Here are my results: [image](readme/images/lighthouse_testing.png)
+
+[top](#content)
 
 ### Responsive Testing
 AIM | SM | MD | LG |
@@ -498,11 +529,15 @@ Images | yes | yes | yes
 Renders as expected | yes | yes | yes
 Form validation | yes | yes | yes
 
+[top](#content)
+
 ### Bugs and Fixes
 ISSUE | Solved? | How? | link
 --- | --- | --- | --- | 
 It was not possible to NOT save the changes made in teh checkout form in checkout.html | Yes | Thanks to helpful student peers (Phillip and Luke) from the Slack community, they posted the required code needed for the checkbox to work with the .js, .html, and .py files. | (https://code-institute-room.slack.com/archives/C7HS3U3AP/p1605302104469800?thread_ts=1605222094.452700&cid=C7HS3U3AP) and (https://code-institute-room.slack.com/archives/C7HS3U3AP/p1621881386435800?thread_ts=1605222094.452700&cid=C7HS3U3AP) 
 inernal server occured after PEP8 chnages | yes | Gitpod terminal told me whre the errors were occuring. Reverted the codes back to its state before the PEP8 changes | [image](readme/images/bugs_and_fixes_pep8.png)
+
+[top](#content)
 
 ## **DEPLOYMENT**
 ### Making a local clone
@@ -519,6 +554,8 @@ You may want to have access via a copy of the repository on your own device. The
 4. Click on the ‘Code’ button again and copy the text given under the subheading ‘HTTPS’. A button next to this text gives you an easier way of copying the text
 5. Back to your IDE terminal, after the ‘git clone’, press the spacebar button and paste in the link you copied from the repository. Your entry in the terminal should look something like this: ‘gti clone https://github.com/shiba517/msp4_gallery_five.git’. Then press enter
 6. Your terminal will let you know the repository has been cloned and saved to your preferred destination and will be evident when viewing files and folders from your preferred destination
+
+[top](#content)
 
 ### Working with a local clone
 1. Install all the requirements from requirements.txt by typing in 'pip3 install -r requirements.txt' into your terminal
@@ -540,6 +577,8 @@ You may want to have access via a copy of the repository on your own device. The
     * python3 manage.py loaddata categories
     python3 manage.py loaddata products
 9. You are now done. To get access to your admin, run the server ('python3 manage.py runserver') and type in'/admin' at teh end of your url
+
+[top](#content)
 
 ### Deploying to Heroku
 1. Install all the requirements from requirements.txt by typing in 'pip3 install -r requirements.txt' into your terminal
@@ -581,6 +620,8 @@ You may want to have access via a copy of the repository on your own device. The
     * AWS_ACCESS_KEY_ID can be found from your AWS account
     * AWS_SECRET_ACCESS_KEY can be found from your AWS account
 
+[top](#content)
+
 ### Setting up a real active email service
 1. Create a Gmail account
 2. go to Settings > Accounts and Import > Other Google account settings
@@ -592,15 +633,21 @@ You may want to have access via a copy of the repository on your own device. The
     * Copy and paste the password and add it to your Heroku config variable under the name of 'EMAIL_HOST_PASS'
 4. Whilst on the config variable, add another under the name of 'EMAIL_HOST_USER' with its value being your email address
 
+[top](#content)
+
 ## **CREDITS**
 ### References
 * REF001 - 'profile' app was heavily copied/slightly adapted from Code Insitute Full Stack Frameworks with Django module (https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+FSF_102+Q1_2020/courseware/4201818c00aa4ba3a0dae243725f6e32/2c1b98a8efb748009445d5056c97483b/)
 * REF002 - 'checkout' app was heavily copied/slightly adapted from Code Insitute Full Stack Frameworks with Django module (https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+FSF_102+Q1_2020/courseware/4201818c00aa4ba3a0dae243725f6e32/326f171b831446588d33c0333eb4caaa/)
 * REF003 - 'crate' app was heavily copied/slightly adapted from Code Insitute Full Stack Frameworks with Django module (was heavily copied/slightly adapted from Code Insitute Full Stack Frameworks with Django module)
 
+[top](#content)
+
 ### Content
 * I copied and pasted [lorem ipsum](https://www.lipsum.com/) texts into the products details due to the nature of the project
 * About us written content was written by me
+
+[top](#content)
 
 ### Media
 * [Jeremy Bezanger](https://unsplash.com/photos/NsdNBQxb-8s)
@@ -666,6 +713,8 @@ You may want to have access via a copy of the repository on your own device. The
 * [Francis Towne](https://unsplash.com/photos/5ruS8plfbvM)
 * [Robert Hills](https://unsplash.com/photos/6fv0MEf3FUE)
 
+[top](#content)
+
 ### Acknowledgement 
 * Code Institue course
 * Course tutor Precious Ijege
@@ -675,5 +724,9 @@ You may want to have access via a copy of the repository on your own device. The
 * [The Net Ninja ](https://www.youtube.com/c/TheNetNinja)
 * [Cryce Truly](https://www.youtube.com/c/CryceTruly)
 
+[top](#content)
+
 ## **DISCLAIMER**
 This webite was built for educational reasons for my coding course from Code Institute. No content, written(unless mentioned in CREDITS - Content of this document) and imagery, is of mine. No offense was intentionaly made with the pricing of the art works (I randomly made up the numbers), and any namings of art works. If there is anything you would like enquire, please do so via my email - shibacdeb@gmail.com
+
+[top](#content)
