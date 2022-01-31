@@ -28,7 +28,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '')
 # DEBUG = 'DEVELOPMENT' in os.environ
 
 # GIT PRODUCTION SETTINGS
-DEBUG = False
+DEBUG = True
 # ALLOWED_HOSTS = []
 
 ALLOWED_HOSTS = ['gallery-five.herokuapp.com', 'localhost']
