@@ -339,7 +339,7 @@ base.css | [image](readme/images/w3_base_css.png) | 2 warnings were related to t
 
 ### **PEP8 Testing**
 * I used pep8online to check whether my .py file codes were PEP8 compliant. I made the changes needed for an All right pass for all .py files.
-* After changes were made, an internal server error occured. I had to revert some line of codes back to its original state for the website to work. More details can be found in 'Bugs and Fixes' section
+* After changes were made, an internal server error occured. I had to revert some line of codes (as told to me by my Gitpod terminal) back to its original state for the website to work. More details can be found in ['Bugs and Fixes'](#bugs-and-fixes) section
 
 [top](#content)
 
