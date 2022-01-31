@@ -37,7 +37,7 @@
                     <a href="{% url 'add_wishlist' product.id %}" class="ncc-wishlist-button" style="color:black" aria-label="like this art work"><i class="fas fa-heart"></i></a>        
                     {% endif %}                                
                     {% if product.image %}
-                    <img src="{{ product.image }}" class=" ncc-card-img" alt="image of art work">
+                    <img src="{{ product.image.url }}" class=" ncc-card-img" alt="image of art work">
                     {% else %}
                     <img src="{{ MEDIA_URL }}noimage.jpg" class=" ncc-card-img" alt="there is no image for this art work">
                     {% endif %}
